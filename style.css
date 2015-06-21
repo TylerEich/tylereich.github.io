@@ -1,0 +1,101 @@
+/* Styles go here */
+
+/* @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300); */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+html, body {
+  background: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+  /* font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "Anonymous Pro";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+#landing {
+  width: 100%;
+  height: 61vmin;
+  position: relative;
+  background-size: 110vw;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+  transition: background-position 100ms linear;
+}
+
+#background {
+  position: absolute;
+  z-index: 0;
+  width: 150%;
+  left: -25%;
+  top: -15%;
+}
+
+#hello-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: table;
+  background: rgba( 0,0,0,0.39 );
+}
+
+main {
+  padding: 5vh 10vw;
+}
+h1 {
+  /* font-family: "Source Code Pro", "Courier New", Courier, monospace; */
+  font-family: "Anonymous Pro";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #51B3DD;
+  margin: 0;
+  margin-bottom: 2vh;
+}
+p {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
+  font-family: "Inconsolata";
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+#hello-world {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  
+  text-shadow: 0 0 8vw black;
+}
+
+#hello-world {
+  padding: 2vh;
+  font-weight: 500;
+  font-size: 10vw;
+  white-space: pre;
+  /* font-family: "Source Code Pro", "Courier New", Courier, monospace; */
+}
+
+#hello-world:after {
+  content: '';
+  box-shadow: 0 0 0 1px white;
+  animation: blink 0.5s linear 0s infinite alternate;
+}
