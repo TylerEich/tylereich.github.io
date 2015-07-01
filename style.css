@@ -33,8 +33,13 @@ html, body {
 
 .footnote {
   font-size: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
+  margin-left: 2ch;
+  padding-bottom: 1.5rem;
+}
+
+.footnote:before {
+  content: '*';
+  margin-left: -2ch;
 }
 
 #landing {
@@ -66,22 +71,59 @@ html, body {
 }
 
 main {
-  padding: 5vh 10vw;
+  padding: 0;
+  max-width: 80ch;
+  margin: auto;
+  position: relative;
+}
+
+#gutter {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background: #f0f0f0;
+
+  height: 100%;
+  width: 6ch;
+}
+#content {
+  margin-left: 8ch;
+  padding-right: 2ch;
+  border-right: 1px solid #f0f0f0;
+  height: 100%
+}
+.line-number {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* padding-right: 2ch; */
+  color: #c0c0c0;
 }
 h1 {
   /* font-family: "Source Code Pro", "Courier New", Courier, monospace; */
   font-family: "Anonymous Pro";
   font-size: 2rem;
+  line-height: 4rem;
   font-weight: bold;
   color: #51B3DD;
   margin: 0;
-  margin-bottom: 2vh;
 }
+
+h2 {
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: limegreen;
+  margin: 0;
+}
+
 p {
   font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
   font-family: "Inconsolata";
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 2rem;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 #hello-world {
   display: table-cell;
