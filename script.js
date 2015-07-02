@@ -106,11 +106,11 @@ function renderLineNumbers() {
 }
 
 window.addEventListener( 'load', function() {
-  renderLineNumbers();
-  window.addEventListener( 'resize', renderLineNumbers );
+  // renderLineNumbers();
+  // window.addEventListener( 'resize', renderLineNumbers );
 
   setTimeout( function() {
-    typeString( 'Hello world.', 0, document.querySelector( '#hello-world' ) );
+    typeString( 'Hello world!', 0, document.querySelector( '#hello-world' ) );
   }, 1000 );
 
   $( '#background' ).plaxify();
