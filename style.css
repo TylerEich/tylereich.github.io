@@ -108,15 +108,16 @@ html, body {
   height: 61vmin;
   display: table;
   position: relative;
-  background-size: auto 1364px;
-  background-repeat: repeat-y;
-  background-position: 50% 0;
-  background-attachment: fixed;
+  /* background-size: auto 1364px; */
+  /* background-repeat: repeat-y; */
+  /* background-position: 50% 0; */
+  /* background-attachment: fixed; */
   overflow: hidden;
   /* animation: background-scroll 60s linear infinite; */
   /* background-image: url('scrolling-header.png'); */
   /* transform: translateZ(0); */
   /* will-change: scrolling-position; */
+  /* display: none; */
 }
 
 #hello-container {
@@ -254,5 +255,6 @@ p {
 #hello-world:after {
   content: '';
   box-shadow: 0 0 0 1px white;
-  animation: blink 1.5s linear 0s infinite alternate;
+  /* animation: blink 1.5s linear 0s infinite alternate; */
+  will-change: opacity;
 }
