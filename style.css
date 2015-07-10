@@ -84,11 +84,11 @@ html, body {
   background-size: auto 1364px;
   background-repeat: repeat-y;
   background-position: 50% 0;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* animation: background-scroll 120s linear infinite; */
   background-image: url('scrolling-header.png');
   /* -webkit-filter: blur( 20px ); */
-  will-change: scroll-position;
+  /* will-change: scroll-position; */
 }
 
 
