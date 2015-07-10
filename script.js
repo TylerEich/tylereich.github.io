@@ -1,9 +1,9 @@
 // Code goes here
 
-var invisibleSpan = document.createElement( 'span' );
-invisibleSpan.className = 'invisible';
-var charSpan = document.createElement( 'span' );
-charSpan.className = 'char';
+// var invisibleSpan = document.createElement( 'span' );
+// invisibleSpan.className = 'invisible';
+// var charSpan = document.createElement( 'span' );
+// charSpan.className = 'char';
 
 function typeString( string, i, element ) {
   if ( i >= string.length ) {
@@ -33,58 +33,58 @@ function typeString( string, i, element ) {
   setTimeout( typeString.bind( null, string, ++i, element ), delay );
 }
 
-function renderLineNumbers() {
-  var content = document.querySelector( '#content' );
-  var gutterContainer = document.querySelector( '#gutter' );
-
-  // clear gutter
-  while ( gutterContainer.firstChild ) {
-    gutterContainer.removeChild( gutterContainer.firstChild );
-  }
-
-  var gutter = document.createDocumentFragment();
-  // var ctx = gutter.getContext( '2d' );
-  // ctx.fillStyle = '#a0a0a0';
-  // ctx.font = 'sans-serif 12px';
-  // ctx.textAlign = 'right';
-  // console.log( ctx );
-
-  var lineNumber = 1;
-  var cursorPosition = 0;
-
-  for ( var i = 0; i < content.children.length; i++ ) {
-    var child = content.children[ i ];
-    var computedStyle = window.getComputedStyle( child );
-    var tag = child.tagName;
-    var height = child.offsetHeight;
-    var lineHeight = parseFloat(
-      computedStyle.getPropertyValue( 'line-height' )
-    );
-    var topOffset = 0;
-
-    while ( topOffset < height ) {
-      var el = document.createElement( 'p' );
-      el.className = 'line-number';
-      el.style.height = lineHeight + 'px';
-      el.style.lineHeight = lineHeight + 'px';
-      el.textContent = lineNumber.toString( 10 );
-      gutter.appendChild( el );
-
-      lineNumber++;
-      topOffset += lineHeight;
-
-      paddingBottom = parseFloat( computedStyle.getPropertyValue( 'padding-bottom' ) );
-      console.log( topOffset + paddingBottom, height );
-
-      if ( topOffset + paddingBottom >= height ) {
-        el.style.paddingBottom = paddingBottom + 'px';
-        console.log( 'padding', el );
-        break;
-      }
-      if ( lineNumber > 500 ) {
-        console.log( 'overflow' ); break;
-      }
-    }
+// function renderLineNumbers() {
+//   var content = document.querySelector( '#content' );
+//   var gutterContainer = document.querySelector( '#gutter' );
+//
+//   // clear gutter
+//   while ( gutterContainer.firstChild ) {
+//     gutterContainer.removeChild( gutterContainer.firstChild );
+//   }
+//
+//   var gutter = document.createDocumentFragment();
+//   // var ctx = gutter.getContext( '2d' );
+//   // ctx.fillStyle = '#a0a0a0';
+//   // ctx.font = 'sans-serif 12px';
+//   // ctx.textAlign = 'right';
+//   // console.log( ctx );
+//
+//   var lineNumber = 1;
+//   var cursorPosition = 0;
+//
+//   for ( var i = 0; i < content.children.length; i++ ) {
+//     var child = content.children[ i ];
+//     var computedStyle = window.getComputedStyle( child );
+//     var tag = child.tagName;
+//     var height = child.offsetHeight;
+//     var lineHeight = parseFloat(
+//       computedStyle.getPropertyValue( 'line-height' )
+//     );
+//     var topOffset = 0;
+//
+//     while ( topOffset < height ) {
+//       var el = document.createElement( 'p' );
+//       el.className = 'line-number';
+//       el.style.height = lineHeight + 'px';
+//       el.style.lineHeight = lineHeight + 'px';
+//       el.textContent = lineNumber.toString( 10 );
+//       gutter.appendChild( el );
+//
+//       lineNumber++;
+//       topOffset += lineHeight;
+//
+//       paddingBottom = parseFloat( computedStyle.getPropertyValue( 'padding-bottom' ) );
+//       console.log( topOffset + paddingBottom, height );
+//
+//       if ( topOffset + paddingBottom >= height ) {
+//         el.style.paddingBottom = paddingBottom + 'px';
+//         console.log( 'padding', el );
+//         break;
+//       }
+//       if ( lineNumber > 500 ) {
+//         console.log( 'overflow' ); break;
+//       }
+//     }
 
 
 
@@ -100,10 +100,10 @@ function renderLineNumbers() {
     //   lineNumber++;
     //
     // }
-  }
+  // }
 
-  gutterContainer.appendChild( gutter );
-}
+  // gutterContainer.appendChild( gutter );
+// }
 
 window.addEventListener( 'load', function() {
   // renderLineNumbers();
@@ -113,9 +113,9 @@ window.addEventListener( 'load', function() {
     typeString( 'Hello world!', 0, document.querySelector( '#hello-world' ) );
   }, 1000 );
 
-  $( '#background' ).plaxify();
-  $( '#hello-world' ).plaxify();
+  // $( '#background' ).plaxify();
+  // $( '#hello-world' ).plaxify();
 
-  $.plax.enable();
+  // $.plax.enable();
   // typeString( 'Hello.\n\nMy name\'s Tyler Eich.\n\nI build apps for the web.', 0, document.querySelector( '#text' ) );
 });

@@ -4,32 +4,93 @@
 
 @keyframes blink {
   0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
     opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
 
+@keyframes background-scroll {
+  from {
+    background-position: 50% 0px;
+  }
+  to {
+    background-position: 50% -1364px;
+  }
+}
+
+html {
+  /* transform: translateZ(0); */
+  /* will-change: scroll-position; */
+}
+
 html, body {
   background: white;
   color: black;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   padding: 0;
 
   /* font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: "Roboto Mono";
   box-sizing: border-box;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+  /* transform: translate3d(0,0,0); */
 }
+
+/* body {
+  background-size: auto 1364px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 50%;
+  animation: background-scroll 60s linear infinite;
+  background-image: url('scrolling-header.png');
+}
+ */
+/* body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: auto 1364px;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  animation: background-scroll 120s linear infinite;
+  background-image: url('blurred-background.png');
+  -webkit-filter: blur( 20px );
+  will-change: scroll-position;
+} */
+
+
+#background {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: auto 1364px;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  /* animation: background-scroll 120s linear infinite; */
+  background-image: url('scrolling-header.png');
+  /* -webkit-filter: blur( 20px ); */
+  will-change: scroll-position;
+}
+
 
 .footnote {
   font-size: 1rem;
@@ -45,29 +106,33 @@ html, body {
 #landing {
   width: 100%;
   height: 61vmin;
+  display: table;
   position: relative;
-  background-size: 110vw;
-  background-repeat: repeat;
-  background-position: 50% 50%;
+  background-size: auto 1364px;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-attachment: fixed;
   overflow: hidden;
-  transition: background-position 100ms linear;
-}
-
-#background {
-  position: absolute;
-  z-index: 0;
-  width: 150%;
-  left: -25%;
-  top: -15%;
+  /* animation: background-scroll 60s linear infinite; */
+  /* background-image: url('scrolling-header.png'); */
+  /* transform: translateZ(0); */
+  /* will-change: scrolling-position; */
 }
 
 #hello-container {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
+  top: 0;
   z-index: 10;
-  display: table;
-  background: rgba( 0,0,0,0.39 );
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  /* background: rgba( 0,0,0,0.75 ); */
+  /* top: 0; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
 }
 
 main {
@@ -75,6 +140,11 @@ main {
   max-width: 80ch;
   margin: auto;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.875);
+  /* background-image: url('blurred-background.png'); */
+  /* background-attachment: fixed; */
+  /* background-size: auto 130%; */
+  /* background-position: 50% 0; */
 }
 
 #gutter {
@@ -88,9 +158,10 @@ main {
   width: 6ch;
 }
 #content {
-  margin-left: 8ch;
-  padding-right: 2ch;
-  border-right: 1px solid #f0f0f0;
+  /* margin-left: 8ch; */
+  /* padding-right: 2ch; */
+  padding: 4ch;
+  /* border-right: 1px solid #f0f0f0; */
   height: 100%
 }
 .line-number {
@@ -102,19 +173,21 @@ main {
 }
 h1 {
   /* font-family: "Source Code Pro", "Courier New", Courier, monospace; */
-  font-family: "Anonymous Pro";
+  font-family: "Inconsolata";
+  /* font-family: "Roboto Mono"; */
   font-size: 2rem;
   line-height: 4rem;
   font-weight: bold;
-  color: #51B3DD;
+  color: rgba(96, 125, 139, 0.75);
   margin: 0;
 }
 
 h2 {
   line-height: 3rem;
   font-size: 1.5rem;
-  color: limegreen;
+  color: rgba(255,255,255,0.5);
   margin: 0;
+  font-family: "Inconsolata";
 }
 
 ul {
@@ -122,6 +195,7 @@ ul {
   padding: 0;
   font-weight: 500;
   list-style-position: inside;
+  color: white;
 }
 ul:before {
   content: '[';
@@ -154,11 +228,12 @@ p {
   line-height: 2rem;
   margin: 0;
   padding-bottom: 1rem;
+  color: white;
 }
 #hello-world {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  display: inline;
+  /* vertical-align: middle; */
+  /* text-align: center; */
   color: white;
 
   text-shadow: 0 0 8vw black;
@@ -170,10 +245,14 @@ p {
   font-size: 10vw;
   white-space: pre;
   /* font-family: "Source Code Pro", "Courier New", Courier, monospace; */
+  /* background-color: rgba(0,0,0,0.75); */
+  /* background-image: url('blurred-background.png'); */
+  /* background-attachment: fixed; */
+  /* background-position: 50% 0; */
 }
 
 #hello-world:after {
   content: '';
   box-shadow: 0 0 0 1px white;
-  animation: blink 0.5s linear 0s infinite alternate;
+  animation: blink 1.5s linear 0s infinite alternate;
 }
