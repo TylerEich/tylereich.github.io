@@ -10,22 +10,34 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,500,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://rawgit.com/cameronmcefee/plax/master/js/plax.js"></script>
     <script src="script.js"></script>
   </head>
 
   <body>
-    <div id="background-tiles">
-      <div class="background"></div>
-      <div class="background"></div>
+    <div class="background-tiles">
+      <div class="background-anchored"></div>
       <div class="background"></div>
     </div>
 
+    <nav>
+      <div class="background-tiles">
+        <div class="background-anchored"></div>
+        <div class="background"></div>
+      </div>
+
+      <div class="navbar-content">
+        Tyler Eich
+      </div>
+
+      <hr class="separator">
+    </nav>
+
     <div id="landing">
-      <div id="landing-background-tiles">
-        <div class="landing-background"></div>
+      <div class="landing-background-tiles">
+        <div class="landing-background-anchored"></div>
         <div class="landing-background"></div>
       </div>
       <div id="hello-container">
@@ -33,10 +45,73 @@
       </div>
     </div>
 
-    <main>
+    <main id="content">
       <!-- <section id="gutter"></section> -->
 
-      <section id="content">
+      <section class="topic">
+        <object type="image/svg+xml" data="vector/js.svg" class="icon"></object>
+        <div class="text">
+          <h1>
+            JavaScript
+          </h1>
+          <p>
+            The web's programming language. It lets your web page do stuff. Anything from a simple textbox to a full-scale drawing webapp can run on the power of JavaScript.
+          </p>
+        </div>
+      </section>
+      <section class="topic narrow">
+        <div class="text">
+          <h1>
+            Skills
+          </h1>
+        </div>
+
+        <h2 class="text">
+          Client
+        </h2>
+        <section class="subtopic">
+          <section class="item">
+            <p class="subtext">
+              JavaScript
+            </p>
+            <object type="image/svg+xml" data="vector/js.svg" class="icon"></object>
+          </section>
+          <section class="item">
+            <p class="subtext">
+              Angular
+            </p>
+            <object type="image/svg+xml" data="vector/angular.svg" class="icon"></object>
+          </section>
+        </section>
+
+        <h2 class="text">
+          Layout
+        </h2>
+        <section class="subtopic">
+          
+          <section class="item">
+            <p class="subtext">
+              HTML
+            </p>
+            <object type="image/svg+xml" data="vector/html5.svg" class="icon"></object>
+          </section>
+<!--           <section class="item small">
+            <object type="image/svg+xml" data="vector/plus.svg" class="icon"></object>
+          </section> -->
+          <section class="item">
+            <p class="subtext">
+              CSS
+            </p>
+            <object type="image/svg+xml" data="vector/css3.svg" class="icon"></object>
+          </section>
+        </section>
+      </section>
+
+<!--       <section>
+        <object type="image/svg+xml" data="vector/github.svg" class="icon"></object>
+      </section>
+      <section>
+        <object type="image/svg+xml" data="vector/twitter.svg" class="icon"></object>
         <h1 class="name">
           I'm Tyler&nbsp;Eich
         </h1>
@@ -44,27 +119,24 @@
           I write JavaScript.
         </p>
 
+
+      </section>
+      <section>
+        <object type="image/svg+xml" data="vector/stack-overflow.svg" class="icon"></object>
         <h1>
           Skills
         </h1>
         <ul>
           <li>
-            'Angular'
+            Angular
           </li>
           <li>
-            'ES6 (ECMAScript 2015)'
+            ECMAScript 2015
           </li>
           <li>
-            'Node &amp; IO.js'
+            Node &amp; IO.js
           </li>
         </ul>
-
-        <h1>
-          JavaScript
-        </h1>
-        <p>
-          The web's programming language. It lets your web page do stuff. Anything from a simple textbox to a full-scale drawing webapp can run on the power of JavaScript.
-        </p>
 
         <h1>
           Other Web Technologies
@@ -82,7 +154,7 @@
         <p>
           Cascading Style Sheets make a webpage beautiful. CSS is responsible for color, font choice, layout, animation, and everything else that makes a webapp yours.
         </p>
-      </section>
+      </section> -->
     </main>
   </body>
 
