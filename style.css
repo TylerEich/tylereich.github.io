@@ -143,7 +143,7 @@ nav .background-tiles {
 }
 
 .background {
-/*   animation: background-scroll 3s linear infinite; */
+  animation: background-scroll 180s linear infinite;
 }
 
 nav {
@@ -214,7 +214,7 @@ nav .separator {
 /*   position: absolute; */
 }
 .landing-background {
-/*   animation: background-scroll 3s linear infinite; */
+  animation: background-scroll 180s linear infinite;
 }
 
 .icon {
@@ -377,7 +377,7 @@ p {
 #hello-world:after {
   content: '';
   box-shadow: 0 0 0 1px white;
-/*   animation: blink 1.5s linear 0s infinite alternate; */
+  animation: blink 1.5s linear 0s infinite alternate;
   will-change: opacity;
 }
 
