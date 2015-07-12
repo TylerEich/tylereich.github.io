@@ -2,13 +2,6 @@
 
 /* @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300); */
 
-@media ( min-width: 10px ) {
-  .icon {
-    flex-basis: 30ch;
-    height: 30ch;
-  }
-}
-
 @keyframes blink {
   0% {
     opacity: 0;
@@ -405,7 +398,7 @@ p {
   }
 }
 
-@media ( min-width: 0ch ) {
+/* @media ( min-width: 0ch ) { */
   section {
     flex-wrap: wrap;
   }
@@ -420,4 +413,4 @@ p {
     flex-basis: 100%;
     text-align: center;
   }
-}
+/* } */
