@@ -18,7 +18,11 @@
   "homepage": "https://github.com/TylerEich/tylereich.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^5.2.0",
+    "autoprefixer-core": "^5.2.1",
+    "clean-css": "^3.3.5",
     "cssnano": "^2.0.3",
+    "html-minifier": "^0.7.2",
+    "postcss": "^4.1.16",
     "postcss-cli": "^1.4.0",
     "uglify-js": "^2.4.23"
   }

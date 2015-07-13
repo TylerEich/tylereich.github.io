@@ -230,7 +230,7 @@ nav .background-tiles {
   background-size: auto 2166px;
   background-repeat: repeat-y;
   background-position: 50% 0;
-  background-image: url('blurred-background-tall-narrow.png');
+  background-image: url('blurred-background-tall-narrow-min.png');
   background-color: rgb(21, 23, 24);
   z-index: inherit;
   pointer-events: none;
@@ -510,19 +510,19 @@ p {
     flex-basis: 15rem;
     margin-left: 2rem;
     margin-right: 0;
-  
+
     border: none;
 }
   .array li {
     text-align: left;
-  
+
     padding: 0;
 }
 
   .subtopic .separator {
     display: block;
   }
-  
+
   .items,
   .item {
     justify-content: flex-end;
@@ -558,7 +558,7 @@ p {
     margin-left: 0;
     flex-basis: 100%;
     text-align: center;
-  
+
     margin-bottom: 0.5rem;
 }
 /* } */
