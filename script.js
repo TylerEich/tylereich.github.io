@@ -88,14 +88,20 @@ function typeString( string, i, element ) {
   setTimeout( typeString.bind( null, string, ++i, element ), delay );
 }
 
-window.addEventListener( 'load', function() {
+if ( document.readyState === 'complete' ) {
   setTimeout( function() {
     typeString( 'Hello world.', 0, document.querySelector( '#hello-world' ) );
   }, 1000 );
+} else {
+  window.addEventListener( 'load', function() {
+    setTimeout( function() {
+      typeString( 'Hello world.', 0, document.querySelector( '#hello-world' ) );
+    }, 1000 );
 
-//   $( '#background' ).plaxify();
-//   $( '#hello-world' ).plaxify();
+  //   $( '#background' ).plaxify();
+  //   $( '#hello-world' ).plaxify();
 
-//   $.plax.enable();
-  // typeString( 'Hello.\n\nMy name\'s Tyler Eich.\n\nI build apps for the web.', 0, document.querySelector( '#text' ) );
-});
+  //   $.plax.enable();
+    // typeString( 'Hello.\n\nMy name\'s Tyler Eich.\n\nI build apps for the web.', 0, document.querySelector( '#text' ) );
+  });
+}
