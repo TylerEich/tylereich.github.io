@@ -364,8 +364,8 @@ main {
   color: #c0c0c0;
 }
 h1 {
-  font-family: "Source Code Pro", "Courier New", Courier, monospace;
-  /* font-family: "Inconsolata"; */
+/*   font-family: "Source Code Pro", "Courier New", Courier, monospace; */
+  font-family: "Inconsolata";
   /* font-family: "Roboto Mono"; */
   font-size: 2.5rem;
   line-height: 3rem;
@@ -383,8 +383,8 @@ h2 {
   color: rgba(255,255,255,0.5);
   color: hsla(199, 38%, 90%, 0.75);
   margin: 0;
-  /* font-family: "Inconsolata"; */
-  font-weight: 400;
+  font-family: "Inconsolata";
+  font-weight: bold;
   /* font-size: 1.5rem; */
 }
 
@@ -494,12 +494,12 @@ p {
  */
 @media ( max-width: 25rem ) {
   .array {
-    margin: 0 1rem;
+    margin: 1rem 1rem;
   }
 }
 @media ( min-width: 25rem ) and ( max-width: 40rem ) {
   .array {
-    margin: 0 2rem;
+    margin: 1rem 2rem;
   }
 }
 
