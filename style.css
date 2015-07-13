@@ -230,7 +230,7 @@ nav .background-tiles {
   background-size: auto 2166px;
   background-repeat: repeat-y;
   background-position: 50% 0;
-  background-image: url('blurred-background-tall-narrow-min.png');
+  background-image: url('blurred-background-tall-narrow.png');
   background-color: rgb(21, 23, 24);
   z-index: inherit;
   pointer-events: none;
