@@ -33,19 +33,18 @@
 }
 
 html, body {
-  background: white;
-  color: black;
+  /* background: white; */
+  /* color: black; */
   width: 100%;
   margin: 0;
   padding: 0;
 
   font-family: "Roboto Mono";
-  box-sizing: border-box;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
-html {
+body {
   background-color: rgb(21,23,24);
 }
 
