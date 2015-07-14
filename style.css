@@ -1,6 +1,35 @@
 /* Styles go here */
 
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:700|Roboto+Mono:400,500);
+/*@import url(http://fonts.googleapis.com/css?family=Inconsolata:700|Roboto+Mono:400,500);*/
+
+/* latin */
+/* @font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(fonts/inconsolata-bold.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+latin
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(fonts/robotomono-regular.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+latin
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Mono Medium'), local('RobotoMono-Medium'), url(fonts/robotomono-medium.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+} */
+
+
+
+
 
 @keyframes blink {
   0% {
@@ -39,7 +68,7 @@ html, body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Lucida Console", Monaco, monospace;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
@@ -83,7 +112,7 @@ header .separator {
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2.75rem;
-  font-family: "Inconsolata";
+  font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
   /* background-color: rgba(0,0,0,0.75); */
   max-width: 40rem;
   margin: auto;
@@ -109,7 +138,7 @@ header .separator {
   line-height: 6rem;
   font-size: 4rem;
   color: hsla(199, 38%, 90%, 0.75);
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Lucida Console", Monaco, monospace;
   font-weight: 500;
 }
 
@@ -178,7 +207,7 @@ header .separator {
 }
 
 .item .subtext {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", "Lucida Console", Monaco, monospace;
   font-weight: 500;
   font-size: 1.5rem;
   color: rgba(148, 188, 207, 0.67);
@@ -367,7 +396,8 @@ main {
 }
 h1 {
 /*   font-family: "Source Code Pro", "Courier New", Courier, monospace; */
-  font-family: "Inconsolata";
+
+font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
   /* font-family: "Roboto Mono"; */
   font-size: 2.5rem;
   line-height: 3rem;
@@ -385,7 +415,7 @@ h2 {
   color: rgba(255,255,255,0.5);
   color: hsla(199, 38%, 90%, 0.75);
   margin: 0;
-  font-family: "Inconsolata";
+  font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
   font-weight: bold;
   /* font-size: 1.5rem; */
 }
@@ -438,8 +468,8 @@ h2 {
 }
  */
 p {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
-  font-family: "Roboto Mono";
+  /* font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif; */
+  /* font-family: "Roboto Mono"; */
   font-weight: 400;
   font-size: 1rem;
   line-height: 2rem;
