@@ -260,16 +260,19 @@ nav .background-tiles {
 .background-anchored {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
+/*   left: 50%;
   margin-left: -325px;
   width: 650px;
-
-  /* height: 2166px; */
-  /* background-size: auto 2166px; */
-  /* background-repeat: repeat-y; */
-  /* background-position: center top; */
-  /* background-image: url('blurred-background-tall-narrow-fix.jpg'); */
-  /* background-color: rgb(21, 23, 24); */
+  height: 2166px;
+ */
+  width: 100%;
+  height: 100%;
+  background-size: auto 722px;
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-image: url('background.jpg');
+/*   background-color: rgb(21, 23, 24); */
   z-index: inherit;
   pointer-events: none;
 }
@@ -315,16 +318,19 @@ nav .background-tiles {
 .landing-background-anchored {
   position: fixed;
   top: 0;
-  left: 50%;
-  margin-left: -310px;
-  width: 620px;
+  left: 0;
+/*   left: 50%; */
+/*   margin-left: -310px; */
+/*   width: 620px; */
+/*   height: 2166px; */
 
-  /* height: 2166px; */
-  /* background-image: url('header-tall-narrow.png');
+  width: 100%;
+  height: 100%;
+  background-image: url('header.png');
   background-color: rgb(21, 23, 24);
-  background-size: auto 2166px;
+  background-size: auto 722px;
   background-repeat: repeat-y;
-  background-position: 50% 0; */
+  background-position: top center;
 }
 .landing-background-anchored {
 /*   position: absolute; */
