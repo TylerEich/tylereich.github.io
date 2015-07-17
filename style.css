@@ -88,6 +88,7 @@ header {
   overflow: hidden;
 
   z-index: 3;
+  background-color: rgb(21, 23, 24);
 }
 
 nav {
@@ -136,7 +137,7 @@ header .separator {
 }
 
 .main-statement {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 .main-statement h1 {
   flex-basis: 100%;
