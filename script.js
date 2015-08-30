@@ -1,5 +1,7 @@
 var KEYSTROKE_DELAY = 100;
 
+Chart.defaults.global.responsive = true;
+
 // Syntax sugar. I hate typing fn.bind( null, ... )
 function bond() {
   var args = Array.prototype.slice.call( arguments );
@@ -43,8 +45,54 @@ function beginTyping() {
       tyler.classList.add( 'enter' );
     });
 }
-if ( document.readyState !== 'loading' ) {
+
+function loadGraph() {
+  var data = [
+        {
+            value: 101,
+            label: "JavaScript",
+            color: "#607D8B ",
+//             highlight: "rgba(220,220,220,0.75)",
+        }, {
+            value: 43,
+            label: "Angular",
+            color: "#78909C",
+//             highlight: "rgba(220,220,220,0.75)",
+        }, {
+            value: 19,
+            label: "jQuery",
+            color: "#90A4AE",
+//             highlight: "rgba(220,220,220,0.75)",
+        }, {
+            value: 18,
+            label: "Google Maps",
+            color: "#B0BEC5",
+//             highlight: "rgba(220,220,220,0.75)",
+        }, {
+            value: 15,
+            label: "CSS",
+            color: "#CFD8DC",
+//             highlight: "rgba(220,220,220,0.75)",
+        }
+    ];
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myNewChart = new Chart(ctx).Doughnut(data, {
+    barShowStroke: false,
+    animationEasing: 'easeOutQuint',
+    animateScale: true,
+    animationSteps : 180,
+    percentageInnerCutout: 62,
+    segmentShowStroke: false
+});
+}
+
+function init() {
   beginTyping();
+//   loadGraph();
+}
+
+if ( document.readyState !== 'loading' ) {
+  init();
 } else {
-  window.addEventListener( 'DOMContentLoaded', beginTyping );
+  window.addEventListener( 'DOMContentLoaded', init );
 }
