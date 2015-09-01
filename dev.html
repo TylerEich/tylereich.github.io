@@ -7,14 +7,21 @@
     <link rel="icon" type="image/png" href="favicon-dev.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <script src="js/Chart.Core.js">
-</script>
-    <script src="js/Chart.Doughnut.js">
-</script>
-    <script src="Promise.min.js">
-</script>
-    <script src="script.js">
-</script>
+    <script>
+      var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
+      if ( !is_chrome ) {
+        var s = document.createElement( 'script' );
+        s.type = 'text/javascript';
+//         s.async = true;
+        s.src = 'js/prefixfree.min.js'
+        document.getElementsByTagName( 'head' )[ 0 ].appendChild( s );
+      }
+    </script>
+    <script src="js/Chart.Core.js"></script>
+    <script src="js/Chart.Doughnut.js"></script>
+    <script src="Promise.min.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
