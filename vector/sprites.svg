@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" media="none" onload="if(media!='all')media='all'">
-  <head>
-    <title>Tyler Eich</title>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="favicon-dev.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
-    <script src="js/Chart.Core.js">
-</script>
-    <script src="js/Chart.Doughnut.js">
-</script>
-    <script src="Promise.min.js">
-</script>
-    <script src="script.js">
-</script>
-  </head>
-
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="angular" viewBox="0 0 64 64">
   	<path d="M31.904,-0 L62.095,10.409 L57.356,49.859 L31.936,64 L6.645,50.048 L1.905,10.597 L31.904,-0 z M31.834,5.436 L31.833,5.437 L31.833,5.436 L31.833,5.437 L13.286,46.853 L20.203,46.725 L23.922,37.388 L31.834,37.388 L31.852,37.38 L40.545,37.388 L44.617,46.855 L51.236,46.978 L31.835,5.438 L31.834,5.436 z M31.883,18.716 L38.148,31.871 L32.135,31.871 L31.833,31.861 L26.363,31.861 L31.883,18.716 z"/>
   </symbol>
@@ -52,171 +32,22 @@
   <symbol id="stack-overflow" viewBox="0 0 64 64">
   	<path d="M40.036,50.036 L40.036,55.429 L14.786,55.464 L14.786,50.071 z M48.643,37.679 L48.643,62.714 L48.607,63.964 L48.607,64 L8.179,64 L6.929,63.964 L6.893,63.964 L6.893,37.679 L11.214,37.679 L11.214,59.75 L44.357,59.75 L44.357,37.679 L48.643,37.679 z M15.5,40.821 L40.643,43.143 L40.179,48.5 L15,46.179 z M17.929,29.536 L42.321,36.071 L40.929,41.286 L16.536,34.75 z M23.75,17.071 L45.5,29.929 L42.75,34.571 L21,21.714 z M36.607,5.25 L50.821,26.143 L46.393,29.179 L32.143,8.321 z M52.786,-0 L57.107,24.893 L51.786,25.821 L47.464,0.929 z"/>
   </symbol>
+  <symbol id="" viewBox="0 0 64 64">
+  	
+  </symbol>
+  <symbol id="" viewBox="0 0 64 64">
+  	
+  </symbol>
+  <symbol id="" viewBox="0 0 64 64">
+  	
+  </symbol>
+  <symbol id="" viewBox="0 0 64 64">
+  	
+  </symbol>
+  <symbol id="" viewBox="0 0 64 64">
+  	
+  </symbol>
   <symbol id="twitter" viewBox="0 0 64 64">
     <path d="M64,12.183 Q61.279,16.162 57.421,18.964 Q57.462,19.533 57.462,20.67 Q57.462,25.949 55.919,31.208 Q54.376,36.467 51.228,41.299 Q48.081,46.132 43.736,49.848 Q39.391,53.563 33.259,55.777 Q27.127,57.99 20.142,57.99 Q9.137,57.99 0,52.102 Q1.421,52.264 3.168,52.264 Q12.305,52.264 19.452,46.66 Q15.188,46.579 11.817,44.041 Q8.447,41.503 7.188,37.563 Q8.528,37.766 9.665,37.766 Q11.411,37.766 13.117,37.32 Q8.569,36.386 5.584,32.792 Q2.599,29.198 2.599,24.447 L2.599,24.284 Q5.36,25.827 8.528,25.949 Q5.848,24.162 4.264,21.279 Q2.68,18.396 2.68,15.025 Q2.68,11.452 4.467,8.406 Q9.381,14.457 16.426,18.091 Q23.472,21.726 31.513,22.132 Q31.188,20.589 31.188,19.127 Q31.188,13.685 35.025,9.848 Q38.863,6.01 44.305,6.01 Q49.99,6.01 53.888,10.152 Q58.315,9.299 62.213,6.985 Q60.711,11.655 56.447,14.213 Q60.223,13.807 64,12.183 z"/>
   </symbol>
 </svg>
-
-<!--     <div class="background-tiles">
-      <div class="background-anchored" src="background.jpg"></div>
-      <div class="background" src="background.jpg"></div>
-    </div>
- -->
-    <div id="landing">
-<!--       <div class="landing-background-tiles">
-        <div class="landing-background-anchored" src="header.png"></div>
-        <div class="landing-background" src="header.png"></div>
-      </div> -->
-        <span id="hello-world">&#x200B;</span>
-        <span id="tyler-eich">I’m Tyler Eich</span>
-      <div class="ellipse"></div>
-    </div>
-
-    <main id="content">
-          <h1>
-            Web Developer
-          </h1>
-        <section class="grid">
-            <div class="card grid-item">
-              <svg class="icon">
-                <use xlink:href="#js">
-              </svg>
-              <p class="subtext">
-                JavaScript
-              </p>
-            </div>
-            <div class="card grid-item">
-              <svg class="icon">
-                <use xlink:href="#angular">
-              </svg>
-              <p class="subtext">
-                Angular
-              </p>
-            </div>
-            <div class="card grid-item">
-                <svg class="icon">
-                <use xlink:href="#html">
-              </svg>
-                <p class="subtext">
-                  HTML
-                </p>
-              </div>
-              <div class="card grid-item">
-                <svg class="icon">
-                <use xlink:href="#css">
-              </svg>
-                <p class="subtext">
-                  CSS
-                </p>
-              </div>
-              <div class="card grid-item">
-                <svg class="icon">
-                <use xlink:href="#sass">
-              </svg>
-                <p class="subtext">
-                  Sass
-                </p>
-              </div>
-              <div class="card grid-item">
-                <svg class="icon">
-                <use xlink:href="#karma">
-              </svg>
-                <p class="subtext">
-                  Karma
-                </p>
-              </div>
-              <div class="card grid-item">
-                <svg class="icon">
-                <use xlink:href="#jasmine">
-              </svg>
-                <p class="subtext">
-                  Jasmine
-                </p>
-              </div>
-      </section>
-          <h1>
-            Me
-          </h1>
-
-          <div class="image-container grid">
-            <img class="avatar grid-item" src="avatar.jpg">
-          </div>
-          <section class="grid">
-              <a class="grid-item button" href="mailto:eichtyler@gmail.com?Subject=Hello%20Tyler">
-                <svg class="icon">
-                <use xlink:href="#email">
-              </svg>
-                <p class="subtext">
-                  Email
-                </p>
-              </a>
-              <a class="grid-item button" target="_blank" href="https://twitter.com/eichtyler/">
-                <svg class="icon">
-                <use xlink:href="#twitter">
-              </svg>
-                <p class="subtext">
-                  Twitter
-                </p>
-              </a>
-              
-<!--               <hr class="separator"> -->
-
-              <a class="grid-item button" target="_blank" href="http://stackoverflow.com/users/2892649/tyler-eich">
-                <svg class="icon">
-                <use xlink:href="#stack-overflow">
-              </svg>
-                <p class="subtext">
-                  Stack Overflow
-                </p>
-              </a>
-              <a class="grid-item button" target="_blank" href="https://github.com/TylerEich/tylereich.github.io">
-                <svg class="icon">
-                <use xlink:href="#github">
-              </svg>
-                <p class="subtext">
-                  GitHub
-                </p>
-              </a>
-          </section>
-
-      <footer>
-        <span>
-          Hosted with
-        </span>
-        <svg class="icon">
-          <use xlink:href="#heart">
-        </svg>
-        <span>
-          by GitHub
-        </span>
-    </footer>
-
-
-    </main>
-
-    
-    <script>
-
-
-
-// Google Analytics
-(function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-    }
-    ,
-    i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-49860512-2', 'auto');
-ga('send', 'pageview');
-</script>
-  </body>
-
-</html>

@@ -18,6 +18,27 @@ function wait( ms ) {
   });
 }
 
+function makeArray( list ) {
+  return Array.prototype.slice.call( list );
+}
+
+function isVisible( element ) {
+  var rect = element.getBoundingClientRect();
+//   console.log( rect.top, rect.bottom, window.innerHeight );
+  return rect.top <= window.innerHeight &&
+    rect.bottom >= 0;
+}
+
+// // Promise wrapper/polyfill for requestAnimationFrame
+// function nextFrame() {
+//   return new Promise( function( resolve, reject ) {
+//     if ( 'requestAnimationFrame' in window ) {
+//       requestAnimationFrame( resolve );
+//     } else {
+//       setTimeout( resolve, 0 );
+//     }
+//   });
+// }
 
 function typeChar( char, element ) {
   element.innerText += char;
@@ -38,12 +59,14 @@ function typeString( string, element, cb ) {
 
 function beginTyping() {
   var hello = document.querySelector( '#hello-world' );
-  wait( 1000 ).then( bond( typeString, 'Hello world', hello ) )
+  var promise = wait( 1000 ).then( bond( typeString, 'Hello world', hello ) )
     .then( bond( wait, 750 ) )
     .then( function() {
       var tyler = document.querySelector( '#tyler-eich' );
       tyler.classList.add( 'enter' );
     });
+  
+  return promise;
 }
 
 function loadGraph() {
@@ -86,8 +109,70 @@ function loadGraph() {
 });
 }
 
+function setClassOnNodes( className, include, nodes, delay ) {
+  if ( delay === undefined ) {
+    delay = 0;
+  }
+
+  if ( nodes.length > 1 ) {
+    nodes = makeArray( nodes );
+  } else {
+    nodes = [ nodes ];
+  }
+
+  var promise = nodes.reduce( function( promise, node ) {
+    var nextPromise = promise.then( bond( wait, delay ) )
+      .then( function() {
+        if ( include ) {
+          node.classList.add( className );
+        } else {
+          node.classList.remove( className );
+        }
+      });
+    
+    return nextPromise;
+  }, Promise.resolve() );
+
+  return promise;
+}
+
+
+function addClassToNodes( className, nodes, delay ) {
+  return setClassOnNodes( className, true, nodes, delay );
+}
+
+function removeClassFromNodes( className, nodes, delay ) {
+  return setClassOnNodes( className, false, nodes, delay );
+}
+
+function enterItems( items ) {
+  return wait( 0 ).then( function() {
+    var visible = items.filter( isVisible );
+
+    visible.reduce( function( promise, item ) {
+      return promise.then(
+        bond( addClassToNodes, 'enter', item, 100 )
+      );
+    }, Promise.resolve() );
+  });
+}
+
 function init() {
   beginTyping();
+
+  var gridItems = makeArray( document.querySelectorAll( '.grid-item' ) );
+  var headings = makeArray( document.querySelectorAll( 'h1' ) );
+
+  var items = headings.concat( gridItems );
+
+  var debounce = false;
+
+  if ( window.pageYOffset ) {
+    window.window.addEventListener( 'load', bond( enterItems, items ) );
+  }
+  
+  window.addEventListener( 'scroll', bond( enterItems, items ) );
+  window.addEventListener( 'resize', bond( enterItems, items ) );
 //   loadGraph();
 }
 
