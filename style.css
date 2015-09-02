@@ -153,7 +153,7 @@ h1:not( .enter ) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 64rem;
+  max-width: 56rem;
 }
 .stack {
   display: flex;
@@ -187,7 +187,7 @@ h1:not( .enter ) {
   margin: 1rem 0;
 }
 
-@media ( min-width: 32rem ) {
+/* @media ( min-width: 24rem ) and ( max-width: 48rem ) {
   .card {
     flex-basis: 8rem;
     margin: 2rem;
@@ -195,14 +195,14 @@ h1:not( .enter ) {
   .card .icon {
     height: 8rem;
   }
-}
-@media ( min-width: 64rem ) {
+} */
+@media ( min-width: 48rem ) {
   .card {
-    flex-basis: 12rem;
+    flex-basis: 8rem;
     margin: 2rem;
   }
   .card .icon {
-    height: 16rem;
+    height: 8rem;
   }
 }
 
