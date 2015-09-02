@@ -160,10 +160,7 @@ function enterItems( items ) {
 function init() {
   beginTyping();
 
-  var gridItems = makeArray( document.querySelectorAll( '.grid-item' ) );
-  var headings = makeArray( document.querySelectorAll( 'h1' ) );
-
-  var items = headings.concat( gridItems );
+  var items = makeArray( document.querySelectorAll( '.animate' ) );
 
   var debounce = false;
 
