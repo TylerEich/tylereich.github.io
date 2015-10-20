@@ -38,7 +38,7 @@ prefixCss()
       );
 
       html = html.replace(
-        '<script src="script.js"></script>',
+        '<script defer src="script.js"></script>',
         '<script>' + scriptJs + '</script>'
       );
 
