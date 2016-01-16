@@ -1,3 +1,20 @@
+$white: #ffffff;
+
+$primary: #607d8b;
+$primary-light: #cfd8dc;
+$primary-medium: #90a4ae;
+$primary-dark: #455a64;
+
+$accent: #ff4081;
+
+$transition-length: 250ms;
+
+@mixin animate( $multipler ) {
+  transition-property: all;
+  transition-duration: $transition-length * $multipler;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 @font-face {
     font-family: 'Lato';
     src: url('fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
@@ -56,19 +73,82 @@ html {
 }
 
 body {
-width: 100%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   position: absolute;
   top: 0;left: 0;-webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
+  background-color: $white;
   overflow-x: hidden;
 }
 
 .animate {
-  transition: all 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  @include animate( 1 );
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+  background: $primary;
+  color: $white;
+
+  @include animate( 3 );
+
+  &.hide {
+    transform: translateY( -100% );
+    opacity: 0;
+  }
+
+  nav {
+    flex: 1 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 30rem;
+
+    text-align: center;
+    font-weight: bold;
+    
+    #logo {
+/*       flex: 0.5 1 3rem; */
+      height: 3rem;
+
+      padding: 0.5rem 0;
+    }
+
+    a {
+      outline: none;
+
+      display: block;
+      height: 3rem;
+      line-height: 3rem;
+      padding: 0 1rem;
+
+      text-decoration: none;
+      color: $primary-medium;
+
+      @include animate( 2 );
+
+      &.active,
+      &.no-touch:hover {
+        color: $white;
+      }
+    }
+  }
 }
 
 #landing {
@@ -80,7 +160,7 @@ width: 100%;
   overflow: hidden;
 }
 #greeting {
-  background-color: #607D8B;
+  background-color: $primary;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -95,8 +175,9 @@ width: 100%;
   font-size: 16vw;
   line-height: 20vw;
   white-space: pre;
-  color: #FFFFFF;
-  transition: all 750ms cubic-bezier(0.23, 1, 0.32, 1);
+  color: $white;
+  
+  @include animate( 3 );
 }
 #hello-world:after {
   content: '';
@@ -106,14 +187,15 @@ width: 100%;
   will-change: opacity;
 }
 #tyler-eich {
-  color: #CFD8DC;
+  color: $primary-light;
   white-space: pre;
   line-height: 16vw;
   font-size: 10vw;
   font-weight: 700;
-  transition: all 750ms cubic-bezier(0.23, 1, 0.32, 1);
+  
+  @include animate( 3 );
 }
-#tyler-eich:not(.enter) {
+#tyler-eich.hide {
   transform: translateY( 5vh );
   opacity: 0;
 }
@@ -131,7 +213,7 @@ width: 100%;
 .ellipse {
   position: relative;
   top: -5vw;
-  background: #607D8B;
+  background: $primary;
   left: -5%;
   width: 110%;
   height: 10vw;
@@ -143,7 +225,7 @@ width: 100%;
 
 
 #content {
-  padding: 2rem;
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -151,21 +233,31 @@ width: 100%;
 }
 
 .accent {
-  color: #FF4081;
-  fill: #FF4081;
+  color: $accent;
+  fill: $accent;
 }
 
 h1 {
   font-size: 4rem;
   line-height: 5rem;
   font-weight: 700;
-  color: #455A64;
+  color: $primary-dark;
   margin: 6rem 0 1.5rem;
   text-align: center;
   /* margin-bottom: 1.5rem; */
 }
-h1:not( .enter ) {
+h1.animate:not( .enter ) {
   transform: scale( 1.6 );
+  opacity: 0;
+}
+
+h2 {
+  color: $primary-medium;
+  font-size: 1.8rem;
+  text-align: center;
+}
+h2.animate:not( .enter ) {
+  transform: scale( 0.8 ) translateY( -100% );
   opacity: 0;
 }
 
@@ -184,30 +276,31 @@ h1:not( .enter ) {
   flex-direction: column;
   /* flex-wrap: wrap; */
   max-width: 100%;
+  margin: 1rem;
 }
 
 .card {
-  flex: 1 0 6rem;
+  flex: 1 0 8rem;
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 1rem;
   /*   min-width: 8rem; */
-/*   max-height: 12rem; */
+  /*   max-height: 12rem; */
   justify-content: center;
 }
-.card:not( .enter ) {
+.card.animate:not( .enter ) {
   transform: translateY( 3rem ) scale( 0.6 );
   opacity: 0;
 }
 
 .card .icon {
-  fill: #455A64;
+  fill: $primary-dark;
   height: 6rem;
 }
 .card .subtext {
   font-size: 1.5rem;
-  color: #727272;
+  color: rgb(45%, 45%, 45%);
   margin: 1rem 0;
 }
 
@@ -220,6 +313,11 @@ h1:not( .enter ) {
     height: 8rem;
   }
 } */
+@media ( min-width: 24rem ) and ( max-width: 48rem ) {
+  .grid {
+    width: 24rem;
+  }
+}
 @media ( min-width: 48rem ) {
   .card {
     flex-basis: 8rem;
@@ -233,7 +331,7 @@ h1:not( .enter ) {
 .image-container {
   justify-content: center;
   /* flex-basis: 15rem; */
-  margin: 1rem;
+  /* margin: 1rem; */
   display: flex;
   align-items: center;
 }
@@ -249,16 +347,16 @@ h1:not( .enter ) {
   margin: 0.5rem 0;
   width: 100%;
   height: 3rem;
-  background: #FF4081;
+  background: $accent;
   border-radius: 0.5rem;
-  fill: #FFFFFF;
-  color: #FFFFFF;
+  fill: $white;
+  color: $white;
   text-decoration: none;
-  /* border: 1px solid #CFD8DC; */
+  /* border: 1px solid $primary-light; */
   cursor: pointer;
   will-change: background-color;
 }
-.button:not( .enter ) {
+.button.animate:not( .enter ) {
   transform: translateX( -3rem );
   opacity: 0;
 }
@@ -276,11 +374,11 @@ h1:not( .enter ) {
 /*   margin: 0.5rem; */
   width: 2rem;
   /* height: 5rem; */
-/*   background: #FF4081; */
-/*   fill: #FFFFFF; */
-/*   color: #FF4081; */
+/*   background: $accent; */
+/*   fill: $white; */
+/*   color: $accent; */
 /*   text-decoration: none; */
-  /* border: 1px solid #CFD8DC; */
+  /* border: 1px solid $primary-light; */
 /*   cursor: pointer; */
 /*   will-change: background-color; */
 }
@@ -304,7 +402,7 @@ h1:not( .enter ) {
 .label {
   opacity: 1;
 }
-.label:not( .enter ) {
+.label.animate:not( .enter ) {
   opacity: 0;
   transform: translateX( -2rem );
 }
@@ -322,20 +420,28 @@ h1:not( .enter ) {
    align-self: flex-start;
    border-radius: 50%;
    /* margin-bottom: 2rem; */
-   /* border: 1px solid #90A4AE; */
+   /* border: 1px solid $primary-medium; */
    opacity: 1;
 }
 
-.avatar:not( .enter ) {
+.avatar.animate:not( .enter ) {
   opacity: 0;
   transform: scale( 1.1 );
 }
 
+.bio {
+  max-width: 20rem;
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+  line-height: 1.6rem;
+  text-align: center;
+}
+
 footer {
-  color: #CFD8DC;
-  fill: #CFD8DC;
+  color: $primary-light;
+  fill: $primary-light;
   z-index: 3;
-  margin-top: 2rem;
+  margin: 2rem;
   flex: 0;
 }
 
