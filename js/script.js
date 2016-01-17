@@ -110,13 +110,12 @@ function enterItems( items ) {
 
 
 function animatePageLanding() {
-
   function typeChar( char, element ) {
-    element.innerText += char;
+    element.textContent += char;
   }
 
 
-  function typeString( string, element, cb ) {
+  function typeString( string, element ) {
     var chars = string.split( '' );
 
     var promise = chars.reduce( function( promise, char ) {
@@ -132,6 +131,7 @@ function animatePageLanding() {
 
 
   var hello = document.querySelector( '#hello-world' );
+  console.log( hello );
   var promise = wait( 500 ).then( bind( typeString, 'Hello world', hello ) )
     .then( bind( wait, 750 ) )
     .then( function() {
