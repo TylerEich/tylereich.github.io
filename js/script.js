@@ -54,13 +54,11 @@ function setClassOnNodes( className, include, nodes, delay ) {
   }
 
   nodes = makeArray( nodes );
-  console.log( nodes );
 
   var promise = nodes.reduce( function( promise, node ) {
     var nextPromise = promise.then( bind( wait, delay ) )
       .then( function() {
         if ( include ) {
-          console.log( className, node );
           node.classList.add( className );
         } else {
           node.classList.remove( className );
@@ -75,7 +73,6 @@ function setClassOnNodes( className, include, nodes, delay ) {
 
 
 function addClassToNodes( className, nodes, delay ) {
-  // console.log( 'adding class ' + className + ' to ', nodes )
   return setClassOnNodes( className, true, nodes, delay );
 }
 
@@ -94,8 +91,6 @@ function enterItems( items ) {
 
     items.splice( 0, Number.MAX_SAFE_INTEGER );
     items.splice.apply( items, [ 0, 0 ].concat( invisible ) );
-
-    console.log( items.length, items );
 
     return visible.reduce( function( promise, item ) {
       return promise.then(
@@ -131,7 +126,6 @@ function animatePageLanding() {
 
 
   var hello = document.querySelector( '#hello-world' );
-  console.log( hello );
   var promise = wait( 500 ).then( bind( typeString, 'Hello world', hello ) )
     .then( bind( wait, 750 ) )
     .then( function() {
