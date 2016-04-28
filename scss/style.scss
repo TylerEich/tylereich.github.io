@@ -15,29 +15,29 @@ $transition-length: 250ms;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-@font-face {
-    font-family: 'Lato';
-    src: url('fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
-    src: url('fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
-         url('fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
-         url('fonts/LatoLatin-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('fonts/LatoLatin-Bold.eot'); /* IE9 Compat Modes */
-    src: url('fonts/LatoLatin-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/LatoLatin-Bold.woff2') format('woff2'), /* Modern Browsers */
-         url('fonts/LatoLatin-Bold.woff') format('woff'), /* Modern Browsers */
-         url('fonts/LatoLatin-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-}
+// @font-face {
+//     font-family: 'Lato';
+//     src: url('fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+//     src: url('fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//          url('fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
+//          url('fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+//          url('fonts/LatoLatin-Regular.ttf') format('truetype');
+//     font-style: normal;
+//     font-weight: normal;
+//     text-rendering: optimizeLegibility;
+// }
+//
+// @font-face {
+//     font-family: 'Lato';
+//     src: url('fonts/LatoLatin-Bold.eot'); /* IE9 Compat Modes */
+//     src: url('fonts/LatoLatin-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//          url('fonts/LatoLatin-Bold.woff2') format('woff2'), /* Modern Browsers */
+//          url('fonts/LatoLatin-Bold.woff') format('woff'), /* Modern Browsers */
+//          url('fonts/LatoLatin-Bold.ttf') format('truetype');
+//     font-style: normal;
+//     font-weight: bold;
+//     text-rendering: optimizeLegibility;
+// }
 
 @keyframes blink {
   0% {
@@ -77,7 +77,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "Monsterrat", "Helvetica Neue", "Helvetica", sans-serif;
   position: absolute;
   top: 0;left: 0;-webkit-font-smoothing: antialiased;
   background-color: $white;
@@ -116,13 +116,13 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
     width: 100%;
     max-width: 30rem;
 
     text-align: center;
     font-weight: bold;
-    
+
     #logo {
 /*       flex: 0.5 1 3rem; */
       height: 3rem;
@@ -176,7 +176,7 @@ header {
   line-height: 20vw;
   white-space: pre;
   color: $white;
-  
+
   @include animate( 3 );
 }
 #hello-world:after {
@@ -192,7 +192,7 @@ header {
   line-height: 16vw;
   font-size: 10vw;
   font-weight: 700;
-  
+
   @include animate( 3 );
 }
 #tyler-eich.hide {
@@ -308,7 +308,7 @@ h2.animate:not( .enter ) {
   .card {
     flex-basis: 8rem;
     margin: 2rem;
-  } 
+  }
   .card .icon {
     height: 8rem;
   }

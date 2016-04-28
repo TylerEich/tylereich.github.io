@@ -1,0 +1,149 @@
+doctype html
+html(lang="en")
+  include partials/head.jade
+  body
+    include partials/svg-symbols.jade
+    header.hide
+      nav.animate
+        a.animate(href='#')
+          img#logo(src='images/logo.svg')
+        a.link.no-touch(href='#websites') Websites
+        a.link.no-touch(href='#code') Code
+        a.link.no-touch(href='#me') Me
+    #landing
+      section#greeting
+        span#hello-world &ZeroWidthSpace;
+        span#tyler-eich.hide I&rsquo;m Tyler Eich
+      .ellipse
+    main#content
+      section#websites
+        h1.animate
+          | Websites
+        h2.animate
+          | I make them
+        section.grid
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#responsive')
+            p.subtext
+              | Responsive
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#stopwatch')
+            p.subtext
+              | Fast
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#clean')
+            p.subtext
+              | Clean
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#optimized')
+            p.subtext
+              | Optimized
+      // #websites
+      section#code
+        h1.animate
+          | Code
+        h2.animate
+          | I do that too
+        section.grid
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#js')
+            p.subtext
+              | JavaScript
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#angular')
+            p.subtext
+              | Angular
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#nodejs')
+            p.subtext
+              | Node
+          .card.grid-item.animate
+            svg.icon
+              use(xlink:href='#devtools')
+            p.subtext
+              | DevTools
+      section#me
+        h1.animate
+          | Me
+        .image-container
+          img.avatar.animate(src='images/avatar.jpg')
+        //
+          <p class="bio">
+          I’m a self-taught JavaScript web developer.
+          I’ve been writing JavaScript and developing websites since 2012.
+          I’m
+          </p>
+        section.stack
+          a.stack-item.button.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler')
+            svg.icon
+              use(xlink:href='#email')
+            p.label.animate
+              | Email
+          a.stack-item.button.animate(target='_blank', href='https://twitter.com/eichtyler/')
+            svg.icon
+              use(xlink:href='#twitter')
+            p.label.animate
+              | Twitter
+          a.stack-item.button.animate(target='_blank', href='http://stackoverflow.com/users/2892649/tyler-eich')
+            svg.icon
+              use(xlink:href='#stack-overflow')
+            p.label.animate
+              | Stack Overflow
+          a.stack-item.button.animate(target='_blank', href='https://github.com/TylerEich/tylereich.github.io')
+            svg.icon
+              use(xlink:href='#github')
+            p.label.animate
+              | GitHub
+      // #me
+      //
+        <h2 class="animate">
+        Code Quality
+        </h2>
+        <section class="grid">
+        <div class="card grid-item animate">
+        <svg class="icon">
+        <use xlink:href="#karma">
+        </svg>
+        <p class="subtext">
+        Karma
+        </p>
+        </div>
+        <div class="card grid-item animate">
+        <svg class="icon">
+        <use xlink:href="#gauge">
+        </svg>
+        <p class="subtext">
+        Speed
+        </p>
+        </div>
+        <div class="card grid-item animate">
+        <svg class="icon">
+        <use xlink:href="#git">
+        </svg>
+        <p class="subtext">
+        Git
+        </p>
+        </div>
+        <div class="card grid-item animate">
+        <svg class="icon">
+        <use xlink:href="#checklist">
+        </svg>
+        <p class="subtext">
+        Testing
+        </p>
+        </div>
+        </section>
+      footer
+        span
+          | Hosted with
+        svg.icon
+          use(xlink:href='#heart')
+        span
+          | by GitHub
