@@ -1,0 +1,27 @@
+{
+  "name": "tylereich-com",
+  "version": "1.0.0",
+  "description": "Personal website for Tyler Eich",
+  "main": "build.js",
+  "dependencies": {
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
+    "fastdom": "^1.0.1",
+    "tsc": "^1.20150623.0",
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerEich/tylereich.github.io.git"
+  },
+  "author": "Tyler Eich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerEich/tylereich.github.io/issues"
+  },
+  "homepage": "https://github.com/TylerEich/tylereich.github.io#readme"
+}
