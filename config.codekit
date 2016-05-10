@@ -163,15 +163,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/jade\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -268,15 +259,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/animation.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scripts\/elements.ts": {
 		"createDeclarationFile": 0,
@@ -288,15 +279,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/elements.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scripts\/fastdom.ts": {
 		"createDeclarationFile": 0,
@@ -308,15 +299,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/fastdom.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scripts\/promise.ts": {
 		"createDeclarationFile": 0,
@@ -328,15 +319,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/promise.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scripts\/script.ts": {
 		"createDeclarationFile": 0,
@@ -348,15 +339,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/script.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scripts\/utils.ts": {
 		"createDeclarationFile": 0,
@@ -368,15 +359,15 @@
 		"jsxMode": 0,
 		"minifyOutput": 1,
 		"moduleResolutionType": 0,
-		"moduleType": 0,
+		"moduleType": 2,
 		"noImplicitAny": 0,
 		"outputAbbreviatedPath": "\/js\/utils.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"preserveConstEnums": 0,
-		"removeComments": 0,
+		"removeComments": 1,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 2
+		"targetECMAVersion": 1
 		},
 	"\/scss\/style.scss": {
 		"createSourceMap": 1,
@@ -1065,7 +1056,7 @@
 	"stylusImportCSS": 0,
 	"stylusOutputStyle": 0,
 	"stylusResolveRelativeURLS": 0,
-	"typescriptAutoOutputPathEnabled": 0,
+	"typescriptAutoOutputPathEnabled": 1,
 	"typescriptAutoOutputPathFilenamePattern": "*.js",
 	"typescriptAutoOutputPathRelativePath": "\/js",
 	"typescriptAutoOutputPathReplace1": "",
@@ -1076,12 +1067,12 @@
 	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 1,
 	"typescriptModuleResolutionType": 0,
-	"typescriptModuleType": 0,
+	"typescriptModuleType": 2,
 	"typescriptNoImplicitAny": 0,
 	"typescriptPreserveConstEnums": 0,
-	"typescriptRemoveComments": 0,
+	"typescriptRemoveComments": 1,
 	"typescriptSuppressImplicitAnyIndexErrors": 0,
-	"typescriptTargetECMAVersion": 2,
+	"typescriptTargetECMAVersion": 1,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
