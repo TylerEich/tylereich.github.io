@@ -2,18 +2,19 @@ $white: #ffffff;
 
 // $light: 300;
 $normal: 400;
-$bold: 500;
+$bold: 600;
 
 $primary-light: #CED6DB;
 $primary: #607D8B;
 $primary-dark: #445963;
 $highlight: #445963;
 
-$accent: #FF5722;
+$accent: #FF6231;
+// $accent: #ff7145;
 $black: #333333;
 $gray: #727272;
 
-$transition-length: 250ms;
+$transition-length: 300ms;
 
 @mixin animate( $multipler: 1 ) {
   transition-property: all;
@@ -21,19 +22,35 @@ $transition-length: 250ms;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+// @font-face {
+//     font-family: 'Ubuntu';
+//     src: url('fonts/ubuntu-regular.woff') format('woff');
+//     font-style: normal;
+//     font-weight: 400;
+//     text-rendering: optimizeLegibility;
+// }
+
+// @font-face {
+//     font-family: 'Ubuntu';
+//     src: url('fonts/ubuntu-medium.woff') format('woff');
+//     font-style: normal;
+//     font-weight: 500;
+//     text-rendering: optimizeLegibility;
+// }
+
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-regular.woff') format('woff');
+    font-family: 'Hind';
+    src: url('/fonts/hind-regular-webfont.woff') format('woff');
     font-style: normal;
     font-weight: 400;
     text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-medium.woff') format('woff');
+    font-family: 'Hind';
+    src: url('/fonts/hind-semibold-webfont.woff') format('woff');
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     text-rendering: optimizeLegibility;
 }
 
@@ -80,9 +97,14 @@ body {
   padding: 0;
   height: 100%;
   max-width: 100%;
-  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'Hind', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   background-color: $white;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -116,7 +138,7 @@ header {
 
     width: 100%;
     max-width: 60rem;
-    letter-spacing: 0.05rem;
+    // letter-spacing: 0.05rem;
 
     text-align: center;
     font-weight: $bold;
@@ -136,7 +158,6 @@ header {
       line-height: 3rem;
       padding: 0 1rem;
 
-      text-decoration: none;
       color: $primary-light;
 
       @include animate( 2 );
@@ -226,6 +247,10 @@ header {
 }
 
 
+.parallax {
+  @include animate;
+  max-width: 100%;
+}
 
 
 #content {
@@ -276,7 +301,7 @@ h2 {
   text-align: center;
   font-weight: $normal;
   margin: 1rem 0;
-  letter-spacing: 0.125rem;
+  // letter-spacing: 0.125rem;
 
   &.animate:not( .enter ) {
     transform: scale( 1.2 );
@@ -356,20 +381,47 @@ p {
 }
 
 
+.screenshot-container {
+  @media (min-width: 0) {
+    padding: 1rem;
+  }
+  @media (min-width: 30rem) {
+    padding: 2rem;
+  }
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+}
+
 .screenshot {
   @include animate;
   @extend .grid-item;
 
   cursor: pointer;
-  width: 100%;
-  max-width: 30rem;
+  // width: 100%;
+  
+  // min-width: 20rem;
+  // margin: 2rem;
 
-  display: flex;
   // max-width: 20rem;
+  border-radius: 0.25rem;
 
-  @media (min-width: 30rem) {
-    flex-basis: calc( 50% - 2rem );
+  // box-shadow: 0 0.125rem 0.25rem transparentize($black, 0.5);
+
+  &.animate:not( .enter ) {
+    transform: translateY( 1rem ) scale( 0.9 );
+    opacity: 0;
   }
+
+  &:hover {
+    // transform: translateY( -0.5rem );
+    // box-shadow: 0 0.5rem 1rem transparentize($black, 0.5);
+    transform: scale( 1.025 );
+  }
+
+  // @media (min-width: 30rem) {
+  //   flex-basis: calc( 50% - 2rem );
+  // }
 
   figure {
     @include animate( 2 );
@@ -379,38 +431,25 @@ p {
 
     margin: 0;
     padding: 0;
-    // border-radius: 0.25rem;
+    border-radius: inherit;
 
-    background: $accent;
+    background: $white;
+    // margin: 2rem;
+    border: 0.125rem solid $primary-light;
+    border-radius: 0.25rem;
+
+    background: $primary-dark;
     margin: 2rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0.125rem 0.25rem transparentize($black, 0.5);
-
-    &.animate:not( .enter ) {
-      transform: translateY( 1rem ) scale( 0.9 );
-      opacity: 0;
-    }
 
     &:hover {
-      transform: translateY( -0.5rem );
-      box-shadow: 0 0.5rem 1rem transparentize($black, 0.5);
+      // transform: scale( 1.1 );
     }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      // box-shadow: inset 0 0 0 0.125rem transparentize($black, 0.5);
-    }
-
 
     img {
       @include animate;
-
+      
       width: 100%;
       display: block;
 
@@ -418,15 +457,53 @@ p {
         opacity: 0;
       }
     }
-    figcaption {
-      width: 100%;
-      margin: 0;
 
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient( top, transparent, transparentize($black, 0.25));
-      color: $white;
-      padding: 0.5rem;
+    figcaption {
+      .site-title {
+        color: $primary-dark;
+        font-weight: $bold;
+        font-size: 1.25rem;
+        padding-bottom: 0.25rem;
+        text-align: center;
+      }
+      .site-description {
+        color: $black;
+        padding-bottom: 0.25rem;
+      }
+      .attribution {
+        padding-top: 0.25rem;
+        font-weight: $bold;
+        color: $gray;
+        text-align: center;
+
+        a {
+          color: inherit;
+          @include animate;
+        }
+
+        &:hover {
+          color: $primary-dark;
+        }
+
+        a:visited {
+          color: inherit;
+        }
+
+        &:before {
+          content: 'via ';
+          font-weight: normal;
+          color: inherit;
+        }
+      }
+      // width: 100%;
+      // margin: 0;
+
+      // position: absolute;
+      // bottom: 0;
+      background: $primary-light;
+      // color: $primary-light;
+      border-top: 0.125rem solid $primary-light;
+      padding: 1rem;
     }
   }
 }
@@ -484,6 +561,7 @@ button,
   margin: 1rem 0;
 
   text-align: center;
+  line-height: 1;
   // height: 3rem;
   font-size: 1.5rem;
   font-weight: $bold;
@@ -493,10 +571,8 @@ button,
   border-radius: 0.25rem;
   fill: $white;
   color: $white;
+  // color: $accent;
   font-family: inherit;
-  text-decoration: none;
-  border: none;
-  box-shadow: 0 0.125rem 0.25rem transparentize($black, 0.5);
   cursor: pointer;
   will-change: background-color;
 
@@ -509,6 +585,7 @@ button,
     width: 2rem;
     height: 2rem;
   }
+
   .label {
     line-height: 2rem;
     height: 2rem;
@@ -524,9 +601,12 @@ button,
 
   }
   &:hover {
-    // background-color: lighten($accent, 1%);;
-    transform: translateY( -0.5rem );
-    box-shadow: 0 0.5rem 1rem transparentize($black, 0.5);
+    // background-color: $accent;
+    // fill: $white;
+    // color: $white;
+    // transform: translateY( -0.5rem );
+    transform: scale( 1.025 );
+    // box-shadow: 0 0.5rem 1rem transparentize($black, 0.5);
   }
 
 }
@@ -546,10 +626,12 @@ button,
 }
 
 .bio {
-  margin: 1rem 2rem;
+  max-width: 20rem;
+  margin: auto;
+  padding: 1rem;
   padding: 0.5rem;
   line-height: 1.6rem;
-  text-align: center;
+  // text-align: center;
 }
 
 footer {
@@ -559,7 +641,6 @@ footer {
   text-align: center;
 
   a {
-    text-decoration: none;
     color: inherit;
     fill: inherit;
   }

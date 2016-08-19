@@ -1,7 +1,7 @@
 import { Promise } from "./promise";
 import { bind, wait, raf, makeArray } from "./utils";
 import { isVisible, isActive, setClassOnNodes, removeClassFromNodes, addClassToNodes } from "./elements";
-import { enterItems, animatePageLanding, parallax, followNav, slideToItem } from "./animation";
+import { enterItems, animatePageLanding, followNav, slideToItem } from "./animation";
 
 
 function setTouchClass() {
@@ -52,7 +52,7 @@ function init() {
   function update() {
     boundEnterItems();
     boundFollowNav();
-    parallax( coords );
+    // parallax( coords );
 
     animationIsTicking = false;
   }
@@ -120,9 +120,10 @@ function init() {
     });
   } else {
     window.addEventListener( "mousemove", e => {
-      const x = e.screenX;
-      const y = e.screenY;
+      const x = e.screenX - window.screenX;
+      const y = e.screenY - window.screenY;
       coords = { x, y };
+      // console.log( coords );
       requestTick();
     });
   }

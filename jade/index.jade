@@ -1,153 +1,151 @@
 doctype html
-html(lang="en")
-  include partials/head
-  body
-    include partials/svg-symbols
-    mixin svg-icon( id )
-      svg.icon
-        use(xlink:href=`#${id}`)
-    mixin figure( url, caption )
-      figure.animate
-        img.loading(src="#{url}", alt="#{caption}", onload="this.classList.toggle( 'loading' )")
-        figcaption= caption
-    
-    header.hide
-      nav.animate
-        a.link.animate(href='#landing')
-          img#logo(src='images/logo.svg')
-        a.link.no-touch(href='#websites') Websites
-        a.link.no-touch(href='#code') Code
-        a.link.no-touch(href='#me') Me
-    
-    article#landing
-      section#greeting
-        span#hello-world &ZeroWidthSpace;
-        span#tyler-eich.hide I&rsquo;m Tyler Eich
-      .ellipse
-    
-    main#content
-      article#websites
-        h1.animate
-          | Websites
-        h2.animate
-          | I make them
-        //- h2.animate
-        //-   | I make them
-        section.grid
-          .card.animate
-            +svg-icon('responsive')
-            h3 Responsive
-            p
-              strong Designed to adapt.
-              br
-              | Visitors can expect a first-class experience regardless of what device they're using.
-          .card.animate
-            +svg-icon('fast')
-            h3 Fast
-            p 
-              strong Milliseconds matter.
-              br
-              | Hold attention and improve user experience with performant, optimized architecture.
-          .card.animate
-            +svg-icon('clean')
-            h3 Clean
-            p
-              strong Content is king.
-              br
-              | Thoughtful designs focus attention on the message, not the surrounding layout.
-          .card.animate
-            +svg-icon('search')
-            h3 Discoverable
-            p
-              strong Built to be found.
-              br
-              | Extra information behind the scenes helps search engines know where to look.
-        h2.animate
-          | Sites I&rsquo;ve built
-        section.gallery
-          a.parallax.screenshot(href="http://yourmovementmatters.com")
-            +figure( "images/screenshots/yourmovementmatters-com-small.png", "Movement Matters" )
-          //- a.parallax.screenshot
-          //-   +figure( "http://lorempixel.com/1600/900/abstract/2", "Burberry" )
-          //- a.parallax.screenshot
-          //-   +figure( "http://lorempixel.com/1600/900/abstract/3", "Cadillac" )
-          //- a.parallax.screenshot
-          //-   +figure( "http://lorempixel.com/1600/900/abstract/4", "Doolittle Electric" )
-          //- a.parallax.screenshot
-          //-   +figure( "http://lorempixel.com/1600/900/abstract/5", "Elephant Farm" )
-          //- .gallery-item
-          //-   +figure( "http://lorempixel.com/1600/900/abstract/5", "Your Website Here" )
-        section.grid
-          a.button.parallax.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler&body=Let%27s%20talk%20about%20websites')
-            | Ask about websites
-          //- .gallery-item
-          //-   +figure( "https://dummyimage.com/1600x900&text=Start+your+website", "Elephant Farm" )
+html(lang='en')
+	include partials/head
+	body
+		include partials/svg-symbols
+		mixin svg-icon( id )
+			svg.icon
+				use(xlink:href='##{id}')
+		mixin screenshot( href, src, caption )
+			a(href=href)
+				.screenshot-container
+					.screenshot
+						figure.animate
+							img.loading(src=src, alt=caption, onload='this.classList.toggle( "loading" )')
+							figcaption
+								.site-title= caption
+								block
+		
+		header.hide
+			nav.animate
+				a.link.animate(href='#landing')
+					img#logo(src='images/logo.svg')
+				a.link.no-touch(href='#websites') Websites
+				a.link.no-touch(href='#code') Code
+				a.link.no-touch(href='#me') Me
+		
+		article#landing
+			section#greeting
+				span#hello-world &ZeroWidthSpace;
+				span#tyler-eich.hide I&rsquo;m Tyler Eich
+			.ellipse
+		
+		main#content
+			article#websites
+				h1.animate
+					| Websites
+				h2.animate
+					| I make them
+				section.grid
+					.card.animate
+						+svg-icon('responsive')
+						h3 Responsive
+						p
+							strong Designed to adapt
+							br
+							| Visitors can expect a first-class experience regardless of what device they&rsquo;re using
+					.card.animate
+						+svg-icon('fast')
+						h3 Fast
+						p 
+							strong Milliseconds matter
+							br
+							| Hold attention and improve user experience with performant, optimized architecture
+					.card.animate
+						+svg-icon('clean')
+						h3 Clean
+						p
+							strong Content is king
+							br
+							| Thoughtful designs focus attention on the message, not the surrounding layout
+					.card.animate
+						+svg-icon('search')
+						h3 Discoverable
+						p
+							strong Built to be found
+							br
+							| Extra information behind the scenes helps search engines know where to look
+				h2.animate
+					| Sites I&rsquo;ve built
+				section.gallery
+					+screenshot( 'https://doolittle.enterprises', 'images/screenshots/doolittle-enterprises/small.png', 'Doolittle Enterprises' )
+						.attribution
+							a(href='https://localeye.co') Local Eye Design
+						//- p.site-description
+							| Construction and remodelling company with a focus on professionalism and customer satisfaction
+					+screenshot( 'http://yourmovementmatters.com', 'images/screenshots/yourmovementmatters-com/small.png', 'Movement Matters' )
+						//- p.site-description
+							| Motor therapy and recovery services for patients with limited mobility or special needs
+						.attribution
+							a(href='https://localeye.co') Local Eye Design
+				section.grid
+					a.button.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler&body=Let%27s%20talk%20about%20websites')
+						| Ask about websites
 
-      article#code
-        h1.animate
-          | Code
-        h2.animate
-          | I do that too
-        section.grid
-          .card.animate
-            +svg-icon('webapp')
-            h3 Web Apps
-            p
-              strong Beyond the basics.
-              br
-              | Attention to detail and user experience blur the line between native app and website.
-          .card.animate
-            +svg-icon('server')
-            h3 Servers
-            p
-              strong Behind the scenes.
-              br
-              | Rock-solid data management systems leverage NodeJS for maximum speed and reliability.
-          .card.animate
-            +svg-icon('modern')
-            h3 Modern
-            p
-              strong Ahead of the curve.
-              br
-              | Use the latest tools to optimize workflows, improve performance, and enforce best practices.
-          .card.animate
-            +svg-icon('checklist')
-            h3 Tested
-            p
-              strong Code with confidence.
-              br
-              | Automatically check and double-check to avoid embarrasing glitches and errors.
-        section.grid
-          a.button.parallax.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler&body=Let%27s%20talk%20about%20code')
-            | Ask about code
-      article#me
-        h1.animate
-          | Me
-        .image-container
-          img.avatar.animate(src='images/avatar.jpg')
-        //- section
-        //-   p I'm a 
-        section.stack
-          a.button.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler')
-            +svg-icon('email')
-            p.label.animate
-              | Email
-          a.button.animate(target='_blank', href='https://twitter.com/eichtyler/')
-            +svg-icon('twitter')
-            p.label.animate
-              | Twitter
-          a.button.animate(target='_blank', href='http://stackoverflow.com/users/2892649/tyler-eich')
-            +svg-icon('stack-overflow')
-            p.label.animate
-              | Stack Overflow
-          a.button.animate(target='_blank', href='https://github.com/TylerEich/tylereich.github.io')
-            +svg-icon('github')
-            p.label.animate
-              | GitHub
-      footer
-        a(href="https://github.com/TylerEich/tylereich.github.io")
-          | Hosted with
-          +svg-icon('heart')
-          | by GitHub
-      
-    include partials/scripts
+			article#code
+				h1.animate
+					| Code
+				h2.animate
+					| I do that too
+				section.grid
+					.card.animate
+						+svg-icon('webapp')
+						h3 Web Apps
+						p
+							strong Beyond the basics
+							br
+							| Attention to detail and user experience blur the line between native app and website
+					.card.animate
+						+svg-icon('server')
+						h3 Servers
+						p
+							strong Behind the scenes
+							br
+							| Rock-solid data management systems leverage NodeJS for maximum speed and reliability
+					.card.animate
+						+svg-icon('modern')
+						h3 Modern
+						p
+							strong Ahead of the curve
+							br
+							| Use the latest tools to optimize workflows, improve performance, and enforce best practices
+					.card.animate
+						+svg-icon('checklist')
+						h3 Tested
+						p
+							strong Code with confidence
+							br
+							| Automatically check and double-check to avoid embarrasing glitches and errors
+				section.grid
+					a.button.animate(href='mailto:me@tylereich.com?Subject=Hello%20Tyler&body=Let%27s%20talk%20about%20code')
+						| Ask about code
+			article#me
+				h1.animate
+					| Me
+				.image-container
+					img.avatar.animate(src='images/avatar.jpg')
+				section.bio
+					p I'm a freelance web developer. My code is easy for humans to read and fast for computers to crunch. I automate as much as possible to maintain high standards for software quailty.
+				section.stack
+					a.button.animate(href='mailto:Tyler%20Eich<me@tylereich.com>?Subject=Hello%20Tyler')
+						+svg-icon('email')
+						p.label.animate
+							| Email
+					a.button.animate(target='_blank', href='https://twitter.com/eichtyler/')
+						+svg-icon('twitter')
+						p.label.animate
+							| Twitter
+					a.button.animate(target='_blank', href='http://stackoverflow.com/users/2892649/tyler-eich')
+						+svg-icon('stack-overflow')
+						p.label.animate
+							| Stack Overflow
+					a.button.animate(target='_blank', href='https://github.com/TylerEich/tylereich.github.io')
+						+svg-icon('github')
+						p.label.animate
+							| GitHub
+			footer
+				p Copyright © 2016 Tyler Eich
+				a(href='https://github.com/TylerEich/tylereich.github.io')
+					| Hosted with #[+svg-icon('heart')] by GitHub
+			
+		include partials/scripts
