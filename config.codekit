@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19120",
+"creatorBuild": "19127",
 "files": {
 	"\/bower_components\/fastdom\/bower.json": {
 		"fileType": 524288,
@@ -141,27 +141,58 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/images\/screenshots\/yourmovementmatters-com-small.png": {
+	"\/images\/screenshots\/doolittle-enterprises\/large.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.4344e+06,
-		"inputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com-small.png",
-		"outputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com-small.png",
+		"initialSize": 2.72997e+06,
+		"inputAbbreviatedPath": "\/images\/screenshots\/doolittle-enterprises\/large.png",
+		"outputAbbreviatedPath": "\/images\/screenshots\/doolittle-enterprises\/large.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/screenshots\/yourmovementmatters-com.png": {
+	"\/images\/screenshots\/doolittle-enterprises\/small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 853562,
+		"inputAbbreviatedPath": "\/images\/screenshots\/doolittle-enterprises\/small.png",
+		"outputAbbreviatedPath": "\/images\/screenshots\/doolittle-enterprises\/small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/screenshots\/yourmovementmatters-com\/large.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1.88946e+06,
-		"inputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com.png",
-		"outputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com.png",
+		"inputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com\/large.png",
+		"outputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com\/large.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
+		},
+	"\/images\/screenshots\/yourmovementmatters-com\/small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.4344e+06,
+		"inputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com\/small.png",
+		"outputAbbreviatedPath": "\/images\/screenshots\/yourmovementmatters-com\/small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/jade\/index.jade": {
 		"compileDebug": 1,
@@ -370,7 +401,7 @@
 		"targetECMAVersion": 1
 		},
 	"\/scss\/style.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
@@ -1030,8 +1061,8 @@
 	"sassDebugStyle": 0,
 	"sassDecimalPrecision": 10,
 	"sassOutputStyle": 0,
-	"sassUseLibsass": 0,
-	"shouldRunAutoprefixer": 0,
+	"sassUseLibsass": 1,
+	"shouldRunAutoprefixer": 1,
 	"shouldRunBless": 0,
 	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs, node_modules",
 	"slimAutoOutputPathEnabled": 1,

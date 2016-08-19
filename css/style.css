@@ -58,9 +58,12 @@ body {
   padding: 0;
   height: 100%;
   max-width: 100%;
-  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #ffffff; }
+
+a {
+  text-decoration: none; }
 
 header {
   position: fixed;
@@ -132,7 +135,6 @@ header {
       height: 3rem;
       line-height: 3rem;
       padding: 0 1rem;
-      text-decoration: none;
       color: #CED6DB;
       -webkit-transition-property: all;
       transition-property: all;
@@ -286,8 +288,7 @@ h2 {
   font-size: 2.5rem;
   text-align: center;
   font-weight: 400;
-  margin: 1rem 0;
-  letter-spacing: 0.125rem; }
+  margin: 1rem 0; }
   h2.animate:not(.enter) {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -418,7 +419,8 @@ p {
     position: relative;
     margin: 0;
     padding: 0;
-    background: #FF5722;
+    border-radius: 0.25rem;
+    background: #445963;
     margin: 2rem;
     position: relative;
     overflow: hidden;
@@ -432,7 +434,7 @@ p {
               transform: translateY(-0.5rem);
       box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.5); }
     .screenshot figure:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -450,14 +452,16 @@ p {
       .screenshot figure img.loading {
         opacity: 0; }
     .screenshot figure figcaption {
-      width: 100%;
-      margin: 0;
-      position: absolute;
-      bottom: 0;
-      background: -webkit-linear-gradient(top, transparent, rgba(51, 51, 51, 0.75));
-      background: linear-gradient(top, transparent, rgba(51, 51, 51, 0.75));
-      color: #ffffff;
+      background: #ffffff;
+      color: #CED6DB;
       padding: 0.5rem; }
+      .screenshot figure figcaption .site-title {
+        color: #445963;
+        font-weight: 500;
+        font-size: 1.25rem;
+        padding-bottom: 0.25rem; }
+      .screenshot figure figcaption .url {
+        color: #607D8B; }
 
 .icon {
   width: 100%;
@@ -525,7 +529,6 @@ button,
   fill: #ffffff;
   color: #ffffff;
   font-family: inherit;
-  text-decoration: none;
   border: none;
   box-shadow: 0 0.125rem 0.25rem rgba(51, 51, 51, 0.5);
   cursor: pointer;
@@ -578,10 +581,10 @@ button,
             transform: scale(1.1); }
 
 .bio {
-  margin: 1rem 2rem;
+  max-width: 20rem;
+  margin: auto;
   padding: 0.5rem;
-  line-height: 1.6rem;
-  text-align: center; }
+  line-height: 1.6rem; }
 
 footer {
   color: #CED6DB;
@@ -589,7 +592,6 @@ footer {
   padding: 2rem 0;
   text-align: center; }
   footer a {
-    text-decoration: none;
     color: inherit;
     fill: inherit; }
   footer .icon {
@@ -597,4 +599,3 @@ footer {
     width: 1rem;
     display: inline;
     margin: 0 0.25rem -0.125rem; }
-/*# sourceMappingURL=style.css.map */
