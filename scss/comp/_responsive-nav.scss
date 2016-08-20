@@ -1,0 +1,126 @@
+// @import 'main';
+
+.nav-collapse {
+	.navigation {
+		display: block;
+		list-style: none;
+		margin: 0;
+		width: 100%;
+	}
+
+	&.opened {
+		max-height: 9999px;
+	}
+}
+
+.js .nav-collapse {
+	@include bp( $large ) {
+		position: relative;
+
+		&.closed {
+			max-height: none;
+		}
+	}
+
+	clip: rect( 0 0 0 0 );
+	display: block;
+	max-height: 0;
+	position: absolute;
+	zoom: 1;
+}
+
+.disable-pointer-events {
+	pointer-events: none !important;
+}
+
+.nav-toggle {
+	@include bp( $large ) {
+		display: none;
+	}
+
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	// float: right;
+	position: relative;
+	user-select: none;
+
+	// &::before {
+	// 	color: inherit;
+	// 	font-size: inherit;
+	// 	text-transform: none;
+	// 	padding: 0.5rem;
+	// 	text-align: center;
+	// 	position: absolute;
+	// 	content: "\2261";
+	// 	text-indent: 0;
+	// 	speak: none;
+	// 	width: 100%;
+	// 	left: 0;
+	// 	top: 0;
+	// }
+
+	// &.active::before {
+	// 	font-size: 2rem;
+	// 	content: "✕";
+	// 	/* Close icon */
+	// }
+}
+
+#logo-wrapper {
+	// float: left;
+	position: relative;
+}
+
+.logo {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+}
+
+.dropdown-toggle {
+	// position: absolute;
+	// right: 0;
+}
+
+// .fixed {
+//   position: fixed;
+//   width: 100%;
+//   left: 0;
+//   top: 0;
+// }
+
+// .nav-collapse,
+// .nav-collapse * {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+// .nav-collapse,
+// .nav-collapse ul {
+// 	list-style: none;
+// 	width: 100%;
+// 	float: left;
+// }
+
+// @media screen and (min-width: 40em) {
+// 	.nav-collapse {
+// 		float: right;
+// 		width: auto;
+// 	}
+// }
+
+// @media screen and (min-width: 1024px) {
+// 	.nav-collapse ul ul a {
+// 		display: none;
+// 	}
+// }

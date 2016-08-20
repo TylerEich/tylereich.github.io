@@ -1,0 +1,225 @@
+@charset 'utf-8';
+
+@import 'settings';
+// @import 'util/util';
+// @import 'motion-ui';
+
+// @include foundation-global-styles;
+
+$retina: (
+	min-resolution: 2dppx
+);
+$landscape: (
+	orientation: landscape
+);
+$transparent-uri: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+
+@mixin hero( $id, $path, $ext ) {
+	#hero-#{$id} {
+		background-position: center center;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+
+		@each $bp-label, $bp-size in $bp-classes {
+			@include bp( $bp-size ) {
+				@include bp( $retina ) {
+					background-image: url( '#{$path}/hero-#{$id}/#{$bp-label}-retina.#{$ext}' );
+				}
+
+				@include bp( $landscape ) {
+					@include bp( $retina ) {
+						background-image: url( '#{$path}/hero-#{$id}/#{$bp-label}-landscape-retina.#{$ext}' );
+					}
+
+					background-image: url( '#{$path}/hero-#{$id}/#{$bp-label}-landscape.#{$ext}' );
+				}
+
+				background-image: url( '#{$path}/hero-#{$id}/#{$bp-label}.#{$ext}' );
+			}
+		}
+
+		@content;
+	}
+}
+
+@mixin rectangle( $id, $path, $ext ) {
+	#rectangle-box-#{$id} {
+		@include bp( $small ) {
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 100%;
+			}
+		}
+
+		@include bp( $narrow ) {
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 75%;
+			}
+		}
+
+		@include bp( $medium ) {
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 75%;
+			}
+		}
+
+		@include bp( $large ) {
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 75%;
+			}
+		}
+
+		position: relative;
+		width: 100%;
+
+		#rectangle-content-#{$id} {
+			background-position: center center;
+			background-size: cover;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			@each $bp-label, $bp-size in $bp-classes {
+				@include bp( $bp-size ) {
+					@include bp( $retina ) {
+						background-image: url( '#{$path}/rectangle-#{$id}/#{$bp-label}-retina.#{$ext}' );
+					}
+
+					background-image: url( '#{$path}/rectangle-#{$id}/#{$bp-label}.#{$ext}' );
+				}
+			}
+		}
+
+		@content;
+	}
+}
+
+@mixin square( $id, $path, $ext ) {
+	#square-box-#{$id} {
+		position: relative;
+		width: 100%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		#square-content-#{$id} {
+			background-position: center center;
+			background-size: cover;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			@each $bp-label, $bp-size in $bp-classes {
+				@include bp( $bp-size ) {
+					@include bp( $retina ) {
+						background-image: url( '#{$path}/square-#{$id}/#{$bp-label}-retina.#{$ext}' );
+					}
+
+					background-image: url( '#{$path}/square-#{$id}/#{$bp-label}.#{$ext}' );
+				}
+			}
+		}
+
+		@content;
+	}
+}
+
+@mixin banner( $id, $path, $ext, $transparent-bg:false ) {
+	#banner-background-#{$id} {
+		@include bp( $small ) {
+			height: 250px;
+		}
+		@include bp( $narrow ) {
+			height: 320px;
+		}
+		@include bp( $medium ) {
+			height: 384px;
+		}
+		@include bp( $large ) {
+			height: 480px;
+		}
+
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		width: 100%;
+
+		@if $transparent-bg {
+			background-image: url( $transparent-uri );
+		} @else {
+			@each $bp-label, $bp-size in $bp-classes {
+				@include bp( $bp-size ) {
+					@include bp( $retina ) {
+						background-image: url( '#{$path}/banner-background-#{$id}/#{$bp-label}-retina.#{$ext}' );
+					}
+
+					background-image: url( '#{$path}/banner-background-#{$id}/#{$bp-label}.#{$ext}' );
+				}
+			}
+		}
+
+		#banner-content-#{$id} {
+			@include v-center;
+
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 90%;
+			margin: auto;
+			max-width: $main-width;
+			width: 90%;
+
+			@each $bp-label, $bp-size in $bp-classes {
+				$i: index( $bp-classes, ( $bp-label, $bp-size ) );
+				@include bp( $bp-size ) {
+					@include bp( $retina ) {
+						background-image: url( '#{$path}/banner-content-#{$id}/#{$bp-label}-retina.#{$ext}' );
+					}
+
+					background-image: url( '#{$path}/banner-content-#{$id}/#{$bp-label}.#{$ext}' );
+					width: 90% - ( 5% * $i );
+				}
+			}
+
+			@content;
+		}
+	}
+}
+
+@mixin flexible( $height-limit, $id, $path, $ext ) {
+	#flexible-#{$id} {
+		background-position: center center;
+		background-size: cover;
+		max-height: $height-limit;
+		position: relative;
+		width: 100%;
+
+		@each $bp-label, $bp-size in $bp-classes {
+			@include bp( $bp-size ) {
+				@include bp( $retina ) {
+					background-image: url( '#{$path}/flexible-#{$id}/#{$bp-label}-retina.#{$ext}' );
+				}
+
+				background-image: url( '#{$path}/flexible-#{$id}/#{$bp-label}.#{$ext}' );
+			}
+		}
+
+		@content;
+	}
+}

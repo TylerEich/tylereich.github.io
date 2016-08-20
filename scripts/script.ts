@@ -16,7 +16,7 @@ function init() {
   animatePageLanding();
   setTouchClass();
 
-  const animateItems = makeArray( document.querySelectorAll( ".animate" ) );
+  const revealItems = makeArray( document.querySelectorAll( ".reveal" ) );
   const navItems = makeArray( document.querySelectorAll( ".link" ) )
     .map( node => {
       const selector = node.getAttribute( "href" );
@@ -46,7 +46,7 @@ function init() {
   let animationIsTicking = false;
   let coords = {};
 
-  const boundEnterItems = bind( enterItems, animateItems );
+  const boundEnterItems = bind( enterItems, revealItems );
   const boundFollowNav = bind( followNav, navItems );
 
   function update() {

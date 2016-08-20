@@ -18,7 +18,7 @@ export function enterItems( items ) {
 
     return visible.reduce( ( promise, item ) =>
       promise.then(
-        () => addClassToNodes( "enter", item, 100 )
+        () => removeClassFromNodes( "reveal", item, 100 )
       ),
       wait( 0 )
     );

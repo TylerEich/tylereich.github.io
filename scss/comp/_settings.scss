@@ -1,0 +1,60 @@
+@import 'susy';
+
+$susy: (
+	columns: 12,
+	gutters: 0,
+	gutter-position: inside,
+	// debug: (image: show)
+);
+
+$font-sans-serif: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-sans-serif-condensed: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-serif: 'Merriweather', Cambria, 'Times New Roman', Times, serif;
+$font-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+
+$blue-dark: #2d4973;
+$blue-medium: #5e81b7;
+$blue-light: #bbcae3;
+$gold: #f2bc31;
+$orange: #ed8b30;
+
+$white: #fff;
+$white-alpha: transparentize( $white, 0.1 );
+$white-transparent: transparentize( $white, 1 );
+$black: #222;
+$black-alpha: transparentize( $black, 0.1 );
+$grey: #777;
+$grey-light: #ebebeb;
+
+$primary-color: $blue-dark;
+$secondary-color: #5a2e2e;
+$alternate-color: #68747f;
+$accent-color: $gold;
+
+$small: 0;
+$narrow: 400px;
+$medium: 640px;
+$large: 1024px;
+$bps: ( 'small': $small, 'narrow': $narrow, 'medium': $medium, 'large': $large );
+
+$retina: (
+	min-resolution: 2dppx
+);
+$landscape: (
+	orientation: landscape
+);
+$transparent-uri: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+$width: 72rem;
+
+@mixin bp( $args... ) {
+	@include susy-breakpoint( $args... ) {
+		@content;
+	}
+}
+
+@mixin main-width {
+	margin: auto;
+	max-width: $width;
+	width: 100%;
+}

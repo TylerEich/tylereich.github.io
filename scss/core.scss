@@ -1,0 +1,213 @@
+@import 'main';
+@import 'comp/reset';
+
+body,
+html {
+	font-family: $font-sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+main {
+	@include container;
+
+	margin: auto;
+	max-width: $width;
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $primary-color;
+	font-family: $font-sans-serif;
+	font-weight: 700;
+	margin: 0;
+}
+
+h1 {
+	@include dynamic-text( 1.5rem, 2.5rem );
+	// border-bottom: 1px solid;
+	// color: $black;
+	text-transform: uppercase;
+}
+
+h2 {
+	@include dynamic-text( 2rem, 3rem );
+	text-transform: uppercase;
+}
+
+h3 {
+	@include dynamic-text( 1.25rem, 2rem );
+	// @include dynamic-padding( 0.25rem, 0 );
+	font-family: $font-sans-serif-condensed;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+h4,
+h5,
+h6 {
+	@include dynamic-text( 1rem, 1.25rem );
+}
+
+p {
+	color: inherit;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0.5rem 0;
+}
+
+ul {
+	@extend p;
+	list-style: inside;
+	padding: 0;
+	padding-left: 0.5rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.icon {
+	display: block;
+	max-height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	line-height: 1;
+}
+
+a {
+	color: $accent-color;
+	text-decoration: none;
+}
+
+button,
+.button {
+	background-color: $accent-color;
+	border-color: darken( $accent-color, 0.1 );
+	border-radius: 0;
+	border-width: 0;
+	color: $white;
+	cursor: pointer;
+	font-family: $font-sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	// letter-spacing: 0.125rem;
+	margin: 0.5rem 0;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button-small {
+	@extend .button;
+
+	font-family: $font-sans-serif-condensed;
+	font-size: inherit;
+	padding: 0.25rem 1rem;
+	text-transform: none;
+}
+
+input {
+	font-family: $font-sans-serif;
+}
+
+article {
+	@include container;
+	@include dynamic-padding( 2rem 4rem, 1rem 2rem );
+
+	font-family: $font-sans-serif;
+	margin: auto;
+	max-width: $width;
+
+	p {
+		margin-bottom: 1.5rem;
+	}
+
+	h1 {
+		// margin-bottom: 3rem;
+	}
+}
+
+.aside {
+	@include bp( $small ) {
+		@include span( 12 of 12 );
+	}
+	@include bp( $large ) {
+		@include span( 6 of 12 );
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.wings {
+	display: inline-block;
+	padding: 0 2.5rem;
+	position: relative;
+	// text-align: center;
+
+	&::before,
+	&::after {
+		@include v-center;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		height: 1em;
+		position: absolute;
+		width: 2rem;
+	}
+
+	&::before {
+		background-image: url( '../img/header-wing-left.png' );
+		left: -0.5rem;
+	}
+
+	&::after {
+		background-image: url( '../img/header-wing-right.png' );
+		right: -0.5rem;
+	}
+}
+
+.description {
+	@include dynamic-text( 1rem, 1.25rem );
+	// @include dynamic-padding( 0.25rem, 0 );
+	color: $blue-medium;
+	font-family: $font-serif;
+	font-style: italic;
+	font-weight: 400;
+	margin-top: 1rem;
+}
+
+.more-info {
+	@include dynamic-text( 1rem, 1.5rem );
+
+	font-family: $font-sans-serif-condensed;
+	font-weight: bold;
+	// position: relative;
+	text-align: right;
+	// right: 0;
+
+	a {
+		color: inherit;
+	}
+}
