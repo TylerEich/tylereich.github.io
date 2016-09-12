@@ -10,9 +10,12 @@ export function wait( ms ) {
   return new Promise( ( resolve, reject ) => void setTimeout( resolve, ms ) );
 }
 
-export function raf() {
+export function raf( callback ) {
   return new Promise(
-    ( resolve, reject ) => void requestAnimationFrame( resolve )
+    ( resolve, reject ) => void requestAnimationFrame( () => {
+      callback();
+      resolve();
+    })
   );
 }
 

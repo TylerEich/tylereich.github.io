@@ -1,5 +1,6 @@
 import { fastdom } from "./fastdom";
 
+import { Promise } from "./promise";
 import { bind, wait, raf, makeArray } from "./utils";
 import { isVisible, isActive, setClassOnNodes, removeClassFromNodes, addClassToNodes } from "./elements";
 
@@ -185,20 +186,29 @@ export function slideToItem( item ) {
   const timestamp = performance.now();
   let stop = false;
 
-  const rafCallback = ( now ) => {
-    if ( stop ) {
-      return;
-    }
-
-    slide( start, end, 750, now - timestamp );
-
-    if ( now - timestamp <= 750 ) {
-      requestAnimationFrame( rafCallback );
-    }
-  };
-  requestAnimationFrame( rafCallback );
+  // raf( rafCallback );
 
   window.addEventListener( "scroll", () => {
     void 0;
   });
+
+  const promise = new Promise( ( resolve, reject ) => {
+    const rafCallback = ( now ) => {
+      if ( stop ) {
+        return;
+      }
+
+      slide( start, end, 750, now - timestamp );
+
+      if ( now - timestamp <= 750 ) {
+        requestAnimationFrame( rafCallback );
+      } else {
+        resolve();
+      }
+    };
+
+    requestAnimationFrame( rafCallback );
+  });
+
+  return promise;
 }

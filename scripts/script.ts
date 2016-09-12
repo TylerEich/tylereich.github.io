@@ -31,12 +31,12 @@ function init() {
 
   navItems.forEach( item => {
     item.link.addEventListener( "click", e => {
-      // e.preventDefault();
-      if ( window.location.hash === item.href ) {
+      e.preventDefault();
+      var hash = item.href;
+      slideToItem( item.section ).then( () => {
         window.location.hash = "";
         window.location.href = item.href;
-      }
-      slideToItem( item.section );
+      });
     });
   });
 
