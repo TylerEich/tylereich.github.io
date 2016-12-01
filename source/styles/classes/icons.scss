@@ -1,0 +1,12 @@
+@import 'vars';
+
+@each $name, $color in $color-list {
+	.fill-#{$name} {
+		fill: $color;
+	}
+}
+
+.icon {
+	width: 6rem;
+	height: 6rem;
+}

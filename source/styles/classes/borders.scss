@@ -1,0 +1,9 @@
+@import 'vars';
+
+.border {
+	border-width: $border-width;
+}
+
+.rounded {
+	border-radius: $border-radius;
+}

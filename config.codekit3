@@ -5,6 +5,14 @@
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
 		"uuidString": "07A232F1-2370-462B-A01B-2334DE5796E4"
+		},
+	{
+		"name": "New \"Run Script\" Step",
+		"scriptSourceString": "\/usr\/local\/bin\/purifycss build\/styles\/style.css build\/index.html build\/thanks.html --min --out build\/styles\/style.css",
+		"scriptType": 1,
+		"scriptUUIDString": "35AE169D-D40E-4FF1-8C8B-2ED0708B17B3",
+		"stepType": 2,
+		"uuidString": "B8B34C74-5E3C-4516-9294-6ECA31DB6942"
 		}
 	],
 "creatorBuild": "25444",
@@ -21,134 +29,16 @@
 		"oAP": "\/build\/.sass-lint.yml",
 		"oF": 0
 		},
-	"\/bower_components\/fastdom\/.bower.json": {
-		"ft": 524288,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.bower.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/bower_components\/fastdom\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.gitignore",
-		"oF": 0
-		},
-	"\/bower_components\/fastdom\/.jshintignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.jshintignore",
-		"oF": 0
-		},
-	"\/bower_components\/fastdom\/.jshintrc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.jshintrc",
-		"oF": 0
-		},
-	"\/bower_components\/fastdom\/.npmignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.npmignore",
-		"oF": 0
-		},
-	"\/bower_components\/fastdom\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/.travis.yml",
-		"oF": 0
-		},
-	"\/bower_components\/fastdom\/bower.json": {
-		"ft": 524288,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/bower.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/bower_components\/fastdom\/extensions\/fastdom-promised.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/extensions\/fastdom-promised.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/bower_components\/fastdom\/extensions\/fastdom-sandbox.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/extensions\/fastdom-sandbox.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/bower_components\/fastdom\/fastdom-strict.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/fastdom-strict.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/bower_components\/fastdom\/fastdom.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/fastdom.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/bower_components\/fastdom\/fastdom.min.js": {
-		"ft": 64,
-		"mi": 1,
+	"\/build": {
+		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/bower_components\/fastdom\/fastdom.min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/bower_components\/fastdom\/package.json": {
-		"ft": 524288,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/package.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/bower_components\/fastdom\/src\/fastdom-strict.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/build\/bower_components\/fastdom\/src\/fastdom-strict.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oAP": "\/build\/build",
+		"oF": 0
 		},
 	"\/CNAME": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/build\/CNAME",
-		"oF": 0
-		},
-	"\/css\/style.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/css\/style.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/style.css.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/css\/style.css.map",
 		"oF": 0
 		},
 	"\/favicon.png": {
@@ -157,398 +47,7 @@
 		"oA": 0,
 		"oAP": "\/favicon.png",
 		"oF": 0,
-		"opt": 0
-		},
-	"\/fonts\/hind-bold-webfont.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-bold-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-bold-webfont.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-bold-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/Hind-Bold.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/Hind-Bold.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-light-webfont.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-light-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-light-webfont.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-light-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/Hind-Light.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/Hind-Light.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-medium-webfont.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-medium-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-medium-webfont.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-medium-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/Hind-Medium.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/Hind-Medium.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-regular-webfont.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-regular-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-regular-webfont.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-regular-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/Hind-Regular.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/Hind-Regular.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-semibold-webfont.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-semibold-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/hind-semibold-webfont.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/hind-semibold-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/Hind-SemiBold.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/Hind-SemiBold.woff",
-		"oF": 0
-		},
-	"\/fonts\/ubuntu-medium.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/ubuntu-medium.woff",
-		"oF": 0
-		},
-	"\/fonts\/ubuntu-regular.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/fonts\/ubuntu-regular.woff",
-		"oF": 0
-		},
-	"\/images\/avatar.jpg": {
-		"ft": 16384,
-		"iS": 49973,
-		"oA": 0,
-		"oAP": "\/images\/avatar.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/images\/logo-2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/images\/logo-2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/logo.png": {
-		"ft": 32768,
-		"iS": 53811,
-		"oA": 0,
-		"oAP": "\/images\/logo.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/images\/logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/images\/logo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/screenshots\/doolittle-enterprises\/large.png": {
-		"ft": 32768,
-		"iS": 2729970,
-		"oA": 0,
-		"oAP": "\/images\/screenshots\/doolittle-enterprises\/large.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/images\/screenshots\/doolittle-enterprises\/small.png": {
-		"ft": 32768,
-		"iS": 853562,
-		"oA": 0,
-		"oAP": "\/images\/screenshots\/doolittle-enterprises\/small.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/images\/screenshots\/yourmovementmatters-com\/large.png": {
-		"ft": 32768,
-		"iS": 1889460,
-		"oA": 0,
-		"oAP": "\/images\/screenshots\/yourmovementmatters-com\/large.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/images\/screenshots\/yourmovementmatters-com\/small.png": {
-		"ft": 32768,
-		"iS": 2434400,
-		"oA": 0,
-		"oAP": "\/images\/screenshots\/yourmovementmatters-com\/small.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/index.html",
-		"oF": 0
-		},
-	"\/jade\/_main.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_main.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/comp\/_hero.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_hero.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/comp\/_reset.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_reset.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/comp\/_responsive-nav.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_responsive-nav.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/comp\/_settings.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_settings.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/index.jade": {
-		"cOD": 0,
-		"ft": 512,
-		"oA": 0,
-		"oAP": "\/index.html",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/jade\/mixins\/_center.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_center.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/mixins\/_dynamic.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_dynamic.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/mixins\/_image-sizes.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_image-sizes.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/mixins\/_main-width.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_main-width.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/mixins\/_text.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_text.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/jade\/partials\/head-content.jade": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 1,
-		"oAP": "\/head-content.html",
-		"oF": 0,
-		"oS": 1
-		},
-	"\/jade\/partials\/header.jade": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 1,
-		"oAP": "\/header.html",
-		"oF": 0,
-		"oS": 1
-		},
-	"\/jade\/partials\/scripts.jade": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 1,
-		"oAP": "\/scripts.html",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/jade\/partials\/svg-symbols.jade": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 1,
-		"oAP": "\/svg-symbols.html",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/js\/animation.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/min\/animation-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/animation.js.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/js\/animation.js.map",
-		"oF": 0
-		},
-	"\/js\/script.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/min\/script-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/script.js.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/js\/script.js.map",
-		"oF": 0
-		},
-	"\/js\/utils.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/min\/utils-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/utils.js.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/js\/utils.js.map",
-		"oF": 0
+		"opt": 1
 		},
 	"\/LICENSE": {
 		"ft": 8192,
@@ -564,321 +63,412 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"\/scripts\/animation.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
+	"\/source\/icons\/index.svg": {
+		"ft": 2097152,
+		"miP": 0,
 		"oA": 1,
-		"oAP": "\/js\/animation.js",
+		"oAP": "\/build\/icons\/index.svg",
 		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
-	"\/scripts\/elements.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
+	"\/source\/icons\/thanks.svg": {
+		"ft": 2097152,
+		"miP": 0,
 		"oA": 1,
-		"oAP": "\/js\/elements.js",
+		"oAP": "\/build\/icons\/thanks.svg",
 		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
-	"\/scripts\/fastdom.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
-		"oA": 1,
-		"oAP": "\/js\/fastdom.js",
-		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
-		},
-	"\/scripts\/promise.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
-		"oA": 1,
-		"oAP": "\/js\/promise.js",
-		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
-		},
-	"\/scripts\/script.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
+	"\/source\/images\/avatar.png": {
+		"ft": 32768,
+		"iS": 6958,
 		"oA": 0,
-		"oAP": "\/js\/script.js",
+		"oAP": "\/build\/images\/avatar.png",
 		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
+		"opt": 1
 		},
-	"\/scripts\/utils.ts": {
-		"cDF": 0,
-		"ft": 128,
-		"jxM": 0,
-		"ma": 1,
-		"mi": 1,
-		"moR": 0,
-		"moT": 2,
-		"nIA": 0,
+	"\/source\/images\/logo-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/build\/images\/logo-2.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/images\/logo.png": {
+		"ft": 32768,
+		"iS": 53811,
+		"oA": 0,
+		"oAP": "\/build\/images\/logo.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/build\/images\/logo.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/images\/new-logo-wide.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/build\/images\/new-logo-wide.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/images\/new-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/build\/images\/new-logo.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/images\/screenshots\/childrenshopefw-org\/desktop.png": {
+		"ft": 32768,
+		"iS": 2988106,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/desktop.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/childrenshopefw-org\/mobile.png": {
+		"ft": 32768,
+		"iS": 908943,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/mobile.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/childrenshopefw-org\/tablet.png": {
+		"ft": 32768,
+		"iS": 1852224,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/tablet.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/doolittle-enterprises\/desktop.png": {
+		"ft": 32768,
+		"iS": 1989834,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/desktop.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/doolittle-enterprises\/mobile.png": {
+		"ft": 32768,
+		"iS": 526900,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/mobile.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/doolittle-enterprises\/tablet.png": {
+		"ft": 32768,
+		"iS": 1290195,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/tablet.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/yourmovementmatters-com\/desktop.png": {
+		"ft": 32768,
+		"iS": 1890565,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/desktop.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/yourmovementmatters-com\/mobile.png": {
+		"ft": 32768,
+		"iS": 596664,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/mobile.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/images\/screenshots\/yourmovementmatters-com\/tablet.png": {
+		"ft": 32768,
+		"iS": 1217937,
+		"oA": 0,
+		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/tablet.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/source\/index.pug": {
+		"cOD": 0,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/build\/index.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/partials\/header.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/build\/partials\/header.html",
+		"oF": 0,
+		"oS": 1
+		},
+	"\/source\/partials\/html-head.pug": {
+		"cOD": 1,
+		"ft": 512,
 		"oA": 1,
-		"oAP": "\/js\/utils.js",
+		"oAP": "\/build\/partials\/html-head.html",
 		"oF": 0,
-		"pCE": 0,
-		"rC": 0,
-		"sIE": 0,
-		"tEC": 0
+		"oS": 1
 		},
-	"\/scss\/.sass-cache\/3b712be3c3c9ba05baaf5a8f1322aa3980ee34b2\/style.scssc": {
+	"\/source\/partials\/scripts.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/build\/partials\/scripts.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/partials\/svg-symbols.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/build\/partials\/svg-symbols.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/styles\/.sass-cache\/3b712be3c3c9ba05baaf5a8f1322aa3980ee34b2\/style.scssc": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/scss\/.sass-cache\/3b712be3c3c9ba05baaf5a8f1322aa3980ee34b2\/style.scssc",
+		"oAP": "\/build\/styles\/.sass-cache\/3b712be3c3c9ba05baaf5a8f1322aa3980ee34b2\/style.scssc",
 		"oF": 0
 		},
-	"\/scss\/404.scss": {
-		"aP": 1,
+	"\/source\/styles\/basscss\/basscss.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/basscss\/basscss.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/basscss\/responsive-margin.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/basscss\/responsive-margin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/basscss\/responsive-padding.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/basscss\/responsive-padding.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/basscss\/responsive-position.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/basscss\/responsive-position.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/_vars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/_vars.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/backgrounds.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/backgrounds.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/borders.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/borders.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/buttons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/buttons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/colors.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/colors.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/forms.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/forms.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/icons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/icons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/classes\/links.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/classes\/links.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/core.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 3,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/styles\/core.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/styles\/critical.scss": {
+		"aP": 0,
 		"bl": 0,
 		"dP": 3,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/404.css",
+		"oAP": "\/build\/styles\/critical.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
-	"\/scss\/_main.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_main.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/comp\/_hero.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_hero.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/comp\/_reset.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_reset.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/comp\/_responsive-nav.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_responsive-nav.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/comp\/_settings.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_settings.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/core.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
+	"\/source\/styles\/icons\/thanks.svg": {
+		"ft": 2097152,
+		"miP": 0,
 		"oA": 0,
-		"oAP": "\/css\/core.css",
+		"oAP": "\/build\/styles\/icons\/thanks.svg",
 		"oF": 0,
-		"oS": 3,
-		"uL": 1
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
-	"\/scss\/footer.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/footer.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/header.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/header.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/index.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/index.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/mixins\/_center.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_center.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/mixins\/_dynamic.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_dynamic.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/mixins\/_image-sizes.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_image-sizes.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/mixins\/_main-width.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_main-width.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/mixins\/_text.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 3,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_text.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/scss\/style.scss": {
+	"\/source\/styles\/style.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
-		"oAP": "\/css\/style.css",
+		"oAP": "\/build\/styles\/style.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/source\/thanks.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/build\/thanks.html",
+		"oF": 0,
+		"oS": 1
 		},
 	"\/tsconfig.json": {
 		"ft": 524288,
@@ -887,366 +477,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
-		},
-	"\/vector\/angular.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/angular.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/checklist.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/checklist.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/chrome_devtools-2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/chrome_devtools-2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/chrome_devtools.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/chrome_devtools.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/clean-2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/clean-2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/clean-3.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/clean-3.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/clean.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/clean.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/css3.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/css3.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/devtools.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/devtools.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/email.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/email.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/fast.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/fast.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/gauge.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/gauge.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/git.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/git.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/github.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/github.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/heart.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/heart.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/html5.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/html5.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/jasmine.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/jasmine.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/js.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/js.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/karma.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/karma.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/modern.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/modern.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/nodejs.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/nodejs.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/optimize.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/optimize.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/optimized.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/optimized.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/plus.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/plus.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/responsive.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/responsive.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/sass-circle.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/sass-circle.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/sass.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/sass.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/search.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/search.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/semicircle.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/semicircle.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/server.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/server.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/sprites.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/sprites.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/stack-overflow.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/stack-overflow.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/stopwatch.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/stopwatch.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/vector\/vector.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/vector.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/vector\/webapp.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/build\/vector\/webapp.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		}
 	},
 "hooks": [
@@ -1257,7 +487,8 @@
 	"creationDate": 501783805,
 	"displayValue": "tylereich-com",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-girlfriend"
+	"iconImageName": "meme-girlfriend",
+	"lastBuiltDate": 502246285
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3073,7 +2304,7 @@
 		"autoOutputPathRelativePath": "\/",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 1,
+		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 1
 		},
@@ -3083,11 +2314,11 @@
 		"autoOutputPathRelativePath": "\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 1,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 3,
-		"outputStyle": 3,
+		"outputStyle": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
@@ -3135,7 +2366,7 @@
 		"autoOutputPathRelativePath": "\/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 1,
+		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 1,
 		"jsxMode": 0,
@@ -3146,7 +2377,7 @@
 		"preserveConstEnums": 0,
 		"removeComments": 0,
 		"suppressImplicitAnyIndexErrors": 0,
-		"targetECMAVersion": 0
+		"targetECMAVersion": 1
 		},
 	"languageDefaultsUserDefined": [
 		],
@@ -3317,7 +2548,7 @@
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": ""
+	"websiteRelativeRoot": "\/build"
 	},
 "settingsFileVersion": "3"
 }

@@ -1,0 +1,15 @@
+@import 'vars';
+
+.link {
+	@include animate(2);
+
+	box-shadow: inset 0 -0.125rem $primary-light;
+	color: inherit;
+	// text-decoration-color: $primary;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background-color: $primary-light;
+	}
+}
