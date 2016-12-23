@@ -1505,6 +1505,8 @@ button,
 .button {
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  align-content: center;
+  align-items: center;
   background-image: linear-gradient(to bottom right, #f39e2a, #f36b2a);
   background-size: 150%;
   background-position: 100%;
@@ -1513,8 +1515,10 @@ button,
   box-shadow: 0 0.25rem 0.5rem rgba(53, 53, 53, 0.5);
   color: #fff;
   cursor: pointer;
+  display: inline-flex;
   fill: #fff;
   font-family: inherit;
+  line-height: inherit;
   text-decoration: none;
   transition-property: background-position, box-shadow; }
   button:hover, button:focus,
@@ -1593,12 +1597,12 @@ button,
   width: 100%;
   height: 2.5rem;
   padding: .5rem;
-  border: 0.125rem solid #c1ccd1;
+  border: 0.125rem solid #fff;
   border-radius: 0.25rem;
   -webkit-appearance: none;
   outline: 0; }
   .input:focus {
-    border-color: #647b86; }
+    border-color: #404e55; }
 
 .textarea {
   transition-duration: 300ms;
@@ -1608,14 +1612,14 @@ button,
   display: block;
   width: 100%;
   padding: 0.5rem;
-  border: 0.125rem solid #c1ccd1;
+  border: 0.125rem solid #fff;
   border-radius: 0.25rem;
   box-sizing: border-box;
   resize: none;
   outline: 0;
   -webkit-appearance: none; }
   .textarea:focus {
-    border-color: #647b86; }
+    border-color: #404e55; }
 
 .fill-primary {
   fill: #647b86; }
@@ -1642,11 +1646,16 @@ button,
   width: 6rem;
   height: 6rem; }
 
+.button-icon {
+  height: 1em;
+  width: 1em;
+  align-self: center; }
+
 .link {
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: inset 0 -0.125rem #c1ccd1;
+  box-shadow: inset 0 -0.125rem rgba(193, 204, 209, 0.5);
   color: inherit;
   text-decoration: none; }
   .link:hover, .link:focus {
-    background-color: #c1ccd1; }
+    background-color: rgba(193, 204, 209, 0.5); }

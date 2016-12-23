@@ -4,6 +4,8 @@ button,
 .button {
 	@include animate( 2 );
 
+	align-content: center;
+	align-items: center;
 	background-image: linear-gradient(to bottom right, adjust-hue($accent, 15deg), $accent);
 	background-size: 150%;
 	background-position: 100%;
@@ -12,8 +14,10 @@ button,
 	box-shadow: 0 0.25rem 0.5rem transparentize($black, 0.5);
 	color: $white;
 	cursor: pointer;
+	display: inline-flex;
 	fill: $white;
 	font-family: inherit;
+	line-height: inherit;
 	text-decoration: none;
 	transition-property: background-position, box-shadow;
 

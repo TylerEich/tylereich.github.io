@@ -9,13 +9,13 @@
   width: 100%;
   height: 2.5rem;
   padding: .5rem;
-  border: $border-width solid $primary-light;
+  border: $border-width solid $white;
   border-radius: $border-radius;
 	-webkit-appearance: none;
 	outline: 0;
 
 	&:focus {
-		border-color: $primary;
+		border-color: $primary-dark;
 	}
 }
 
@@ -27,7 +27,7 @@
   display: block;
   width: 100%;
   padding: 0.5rem;
-  border: $border-width solid $primary-light;
+  border: $border-width solid $white;
   border-radius: $border-radius;
   box-sizing: border-box;
 	resize: none;
@@ -35,6 +35,6 @@
 	-webkit-appearance: none;
 
 	&:focus {
-		border-color: $primary;
+		border-color: $primary-dark;
 	}
 }
