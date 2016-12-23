@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+	head
+		include partials/html-head.pug
+
+	body.bg-white.color-black
+		include icons/thanks.svg
+
+		.bg-gradient-1.fixed.top-0.right-0.left-0.bottom-0.flex.items-center
+			.max-width-1.mx-auto.py3.sm-py4.px3.color-white
+				svg.fit.icon.block.fill-white.mx-auto
+					use(xlink:href=`#thumb_up`)
+				h1.mt1.center Thank You
+				p.mt1.center Iʼve received your message and will respond as soon as possible
+				.mt3.center
+					a(href='/').h3.button.py1.px2 Awesome

@@ -1,0 +1,34 @@
+@import 'vars';
+
+button,
+.button {
+	@include animate( 2 );
+
+	align-content: center;
+	align-items: center;
+	background-image: linear-gradient(to bottom right, adjust-hue($accent, 15deg), $accent);
+	background-size: 150%;
+	background-position: 100%;
+	border: 0;
+	border-radius: $border-radius;
+	box-shadow: 0 0.25rem 0.5rem transparentize($black, 0.5);
+	color: $white;
+	cursor: pointer;
+	display: inline-flex;
+	fill: $white;
+	font-family: inherit;
+	line-height: inherit;
+	text-decoration: none;
+	transition-property: background-position, box-shadow;
+
+	&:hover,
+	&:focus {
+		background-position: 0%;
+		box-shadow: 0 0.5rem 1rem transparentize($black, 0.5);
+	}
+
+	&:focus {
+		transform: translateY( -0.25rem );
+		box-shadow: 0 1rem 2rem transparentize($black, 0.5);
+	}
+}
