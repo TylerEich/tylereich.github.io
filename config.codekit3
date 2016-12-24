@@ -7,8 +7,8 @@
 		"uuidString": "07A232F1-2370-462B-A01B-2334DE5796E4"
 		},
 	{
-		"name": "New \"Run Script\" Step",
-		"scriptSourceString": "\/usr\/local\/bin\/purifycss build\/styles\/style.css build\/index.html build\/thanks.html --min --out build\/styles\/style.css",
+		"name": "Optimize CSS and images",
+		"scriptSourceString": "\/usr\/local\/bin\/purifycss build\/styles\/style.css build\/index.html build\/thanks.html --min --out build\/styles\/style.css\n\/usr\/local\/bin\/imageOptim -d build",
 		"scriptType": 1,
 		"scriptUUIDString": "35AE169D-D40E-4FF1-8C8B-2ED0708B17B3",
 		"stepType": 2,
@@ -227,7 +227,7 @@
 		"oA": 0,
 		"oAP": "\/build\/index.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"\/source\/partials\/header.pug": {
 		"cOD": 1,
@@ -251,7 +251,7 @@
 		"oA": 0,
 		"oAP": "\/build\/partials\/scripts.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"\/source\/partials\/svg-symbols.pug": {
 		"cOD": 1,
@@ -259,7 +259,7 @@
 		"oA": 0,
 		"oAP": "\/build\/partials\/svg-symbols.html",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"\/source\/styles\/.sass-cache\/3b712be3c3c9ba05baaf5a8f1322aa3980ee34b2\/style.scssc": {
 		"ft": 8192,
@@ -524,7 +524,7 @@
 	"displayValue": "tylereich-com",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 504152375
+	"lastBuiltDate": 504242629
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
