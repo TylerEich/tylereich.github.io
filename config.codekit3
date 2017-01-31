@@ -15,7 +15,7 @@
 		"uuidString": "B8B34C74-5E3C-4516-9294-6ECA31DB6942"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25504",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -41,14 +41,6 @@
 		"oAP": "\/build\/CNAME",
 		"oF": 0
 		},
-	"\/favicon.png": {
-		"ft": 32768,
-		"iS": 976,
-		"oA": 0,
-		"oAP": "\/favicon.png",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/LICENSE": {
 		"ft": 8192,
 		"oA": 2,
@@ -62,6 +54,14 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/source\/favicon.png": {
+		"ft": 32768,
+		"iS": 976,
+		"oA": 2,
+		"oAP": "\/build\/favicon.png",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/source\/icons\/index.svg": {
 		"ft": 2097152,
@@ -86,7 +86,7 @@
 	"\/source\/images\/avatar.png": {
 		"ft": 32768,
 		"iS": 6958,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/avatar.png",
 		"oF": 0,
 		"opt": 1
@@ -104,7 +104,7 @@
 	"\/source\/images\/logo.png": {
 		"ft": 32768,
 		"iS": 53811,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/logo.png",
 		"oF": 0,
 		"opt": 1
@@ -152,7 +152,7 @@
 	"\/source\/images\/screenshots\/childrenshopefw-org\/desktop.png": {
 		"ft": 32768,
 		"iS": 2988106,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/desktop.png",
 		"oF": 0,
 		"opt": 1
@@ -160,7 +160,7 @@
 	"\/source\/images\/screenshots\/childrenshopefw-org\/mobile.png": {
 		"ft": 32768,
 		"iS": 908943,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/mobile.png",
 		"oF": 0,
 		"opt": 1
@@ -168,15 +168,39 @@
 	"\/source\/images\/screenshots\/childrenshopefw-org\/tablet.png": {
 		"ft": 32768,
 		"iS": 1852224,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/childrenshopefw-org\/tablet.png",
 		"oF": 0,
 		"opt": 1
 		},
+	"\/source\/images\/screenshots\/cityofwoodburn-org\/desktop.png": {
+		"ft": 32768,
+		"iS": 569879,
+		"oA": 2,
+		"oAP": "\/build\/images\/screenshots\/cityofwoodburn-org\/desktop.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/source\/images\/screenshots\/cityofwoodburn-org\/mobile.png": {
+		"ft": 32768,
+		"iS": 398789,
+		"oA": 2,
+		"oAP": "\/build\/images\/screenshots\/cityofwoodburn-org\/mobile.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/source\/images\/screenshots\/cityofwoodburn-org\/tablet.png": {
+		"ft": 32768,
+		"iS": 460061,
+		"oA": 2,
+		"oAP": "\/build\/images\/screenshots\/cityofwoodburn-org\/tablet.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/source\/images\/screenshots\/doolittle-enterprises\/desktop.png": {
 		"ft": 32768,
 		"iS": 1989834,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/desktop.png",
 		"oF": 0,
 		"opt": 1
@@ -184,7 +208,7 @@
 	"\/source\/images\/screenshots\/doolittle-enterprises\/mobile.png": {
 		"ft": 32768,
 		"iS": 526900,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/mobile.png",
 		"oF": 0,
 		"opt": 1
@@ -192,7 +216,7 @@
 	"\/source\/images\/screenshots\/doolittle-enterprises\/tablet.png": {
 		"ft": 32768,
 		"iS": 1290195,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/doolittle-enterprises\/tablet.png",
 		"oF": 0,
 		"opt": 1
@@ -200,7 +224,7 @@
 	"\/source\/images\/screenshots\/yourmovementmatters-com\/desktop.png": {
 		"ft": 32768,
 		"iS": 1890565,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/desktop.png",
 		"oF": 0,
 		"opt": 1
@@ -208,7 +232,7 @@
 	"\/source\/images\/screenshots\/yourmovementmatters-com\/mobile.png": {
 		"ft": 32768,
 		"iS": 596664,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/mobile.png",
 		"oF": 0,
 		"opt": 1
@@ -216,7 +240,7 @@
 	"\/source\/images\/screenshots\/yourmovementmatters-com\/tablet.png": {
 		"ft": 32768,
 		"iS": 1217937,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/build\/images\/screenshots\/yourmovementmatters-com\/tablet.png",
 		"oF": 0,
 		"opt": 1
@@ -228,6 +252,14 @@
 		"oAP": "\/build\/index.html",
 		"oF": 0,
 		"oS": 1
+		},
+	"\/source\/open-graph.png": {
+		"ft": 32768,
+		"iS": 13319,
+		"oA": 2,
+		"oAP": "\/build\/open-graph.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/source\/partials\/header.pug": {
 		"cOD": 1,
@@ -524,7 +556,7 @@
 	"displayValue": "tylereich-com",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 504242629
+	"lastBuiltDate": 507578353
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1172,6 +1204,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -1712,6 +1748,10 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -2250,7 +2290,7 @@
 		"useUnixNewlines": 0
 		},
 	"languageDefaultsJPG": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*.jpg",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -2343,7 +2383,7 @@
 		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsPNG": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*.png",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
