@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "@tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "start": "tailwindcss -i ./src/input.css -o ./style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
