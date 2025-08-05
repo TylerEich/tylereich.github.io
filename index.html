@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tyler Eich</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
-  <body class="bg-gray-100 text-gray-900">
+  <body
+    class="light bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100"
+  >
     <!-- Hero Section -->
-    <header class="bg-white shadow">
+    <header
+      class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 shadow"
+    >
       <div class="max-w-5xl mx-auto py-16 px-4 text-center">
-        <h1 class="text-4xl font-bold mb-4">Tyler Eich</h1>
+        <h1 class="text-4xl font-bold mb-4">Hi. I&apos;m Tyler Eich.</h1>
         <p class="text-lg mb-6">Full-stack Web Developer</p>
         <a
           href="#contact"
-          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md"
+          class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-600 px-6 py-3 rounded-md"
           >Get in Touch</a
         >
       </div>
@@ -30,21 +42,27 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-white py-16">
+    <section id="skills" class="bg-white dark:bg-slate-800 py-16">
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl font-semibold mb-8">Skills</h2>
         <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          <li class="p-4 bg-gray-100 rounded">Web Development</li>
-          <li class="p-4 bg-gray-100 rounded">React Native</li>
-          <li class="p-4 bg-gray-100 rounded">.NET</li>
-          <li class="p-4 bg-gray-100 rounded">Tailwind CSS</li>
-          <li class="p-4 bg-gray-100 rounded">Node.js</li>
-          <li class="p-4 bg-gray-100 rounded">TypeScript</li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+            Web Development
+          </li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+            React Native
+          </li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">.NET</li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+            Tailwind CSS
+          </li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">Node.js</li>
+          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">TypeScript</li>
         </ul>
       </div>
     </section>
 
-    <footer class="text-center py-8 text-sm text-gray-500">
+    <footer class="text-center py-8 text-sm text-slate-500 dark:text-slate-400">
       © 2025 Tyler Eich LLC. All rights reserved.
     </footer>
   </body>
