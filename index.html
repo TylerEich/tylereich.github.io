@@ -1,35 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tyler Eich</title>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        document.documentElement.classList.add("dark");
-      }
-    </script>
   </head>
   <body
-    class="light bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100"
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
   >
     <!-- Hero Section -->
     <header
-      class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 shadow"
+      class="bg-white text-slate-900 shadow dark:bg-slate-900 dark:text-slate-100"
     >
-      <div class="max-w-5xl mx-auto py-16 px-4 text-center">
-        <h1 class="text-4xl font-bold mb-4">Hi. I&apos;m Tyler Eich.</h1>
-        <p class="text-lg mb-6">Full-stack Web Developer</p>
+      <div class="mx-auto max-w-5xl px-4 py-16 text-left">
+        <h1 class="mb-4 text-4xl font-bold">Hi.</h1>
+        <h2 class="mb-3 text-2xl font-semibold">I&apos;m Tyler.</h2>
+        <p class="mb-6 text-3xl">I build stuff.</p>
       </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="max-w-5xl mx-auto py-16 px-4">
-      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <section id="about" class="mx-auto max-w-5xl px-4 py-16">
+      <h2 class="mb-4 text-3xl font-semibold">About Me</h2>
       <p class="mb-4">
         I build performant web and mobile applications with modern technologies.
         My work spans React, React Native, and .NET back ends.
@@ -37,27 +30,27 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-white dark:bg-slate-800 py-16">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold mb-8">Skills</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+    <section id="skills" class="bg-white py-16 dark:bg-slate-800">
+      <div class="mx-auto max-w-5xl px-4">
+        <h2 class="mb-8 text-3xl font-semibold">Skills</h2>
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
             Web Development
           </li>
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
             React Native
           </li>
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">.NET</li>
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">.NET</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
             Tailwind CSS
           </li>
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">Node.js</li>
-          <li class="p-4 bg-slate-100 dark:bg-slate-700 rounded">TypeScript</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Node.js</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">TypeScript</li>
         </ul>
       </div>
     </section>
 
-    <footer class="text-center py-8 text-sm text-slate-500 dark:text-slate-400">
+    <footer class="py-8 text-center text-sm text-slate-500 dark:text-slate-400">
       © 2025 Tyler Eich LLC. All rights reserved.
     </footer>
   </body>
