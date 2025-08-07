@@ -7,43 +7,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+    class="bg-slate-50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-fixed bg-repeat text-slate-950 dark:bg-slate-950 dark:text-slate-50"
   >
     <!-- Hero Section -->
     <header
-      class="bg-white bg-[url(/grid.svg)] bg-size-[auto_32rem] bg-repeat text-slate-900 dark:bg-slate-900 dark:text-slate-100"
+      class="bg-gradient-to-br from-slate-50/100 to-slate-50/0 text-slate-900 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
     >
-      <div class="mx-auto grid max-w-5xl gap-2 px-8 py-12">
-        <h1 class="text-9xl font-bold">Hi.</h1>
-        <h2 class="text-6xl">I&rsquo;m Tyler.</h2>
+      <div class="mx-auto grid max-w-5xl gap-2 px-4 py-8 sm:px-8 sm:py-16">
+        <h1>
+          <div class="text-xl text-slate-700 sm:text-2xl dark:text-slate-400">
+            Hi, my name is
+          </div>
+          <div
+            class="mt-1 text-6xl font-semibold text-slate-950 sm:text-9xl dark:text-slate-50"
+          >
+            Tyler Eich.
+          </div>
+          <div
+            class="mt-2 text-3xl text-slate-700 sm:text-6xl dark:text-slate-300"
+          >
+            I&rsquo;m a web developer.
+          </div>
+        </h1>
       </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="mx-auto grid max-w-5xl gap-2 px-8 py-12">
-        <h2 class="text-3xl">I build things.</h2>
-        <p>{Things go here.}</p>
-      </div>
-    </section>
-
     <!-- Skills Section -->
-    <section id="skills" class="bg-white py-16 dark:bg-slate-800">
-      <div class="mx-auto max-w-5xl px-4">
-        <h2 class="mb-8 text-3xl font-semibold">Skills</h2>
+    <section id="skills">
+      <div
+        class="mx-auto grid max-w-5xl gap-2 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
+      >
+        <h2 class="mb-8 text-3xl font-semibold">Frontend</h2>
         <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
-            Web Development
-          </li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
-            React Native
-          </li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">.NET</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
-            Tailwind CSS
-          </li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Node.js</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">HTML</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">CSS</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Tailwind</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">JavaScript</li>
           <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">TypeScript</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">React</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Angular</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Vue</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
+            WordPress Themes
+          </li>
+        </ul>
+
+        <h2 class="mb-8 text-3xl font-semibold">Backend</h2>
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Node</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">PHP</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">WordPress</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">SQL</li>
+          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">.NET</li>
         </ul>
       </div>
     </section>
