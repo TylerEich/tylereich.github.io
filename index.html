@@ -32,39 +32,308 @@
       </div>
     </header>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- Portfolio Section -->
+    <section id="portfolio">
       <div
-        class="mx-auto grid max-w-5xl gap-2 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
+        class="mx-auto grid max-w-5xl gap-8 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
       >
-        <h2 class="mb-8 text-3xl font-semibold">Frontend</h2>
-        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">HTML</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">CSS</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Tailwind</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">JavaScript</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">TypeScript</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">React</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Angular</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Vue</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">
-            WordPress Themes
-          </li>
-        </ul>
+        <h2 class="text-3xl font-semibold">Portfolio</h2>
 
-        <h2 class="mb-8 text-3xl font-semibold">Backend</h2>
-        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">Node</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">PHP</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">WordPress</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">SQL</li>
-          <li class="rounded bg-slate-100 p-4 dark:bg-slate-700">.NET</li>
-        </ul>
+        <!-- Technology Filters -->
+        <div id="tech-filters" class="flex flex-wrap gap-2"></div>
+
+        <!-- Projects Grid -->
+        <div
+          id="portfolio-grid"
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div
+        class="mx-auto grid max-w-5xl gap-8 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
+      >
+        <h2 class="text-3xl font-semibold">Contact</h2>
+        <form id="contact-form" class="grid gap-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
+          ></textarea>
+
+          <div>
+            <h3 class="mb-2 text-lg font-semibold">Technologies of Interest</h3>
+            <div id="contact-tech" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <button
+            type="submit"
+            class="rounded bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-500"
+          >
+            Send
+          </button>
+        </form>
       </div>
     </section>
 
     <footer class="py-8 text-center text-sm text-slate-500 dark:text-slate-400">
       © 2025 Tyler Eich LLC. All rights reserved.
     </footer>
+
+    <script>
+      const projects = [
+        {
+          title: "Project One",
+          description: "Brief description of Project One.",
+          image: "https://placehold.co/400x250",
+          technologies: ["HTML", "CSS", "Tailwind"],
+        },
+        {
+          title: "Project Two",
+          description: "Brief description of Project Two.",
+          image: "https://placehold.co/400x250",
+          technologies: ["JavaScript", "React", "Tailwind"],
+        },
+        {
+          title: "Project Three",
+          description: "Brief description of Project Three.",
+          image: "https://placehold.co/400x250",
+          technologies: ["TypeScript", "Angular", "CSS"],
+        },
+        {
+          title: "Project Four",
+          description: "Brief description of Project Four.",
+          image: "https://placehold.co/400x250",
+          technologies: ["Vue", "JavaScript", "HTML"],
+        },
+        {
+          title: "Project Five",
+          description: "Brief description of Project Five.",
+          image: "https://placehold.co/400x250",
+          technologies: ["Node", "SQL", "JavaScript"],
+        },
+        {
+          title: "Project Six",
+          description: "Brief description of Project Six.",
+          image: "https://placehold.co/400x250",
+          technologies: ["PHP", "WordPress", "CSS"],
+        },
+        {
+          title: "Project Seven",
+          description: "Brief description of Project Seven.",
+          image: "https://placehold.co/400x250",
+          technologies: [".NET", "SQL", "JavaScript"],
+        },
+        {
+          title: "Project Eight",
+          description: "Brief description of Project Eight.",
+          image: "https://placehold.co/400x250",
+          technologies: ["TypeScript", "React", "Node"],
+        },
+        {
+          title: "Project Nine",
+          description: "Brief description of Project Nine.",
+          image: "https://placehold.co/400x250",
+          technologies: ["Tailwind", "Vue", "JavaScript"],
+        },
+        {
+          title: "Project Ten",
+          description: "Brief description of Project Ten.",
+          image: "https://placehold.co/400x250",
+          technologies: ["Angular", "Node", "SQL"],
+        },
+        {
+          title: "Project Eleven",
+          description: "Brief description of Project Eleven.",
+          image: "https://placehold.co/400x250",
+          technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+        },
+        {
+          title: "Project Twelve",
+          description: "Brief description of Project Twelve.",
+          image: "https://placehold.co/400x250",
+          technologies: ["React", "WordPress", "Tailwind"],
+        },
+      ];
+
+      const allTech = Array.from(
+        new Set(projects.flatMap((p) => p.technologies)),
+      ).sort();
+      const selected = new Set();
+
+      const filtersEl = document.getElementById("tech-filters");
+      const gridEl = document.getElementById("portfolio-grid");
+      const contactTechEl = document.getElementById("contact-tech");
+
+      const pillBase =
+        "rounded-full px-3 py-1 text-sm border transition-colors";
+      const pillActive = "bg-indigo-600 border-indigo-600 text-white";
+      const pillInactive =
+        "bg-slate-200 border-slate-300 text-slate-700 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300";
+
+      function renderFilterPills() {
+        filtersEl.innerHTML = "";
+
+        const allBtn = document.createElement("button");
+        allBtn.textContent = "All";
+        allBtn.dataset.tech = "All";
+        allBtn.className = `${pillBase} ${pillActive}`;
+        allBtn.addEventListener("click", () => {
+          selected.clear();
+          updateFilters();
+          renderProjects();
+        });
+        filtersEl.appendChild(allBtn);
+
+        allTech.forEach((tech) => {
+          const btn = document.createElement("button");
+          btn.textContent = tech;
+          btn.dataset.tech = tech;
+          btn.className = `${pillBase} ${pillInactive}`;
+          btn.addEventListener("click", () => {
+            if (selected.has(tech)) {
+              selected.delete(tech);
+            } else {
+              selected.add(tech);
+            }
+            updateFilters();
+            renderProjects();
+          });
+          filtersEl.appendChild(btn);
+        });
+      }
+
+      function updateFilters() {
+        filtersEl.querySelectorAll("button").forEach((btn) => {
+          const tech = btn.dataset.tech;
+          const isSelected =
+            tech === "All" ? selected.size === 0 : selected.has(tech);
+          btn.className = `${pillBase} ${isSelected ? pillActive : pillInactive}`;
+        });
+        updateAvailability();
+      }
+
+      function updateAvailability() {
+        filtersEl.querySelectorAll("button").forEach((btn) => {
+          const tech = btn.dataset.tech;
+          if (tech === "All" || selected.has(tech)) {
+            btn.disabled = false;
+            btn.classList.remove("opacity-50", "pointer-events-none");
+            return;
+          }
+          const possible = projects.some((p) => {
+            return (
+              p.technologies.includes(tech) &&
+              [...selected].every((t) => p.technologies.includes(t))
+            );
+          });
+          if (possible) {
+            btn.disabled = false;
+            btn.classList.remove("opacity-50", "pointer-events-none");
+          } else {
+            btn.disabled = true;
+            btn.classList.add("opacity-50", "pointer-events-none");
+          }
+        });
+      }
+
+      function renderProjects() {
+        gridEl.innerHTML = "";
+        const visible = projects.filter((p) =>
+          [...selected].every((t) => p.technologies.includes(t)),
+        );
+        visible.forEach((p) => {
+          const card = document.createElement("div");
+          card.className =
+            "flex flex-col rounded-lg bg-slate-100/50 p-4 backdrop-blur-sm dark:bg-slate-800/50";
+
+          const img = document.createElement("img");
+          img.src = p.image;
+          img.alt = `${p.title} screenshot`;
+          img.className = "mb-4 rounded";
+          card.appendChild(img);
+
+          const h3 = document.createElement("h3");
+          h3.className = "mb-2 text-xl font-semibold";
+          h3.textContent = p.title;
+          card.appendChild(h3);
+
+          const desc = document.createElement("p");
+          desc.className = "mb-4 text-sm text-slate-700 dark:text-slate-300";
+          desc.textContent = p.description;
+          card.appendChild(desc);
+
+          const badgeWrap = document.createElement("div");
+          badgeWrap.className = "mt-auto flex flex-wrap gap-2";
+          p.technologies.forEach((t) => {
+            const span = document.createElement("span");
+            span.className =
+              "rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700";
+            span.textContent = t;
+            badgeWrap.appendChild(span);
+          });
+          card.appendChild(badgeWrap);
+
+          gridEl.appendChild(card);
+        });
+        updateAvailability();
+      }
+
+      function renderContactTech() {
+        contactTechEl.innerHTML = "";
+        allTech.forEach((tech) => {
+          const label = document.createElement("label");
+          label.className = "cursor-pointer";
+
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.value = tech;
+          input.className = "peer sr-only";
+
+          const span = document.createElement("span");
+          span.textContent = tech;
+          span.className = `${pillBase} ${pillInactive} peer-checked:bg-indigo-600 peer-checked:border-indigo-600 peer-checked:text-white`;
+
+          label.appendChild(input);
+          label.appendChild(span);
+          contactTechEl.appendChild(label);
+        });
+      }
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const techs = Array.from(
+            contactTechEl.querySelectorAll("input:checked"),
+          ).map((i) => i.value);
+          const formData = new FormData(e.target);
+          fetch("https://example.com/contact", {
+            method: "POST",
+            headers: {
+              "X-Technologies": techs.join(", "),
+            },
+            body: formData,
+          });
+        });
+
+      renderFilterPills();
+      renderProjects();
+      renderContactTech();
+    </script>
   </body>
 </html>
