@@ -7,37 +7,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="bg-slate-50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-fixed bg-repeat text-slate-950 dark:bg-slate-950 dark:text-slate-50"
+    class="bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-100"
   >
     <!-- Hero Section -->
-    <header
-      class="bg-gradient-to-br from-slate-50/100 to-slate-50/0 text-slate-900 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
-    >
+    <header class="bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-repeat">
       <div class="mx-auto grid max-w-5xl gap-2 px-4 py-8 sm:px-8 sm:py-16">
         <h1>
-          <div class="text-xl text-slate-700 sm:text-2xl dark:text-slate-400">
-            Hi, my name is
+          <div
+            class="font-stretch mt-1 text-5xl font-semibold tracking-wide text-slate-900 sm:text-8xl dark:text-slate-100"
+          >
+            Tyler Eich
           </div>
           <div
-            class="mt-1 text-6xl font-semibold text-slate-950 sm:text-9xl dark:text-slate-50"
+            class="dark:text-gold mt-2 text-3xl text-amber-700 font-stretch-expanded sm:text-6xl"
           >
-            Tyler Eich.
-          </div>
-          <div
-            class="mt-2 text-3xl text-slate-700 sm:text-6xl dark:text-slate-300"
-          >
-            I&rsquo;m a web developer.
+            web developer
           </div>
         </h1>
       </div>
     </header>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="bg-gunmetal">
       <div
-        class="mx-auto grid max-w-5xl gap-8 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
+        class="relative mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:px-8 sm:py-16"
       >
-        <h2 class="text-3xl font-semibold">Portfolio</h2>
+        <h2
+          class="text-3xl font-semibold tracking-wide font-stretch-expanded dark:text-slate-100"
+        >
+          portfolio
+        </h2>
 
         <!-- Technology Filters -->
         <div id="tech-filters" class="flex flex-wrap gap-2"></div>
@@ -45,15 +44,330 @@
         <!-- Projects Grid -->
         <div
           id="portfolio-grid"
-          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        ></div>
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1"
+        >
+          <div class="flex">
+            <img
+              src="./assets/ness-bros.png"
+              alt="Project One screenshot"
+              class="mb-4 w-lg rounded"
+            />
+            <div
+              class="mt-8 -ml-8 flex gap-4 rounded-lg border-1 border-slate-700 bg-slate-100/0 p-4 shadow-lg shadow-slate-950 backdrop-blur-lg dark:bg-slate-900/70"
+            >
+              <div class="flex flex-col justify-between">
+                <h3
+                  class="mb-2 text-xl font-semibold lowercase font-stretch-expanded"
+                >
+                  Ness Bros
+                </h3>
+                <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam harum ut velit, quasi ad eius perferendis totam
+                  voluptates maxime aperiam? Tenetur magni nesciunt placeat
+                  architecto, inventore repudiandae suscipit fuga nam.
+                </p>
+                <div class="mt-auto flex flex-wrap gap-2">
+                  <span
+                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                    >HTML</span
+                  ><span
+                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                    >CSS</span
+                  ><span
+                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                    >Tailwind</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Two screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Two</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Two.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >React</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Three screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Three</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Three.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >TypeScript</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Angular</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >CSS</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Four screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Four</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Four.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Vue</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >HTML</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Five screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Five</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Five.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Node</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >SQL</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Six screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Six</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Six.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >PHP</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >WordPress</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >CSS</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Seven screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Seven</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Seven.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >.NET</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >SQL</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Eight screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Eight</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Eight.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >TypeScript</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >React</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Node</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Nine screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Nine</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Nine.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Tailwind</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Vue</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Ten screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Ten</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Ten.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Angular</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Node</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >SQL</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Eleven screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Eleven</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Eleven.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >HTML</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >CSS</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >JavaScript</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >PHP</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col rounded-lg border-1 border-slate-700 bg-slate-100/50 bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-center bg-repeat p-4 shadow-lg shadow-slate-950 backdrop-blur-sm dark:bg-slate-900"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Project Twelve screenshot"
+              class="mb-4 rounded"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Project Twelve</h3>
+            <p class="mb-4 text-sm text-slate-700 dark:text-slate-300">
+              Brief description of Project Twelve.
+            </p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >React</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >WordPress</span
+              ><span
+                class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
+                >Tailwind</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
       <div
-        class="mx-auto grid max-w-5xl gap-8 bg-gradient-to-tl from-slate-50/100 to-slate-50/0 px-4 py-8 sm:px-8 sm:py-16 dark:from-slate-950/100 dark:to-slate-950/0 dark:text-slate-100"
+        class="mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:px-8 sm:py-16 dark:text-slate-100"
       >
         <h2 class="text-3xl font-semibold">Contact</h2>
         <form id="contact-form" class="grid gap-4">
@@ -94,7 +408,7 @@
       © 2025 Tyler Eich LLC. All rights reserved.
     </footer>
 
-    <script>
+    <!-- <script>
       const projects = [
         {
           title: "Project One",
@@ -181,7 +495,7 @@
 
       const pillBase =
         "rounded-full px-3 py-1 text-sm border transition-colors";
-      const pillActive = "bg-indigo-600 border-indigo-600 text-white";
+      const pillActive = "bg-gold text-slate-950";
       const pillInactive =
         "bg-slate-200 border-slate-300 text-slate-700 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300";
 
@@ -259,7 +573,7 @@
         visible.forEach((p) => {
           const card = document.createElement("div");
           card.className =
-            "flex flex-col rounded-lg bg-slate-100/50 p-4 backdrop-blur-sm dark:bg-slate-800/50";
+            "flex flex-col rounded-lg bg-slate-100/50 p-4 backdrop-blur-sm dark:bg-slate-900";
 
           const img = document.createElement("img");
           img.src = p.image;
@@ -334,6 +648,6 @@
       renderFilterPills();
       renderProjects();
       renderContactTech();
-    </script>
+    </script> -->
   </body>
 </html>

@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-gunmetal: #282940;
+  --color-gold: #d9bc66;
+}
