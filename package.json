@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "tailwindcss -i ./src/input.css -o ./style.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./style.css --watch --minify",
     "build": "tailwindcss -i ./src/input.css -o ./style.css --minify"
   },
   "dependencies": {
