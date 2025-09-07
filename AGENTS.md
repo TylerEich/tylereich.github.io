@@ -39,3 +39,28 @@
 - Don’t commit secrets or tokens. Keep large binaries out of git.
 - `CNAME` controls the custom domain; avoid accidental edits.
 - Discuss adding heavy tooling or new frameworks before introducing them.
+
+## Color Scheme
+
+- Primary brand colors: `gunmetal` `#282940` and `gold` `#d9bc66` (defined in `src/input.css` via `@theme`).
+  - Source: `src/input.css:4` (`--color-gunmetal`), `src/input.css:5` (`--color-gold`).
+- Base backgrounds/text:
+  - Light: `bg-slate-100`, `text-slate-500`, headings `text-slate-900`.
+    - Usage: `index.html:10`, `index.html:17`.
+  - Dark: `dark:bg-slate-900`, `dark:text-slate-100`.
+    - Usage: `index.html:10`, `index.html:17`.
+- Accents:
+  - Hero subtitle: light `text-amber-700`, dark `dark:text-gold`.
+    - Usage: `index.html:22`.
+  - Buttons: `bg-indigo-600` hover `hover:bg-indigo-500`, `text-white`.
+    - Usage: `index.html:106`.
+- Surfaces and borders:
+  - Overlay card: light `border-slate-300/40`, `bg-slate-100/80`; dark `dark:border-slate-500/50`, `dark:bg-slate-900/70`.
+    - Usage: `index.html:52`.
+  - Skill tags: light `bg-slate-200`; dark `dark:bg-slate-700`.
+    - Usage: `index.html:62`, `index.html:65`, `index.html:68`.
+- Section backgrounds and footer:
+  - Portfolio section: `bg-gunmetal`.
+    - Usage: `index.html:31`.
+  - Footer text: light `text-slate-500`, dark `dark:text-slate-400`.
+    - Usage: `index.html:114`.
