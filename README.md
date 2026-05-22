@@ -4,12 +4,9 @@ This is the personal website and blog of Tyler Eich, hosted via GitHub Pages.
 
 ## Overview
 
-This repository contains the source code and content for tylereich.github.io. It may include:
-
-- Personal portfolio
-- Blog posts
-- Project showcases
-- Contact information
+A single-page professional presence: who Tyler is and what he builds (mobile
+apps with React Native, plus web, backends, and AI-assisted workflows), with a
+direct way to get in touch. Built as static HTML styled with Tailwind CSS.
 
 ## Getting Started
 
@@ -19,8 +16,11 @@ To view or edit the site locally:
    ```sh
    git clone https://github.com/TylerEich/tylereich.github.io.git
    ```
-2. Open the folder in your preferred code editor (e.g., VS Code).
-3. If using a static site generator (like Jekyll, Hugo, or Next.js), follow the relevant setup instructions.
+2. Install dependencies: `npm install`.
+3. Build/watch the CSS: `npm run dev` (watch) or `npm run build` (one-off). This
+   compiles `src/input.css` → `style.css`; edit styles in `src/input.css`, not
+   `style.css`.
+4. Preview: `python -m http.server` then open `http://localhost:8000`.
 
 ## Deployment
 
