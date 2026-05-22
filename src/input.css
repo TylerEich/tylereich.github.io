@@ -2,5 +2,7 @@
 
 @theme {
   --color-gunmetal: #282940;
+  --color-surface: #2f3050;
+  --color-edge: #41436b;
   --color-gold: #d9bc66;
 }

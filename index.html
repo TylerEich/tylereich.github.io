@@ -1,118 +1,208 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tyler Eich</title>
+    <title>Tyler Eich — Mobile &amp; Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Tyler Eich builds mobile apps with React Native, plus web frontends (React, Angular), C# backends, and AI-assisted workflows."
+    />
+    <meta name="theme-color" content="#282940" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tylereich.com/" />
+    <meta
+      property="og:title"
+      content="Tyler Eich — Mobile &amp; Full-Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="I build mobile apps with React Native — plus web, backends, and AI-assisted workflows."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body
-    class="bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-100"
-  >
-    <!-- Hero Section -->
-    <header class="bg-[url(/grid.svg)] bg-size-[auto_64rem] bg-repeat">
-      <div class="mx-auto grid max-w-5xl gap-2 px-4 py-8 sm:px-8 sm:py-16">
-        <h1>
-          <div
-            class="font-stretch mt-1 text-5xl font-semibold tracking-wide text-slate-900 sm:text-8xl dark:text-slate-100"
-          >
-            Tyler Eich
-          </div>
-          <div
-            class="dark:text-gold mt-2 text-3xl text-amber-700 font-stretch-expanded sm:text-6xl"
-          >
-            web developer
-          </div>
+  <body class="bg-gunmetal text-slate-300 antialiased">
+    <!-- Hero -->
+    <header class="relative overflow-hidden">
+      <div
+        class="pointer-events-none absolute inset-0 bg-[url(/grid.svg)] [mask-image:linear-gradient(to_bottom,black,transparent_85%)] bg-size-[auto_48rem] bg-repeat opacity-20"
+      ></div>
+      <div class="relative mx-auto max-w-5xl px-6 py-24 sm:px-8 sm:py-32">
+        <p class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+          Tyler Eich
+        </p>
+        <h1
+          class="mt-5 text-5xl font-semibold tracking-tight text-slate-50 sm:text-7xl"
+        >
+          I build <span class="text-gold">mobile apps</span>.
         </h1>
+        <p class="mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
+          React Native developer with full-stack range — web frontends, C#
+          backends, and AI-assisted workflows.
+        </p>
       </div>
     </header>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-gunmetal">
-      <div
-        class="relative mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:px-8 sm:py-16"
-      >
-        <h2
-          class="text-3xl font-semibold tracking-wide font-stretch-expanded dark:text-slate-100"
-        >
-          portfolio
+    <!-- Capabilities -->
+    <section id="capabilities" class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+          What I do
         </h2>
-
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <div class="relative pb-14">
-            <img
-              src="./assets/ness-bros.png"
-              alt="Project One screenshot"
-              class="w-full rounded-lg shadow-md"
-            />
-
-            <!-- Overlay badge: translucent, inset, slight bottom overlap -->
-            <div
-              class="mx-4 -mt-6 flex gap-4 rounded-xl border border-slate-300/40 bg-slate-100/80 p-4 shadow-lg shadow-slate-950/50 backdrop-blur-lg dark:border-slate-500/50 dark:bg-slate-900/70"
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <!-- Mobile -->
+          <div
+            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+          >
+            <svg
+              class="text-gold h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
             >
-              <div class="flex flex-col justify-between">
-                <h3
-                  class="mb-2 text-xl font-semibold lowercase font-stretch-expanded"
-                >
-                  Ness Bros
-                </h3>
-                <div class="mt-auto flex flex-wrap gap-2">
-                  <span
-                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
-                    >HTML</span
-                  ><span
-                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
-                    >CSS</span
-                  ><span
-                    class="rounded-full bg-slate-200 px-2 py-1 text-xs dark:bg-slate-700"
-                    >Vue</span
-                  >
-                </div>
-              </div>
-            </div>
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Mobile</h3>
+            <p class="mt-1 text-sm font-medium text-slate-400">React Native</p>
+            <p class="mt-3 text-slate-300">
+              Cross-platform iOS &amp; Android apps.
+            </p>
+          </div>
+
+          <!-- Web -->
+          <div
+            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+          >
+            <svg
+              class="text-gold h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Web</h3>
+            <p class="mt-1 text-sm font-medium text-slate-400">
+              React · Angular
+            </p>
+            <p class="mt-3 text-slate-300">Modern frontends and toolchains.</p>
+          </div>
+
+          <!-- Backend -->
+          <div
+            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+          >
+            <svg
+              class="text-gold h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+              <path d="M3 12A9 3 0 0 0 21 12" />
+            </svg>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Backend</h3>
+            <p class="mt-1 text-sm font-medium text-slate-400">C# · SQL</p>
+            <p class="mt-3 text-slate-300">APIs and data that hold up.</p>
+          </div>
+
+          <!-- AI workflows -->
+          <div
+            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+          >
+            <svg
+              class="text-gold h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"
+              />
+              <path d="M20 3v4" />
+              <path d="M22 5h-4" />
+            </svg>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">
+              AI workflows
+            </h3>
+            <p class="mt-1 text-sm font-medium text-slate-400">
+              AI-assisted development
+            </p>
+            <p class="mt-3 text-slate-300">Modern tooling to ship faster.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div
-        class="mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:px-8 sm:py-16 dark:text-slate-100"
-      >
-        <h2 class="text-3xl font-semibold">Contact</h2>
-        <form id="contact-form" class="grid gap-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            class="rounded border border-slate-300 bg-slate-100 p-2 dark:border-slate-700 dark:bg-slate-700"
-          ></textarea>
-
-          <button
-            type="submit"
-            class="rounded bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-500"
-          >
-            Send
-          </button>
-        </form>
+    <!-- Statement -->
+    <section class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <p
+          class="max-w-3xl text-2xl leading-relaxed font-medium text-slate-200 sm:text-3xl"
+        >
+          I like shipping polished products end to end — from the app in
+          someone's hand to the API behind it.
+        </p>
       </div>
     </section>
 
-    <footer class="py-8 text-center text-sm text-slate-500 dark:text-slate-400">
-      © 2025 Tyler Eich LLC. All rights reserved.
+    <!-- Contact -->
+    <section id="contact" class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+          Get in touch
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-slate-300">
+          Have a project in mind or just want to say hi? Drop me a line.
+        </p>
+        <a
+          href="mailto:me@tylereich.com"
+          class="bg-gold text-gunmetal hover:bg-gold/90 mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition"
+        >
+          <svg
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          me@tylereich.com
+        </a>
+      </div>
+    </section>
+
+    <footer class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-8 text-sm text-slate-500 sm:px-8">
+        © 2026 Tyler Eich LLC
+      </div>
     </footer>
   </body>
 </html>
