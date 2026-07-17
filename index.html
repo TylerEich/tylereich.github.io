@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,41 +20,93 @@
       property="og:description"
       content="I build mobile apps with React Native — plus web, backends, and AI-assisted workflows."
     />
+    <meta property="og:image" content="https://tylereich.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/space-grotesk-latin-wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tyler Eich",
+        "url": "https://tylereich.com/",
+        "email": "mailto:me@tylereich.com",
+        "jobTitle": "Mobile & Full-Stack Developer",
+        "knowsAbout": ["React Native", "React", "Angular", "C#", "SQL"],
+        "sameAs": ["https://github.com/TylerEich"]
+      }
+    </script>
   </head>
   <body class="bg-gunmetal text-slate-300 antialiased">
     <!-- Hero -->
     <header class="relative overflow-hidden">
       <div
-        class="pointer-events-none absolute inset-0 bg-[url(/grid.svg)] [mask-image:linear-gradient(to_bottom,black,transparent_85%)] bg-size-[auto_48rem] bg-repeat opacity-20"
+        class="hero-dots pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
       ></div>
+      <div class="hero-glow pointer-events-none absolute inset-0"></div>
       <div class="relative mx-auto max-w-5xl px-6 py-24 sm:px-8 sm:py-32">
-        <p class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+        <p
+          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+        >
           Tyler Eich
         </p>
         <h1
-          class="mt-5 text-5xl font-semibold tracking-tight text-slate-50 sm:text-7xl"
+          class="font-display mt-5 text-5xl font-semibold tracking-tight text-balance text-slate-50 sm:text-7xl"
         >
           I build <span class="text-gold">mobile apps</span>.
         </h1>
-        <p class="mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
+        <p class="mt-6 max-w-2xl text-lg text-pretty text-slate-400 sm:text-xl">
           React Native developer with full-stack range — web frontends, C#
           backends, and AI-assisted workflows.
         </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#contact"
+            class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            Get in touch
+          </a>
+          <a
+            href="https://github.com/TylerEich"
+            class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex items-center gap-2 rounded-full border px-6 py-3 font-semibold text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <svg
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
       </div>
     </header>
 
     <!-- Capabilities -->
     <section id="capabilities" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2 class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+        <h2
+          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+        >
           What I do
         </h2>
         <div class="mt-8 grid gap-4 sm:grid-cols-2">
           <!-- Mobile -->
           <div
-            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -69,7 +121,9 @@
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
               <path d="M12 18h.01" />
             </svg>
-            <h3 class="mt-4 text-xl font-semibold text-slate-50">Mobile</h3>
+            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
+              Mobile
+            </h3>
             <p class="mt-1 text-sm font-medium text-slate-400">React Native</p>
             <p class="mt-3 text-slate-300">
               Cross-platform iOS &amp; Android apps.
@@ -78,7 +132,7 @@
 
           <!-- Web -->
           <div
-            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -94,7 +148,9 @@
               <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
               <path d="M2 12h20" />
             </svg>
-            <h3 class="mt-4 text-xl font-semibold text-slate-50">Web</h3>
+            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
+              Web
+            </h3>
             <p class="mt-1 text-sm font-medium text-slate-400">
               React · Angular
             </p>
@@ -103,7 +159,7 @@
 
           <!-- Backend -->
           <div
-            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -119,14 +175,16 @@
               <path d="M3 5V19A9 3 0 0 0 21 19V5" />
               <path d="M3 12A9 3 0 0 0 21 12" />
             </svg>
-            <h3 class="mt-4 text-xl font-semibold text-slate-50">Backend</h3>
+            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
+              Backend
+            </h3>
             <p class="mt-1 text-sm font-medium text-slate-400">C# · SQL</p>
             <p class="mt-3 text-slate-300">APIs and data that hold up.</p>
           </div>
 
           <!-- AI workflows -->
           <div
-            class="group border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition"
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -144,7 +202,7 @@
               <path d="M20 3v4" />
               <path d="M22 5h-4" />
             </svg>
-            <h3 class="mt-4 text-xl font-semibold text-slate-50">
+            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
               AI workflows
             </h3>
             <p class="mt-1 text-sm font-medium text-slate-400">
@@ -160,7 +218,7 @@
     <section class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <p
-          class="max-w-3xl text-2xl leading-relaxed font-medium text-slate-200 sm:text-3xl"
+          class="border-gold font-display max-w-3xl border-l-2 pl-6 text-2xl leading-relaxed font-medium text-pretty text-slate-200 sm:pl-8 sm:text-3xl"
         >
           I like shipping polished products end to end — from the app in
           someone's hand to the API behind it.
@@ -171,7 +229,9 @@
     <!-- Contact -->
     <section id="contact" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2 class="text-gold text-sm font-semibold tracking-[0.25em] uppercase">
+        <h2
+          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+        >
           Get in touch
         </h2>
         <p class="mt-4 max-w-xl text-lg text-slate-300">
@@ -179,7 +239,7 @@
         </p>
         <a
           href="mailto:me@tylereich.com"
-          class="bg-gold text-gunmetal hover:bg-gold/90 mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition"
+          class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <svg
             class="h-5 w-5"
@@ -200,8 +260,26 @@
     </section>
 
     <footer class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-8 text-sm text-slate-500 sm:px-8">
-        © 2026 Tyler Eich LLC
+      <div
+        class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-8 text-sm text-slate-500 sm:px-8"
+      >
+        <p>© 2026 Tyler Eich LLC</p>
+        <a
+          href="https://github.com/TylerEich"
+          class="hover:text-gold focus-visible:outline-gold inline-flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+            />
+          </svg>
+          GitHub
+        </a>
       </div>
     </footer>
   </body>
