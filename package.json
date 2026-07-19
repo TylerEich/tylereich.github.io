@@ -1,13 +1,15 @@
 {
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./style.css --watch --minify",
-    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify",
+    "screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "playwright": "^1.54.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14"
   }
