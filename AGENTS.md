@@ -8,8 +8,8 @@
   - `src/input.css`: Tailwind source; edit styles here
   - `style.css`: compiled CSS; do not edit directly
   - `favicon.svg`: gold "TE" monogram favicon
-  - `grid.svg`: animated grid used as the hero background
-  - `svg-generator.js`: small Node script to generate an SVG
+  - `fonts/`: self-hosted Space Grotesk variable font (display typeface)
+  - `og.png`: social share (Open Graph) image
   - `package.json`: scripts and tooling
 
 ## Build, Test, and Development Commands
