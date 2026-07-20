@@ -62,7 +62,35 @@
       <div
         class="hero-dots pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
       ></div>
+      <div
+        class="hero-contours pointer-events-none absolute inset-0 [mask-image:linear-gradient(105deg,black_30%,transparent_85%)]"
+      ></div>
       <div class="hero-glow pointer-events-none absolute inset-0"></div>
+      <svg
+        class="hero-trail pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
+        viewBox="0 0 900 400"
+        preserveAspectRatio="xMaxYMid slice"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M560 380 C 640 310, 620 240, 700 210 S 850 150, 900 80"
+          stroke="#d9bc66"
+          stroke-opacity="0.35"
+          stroke-width="2"
+          stroke-dasharray="1 10"
+          stroke-linecap="round"
+        />
+        <circle cx="700" cy="210" r="4" fill="#d9bc66" fill-opacity="0.6" />
+        <circle
+          cx="560"
+          cy="380"
+          r="4"
+          stroke="#d9bc66"
+          stroke-opacity="0.6"
+          stroke-width="1.5"
+        />
+      </svg>
       <div class="relative mx-auto max-w-5xl px-6 py-24 sm:px-8 sm:py-32">
         <p
           class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
@@ -86,20 +114,23 @@
             Get in touch
           </a>
           <a
-            href="https://github.com/TylerEich"
+            href="#work"
             class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex items-center gap-2 rounded-full border px-6 py-3 font-semibold text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
           >
+            See the work
             <svg
-              class="h-5 w-5"
+              class="h-4 w-4"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               aria-hidden="true"
             >
-              <path
-                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
-              />
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
             </svg>
-            GitHub
           </a>
         </div>
       </div>
@@ -264,6 +295,228 @@
           Also fluent in: React · Angular · TypeScript · C# · ASP.NET · SQL ·
           Cosmos DB · Azure Service Bus
         </p>
+      </div>
+    </section>
+
+    <!-- Selected work — placeholder screenshots (img/work/placeholder-*.jpg) and
+         copy below; swap per real project before shipping. -->
+    <section id="work" class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2
+          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+        >
+          Selected work
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg text-pretty text-slate-300">
+          Every screen, every size — desktop, iPad, and mobile from real client
+          builds.
+        </p>
+
+        <div class="mt-10 space-y-6">
+          <!-- Project card -->
+          <article
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+          >
+            <div class="work-trio">
+              <div class="device-browser">
+                <div class="device-browser-bar">
+                  <i></i><i></i><i></i>
+                  <span class="url"></span>
+                </div>
+                <img
+                  src="img/work/placeholder-desktop.jpg"
+                  alt="Desktop view — placeholder screenshot"
+                  loading="lazy"
+                  decoding="async"
+                  width="1600"
+                  height="1000"
+                />
+              </div>
+              <div class="device-tablet">
+                <div class="device-screen">
+                  <img
+                    src="img/work/placeholder-ipad.jpg"
+                    alt="iPad view — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="1000"
+                    height="1432"
+                  />
+                </div>
+              </div>
+              <div class="device-phone">
+                <span class="device-island"></span>
+                <div class="device-screen">
+                  <img
+                    src="img/work/placeholder-mobile.jpg"
+                    alt="Mobile view — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="480"
+                    height="1039"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
+            >
+              <h3 class="font-display text-xl font-semibold text-slate-50">
+                Project name
+              </h3>
+              <p class="text-sm text-slate-400">
+                Role · <span class="text-gold">Design → App Stores</span> ·
+                Stack · <span class="text-gold">React Native + ASP.NET</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- Project card (mirrored layout) -->
+          <article
+            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+          >
+            <div class="work-trio is-reversed">
+              <div class="device-browser">
+                <div class="device-browser-bar">
+                  <i></i><i></i><i></i>
+                  <span class="url"></span>
+                </div>
+                <img
+                  src="img/work/placeholder-desktop.jpg"
+                  alt="Desktop view — placeholder screenshot"
+                  loading="lazy"
+                  decoding="async"
+                  width="1600"
+                  height="1000"
+                />
+              </div>
+              <div class="device-tablet">
+                <div class="device-screen">
+                  <img
+                    src="img/work/placeholder-ipad.jpg"
+                    alt="iPad view — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="1000"
+                    height="1432"
+                  />
+                </div>
+              </div>
+              <div class="device-phone">
+                <span class="device-island"></span>
+                <div class="device-screen">
+                  <img
+                    src="img/work/placeholder-mobile.jpg"
+                    alt="Mobile view — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="480"
+                    height="1039"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
+            >
+              <h3 class="font-display text-xl font-semibold text-slate-50">
+                Project name
+              </h3>
+              <p class="text-sm text-slate-400">
+                Role · <span class="text-gold">Design → App Stores</span> ·
+                Stack · <span class="text-gold">React Native + ASP.NET</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Native — placeholder phone screenshots (img/native/placeholder-*.jpg)
+         and store links; swap in real Fort Wayne Trails captures + URLs. -->
+    <section id="native" class="border-edge/60 border-t">
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2
+          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+        >
+          Native · iOS &amp; Android
+        </h2>
+        <div
+          class="mt-8 grid items-center gap-10 lg:grid-cols-[3fr_2fr] lg:gap-12"
+        >
+          <div>
+            <h3
+              class="font-display text-2xl font-semibold text-slate-50 sm:text-3xl"
+            >
+              Fort Wayne Trails
+            </h3>
+            <p class="mt-4 max-w-md text-slate-300">
+              Trail maps, live location, and points of interest for the Fort
+              Wayne trail network — one React Native codebase, shipped to both
+              app stores.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#"
+                class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                <span class="text-[0.65rem] text-slate-400"
+                  >Download on the</span
+                >
+                <span class="font-display font-semibold">App Store</span>
+              </a>
+              <a
+                href="#"
+                class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                <span class="text-[0.65rem] text-slate-400">Get it on</span>
+                <span class="font-display font-semibold">Google Play</span>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-end justify-center gap-6">
+            <div class="mb-6 w-[9.5rem]">
+              <div class="device-phone">
+                <span class="device-island"></span>
+                <div class="device-screen">
+                  <img
+                    src="img/native/placeholder-ios.jpg"
+                    alt="Fort Wayne Trails on iOS — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="480"
+                    height="1039"
+                  />
+                </div>
+              </div>
+              <p
+                class="mt-2 text-center text-xs tracking-[0.1em] text-slate-500 uppercase"
+              >
+                iOS
+              </p>
+            </div>
+            <div class="w-[9.5rem]">
+              <div class="device-phone is-android">
+                <span class="device-island"></span>
+                <div class="device-screen">
+                  <img
+                    src="img/native/placeholder-android.jpg"
+                    alt="Fort Wayne Trails on Android — placeholder screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    width="480"
+                    height="1039"
+                  />
+                </div>
+              </div>
+              <p
+                class="mt-2 text-center text-xs tracking-[0.1em] text-slate-500 uppercase"
+              >
+                Android
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
