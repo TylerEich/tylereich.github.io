@@ -25,6 +25,9 @@
 - Tailwind: prefer utility-first classes; semantic HTML where possible. Class order is auto-sorted by the Prettier plugin.
 - File names: lowercase kebab-case for assets (e.g., `project-card.png`).
 - Do not edit `style.css` manually; change `src/input.css` and rebuild.
+- Cache busting: `index.html` links the stylesheet as `style.css?v=<hash>`. After
+  rebuilding `style.css`, bump the `?v=` value (e.g. `md5sum style.css | cut -c1-8`)
+  so browsers/CDN fetch the new CSS instead of a stale cached copy.
 
 ## Testing Guidelines
 
