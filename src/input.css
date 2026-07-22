@@ -173,10 +173,15 @@
     border-radius: 9999px;
   }
 
-  /* Portfolio "trio" composite: desktop + iPad + phone layered together */
+  /* Portfolio "trio" composite: desktop + iPad + phone layered together.
+     The container's aspect ratio is tuned so the browser backdrop matches the
+     desktop screenshot's ratio (≈1.54), avoiding a cover-crop to a corner. */
   .work-trio {
     position: relative;
-    height: clamp(15rem, 32vw, 21.25rem);
+    width: 100%;
+    max-width: 44rem;
+    margin-inline: auto;
+    aspect-ratio: 5 / 3;
   }
   .work-trio .device-browser {
     position: absolute;
@@ -208,30 +213,40 @@
     right: 46%;
   }
 
+  /* On small screens the layered composite gets too cramped and the frames
+     clip each other — unstack into a clean grid instead so every screenshot
+     is shown at its own aspect ratio with no overlap. */
   @media (max-width: 640px) {
-    .work-trio {
-      height: 21.5rem;
+    .work-trio,
+    .work-trio.is-reversed {
+      max-width: none;
+      aspect-ratio: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 0.75rem;
     }
     .work-trio .device-browser,
     .work-trio.is-reversed .device-browser {
-      inset: 0;
+      position: static;
+      inset: auto;
+      grid-column: 1 / -1;
     }
     .work-trio .device-tablet,
-    .work-trio.is-reversed .device-tablet {
-      top: auto;
-      right: 2%;
-      left: auto;
-      bottom: 4px;
-      width: 46%;
-      height: auto;
-    }
+    .work-trio.is-reversed .device-tablet,
     .work-trio .device-phone,
     .work-trio.is-reversed .device-phone {
-      left: 4%;
-      right: auto;
-      bottom: 0;
-      width: 40%;
+      position: static;
+      inset: auto;
+      width: 100%;
       height: auto;
+    }
+    /* Keep the phone from towering over the tablet in its column */
+    .work-trio .device-phone,
+    .work-trio.is-reversed .device-phone {
+      align-self: start;
+      justify-self: center;
+      max-width: 72%;
     }
   }
 }
