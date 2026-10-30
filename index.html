@@ -33,6 +33,7 @@
       crossorigin
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="js/sections.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -59,80 +60,90 @@
   <body class="bg-gunmetal text-slate-300 antialiased">
     <!-- Hero -->
     <header class="relative overflow-hidden">
-      <div
-        class="hero-dots pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
-      ></div>
-      <div
-        class="hero-contours pointer-events-none absolute inset-0 [mask-image:linear-gradient(105deg,black_30%,transparent_85%)]"
-      ></div>
       <div class="hero-glow pointer-events-none absolute inset-0"></div>
-      <svg
-        class="hero-trail pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
-        viewBox="0 0 900 400"
-        preserveAspectRatio="xMaxYMid slice"
-        fill="none"
-        aria-hidden="true"
+      <div
+        class="relative mx-auto grid max-w-5xl items-center gap-12 px-6 py-24 sm:px-8 sm:py-32 lg:grid-cols-[minmax(0,1fr)_300px]"
       >
-        <path
-          d="M560 380 C 640 310, 620 240, 700 210 S 850 150, 900 80"
-          stroke="#d9bc66"
-          stroke-opacity="0.35"
-          stroke-width="2"
-          stroke-dasharray="1 10"
-          stroke-linecap="round"
-        />
-        <circle cx="700" cy="210" r="4" fill="#d9bc66" fill-opacity="0.6" />
-        <circle
-          cx="560"
-          cy="380"
-          r="4"
-          stroke="#d9bc66"
-          stroke-opacity="0.6"
-          stroke-width="1.5"
-        />
-      </svg>
-      <div class="relative mx-auto max-w-5xl px-6 py-24 sm:px-8 sm:py-32">
-        <p
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
-        >
-          Tyler Eich
-        </p>
-        <h1
-          class="font-display mt-5 text-5xl font-semibold tracking-tight text-balance text-slate-50 sm:text-7xl"
-        >
-          I build <span class="text-gold">mobile apps</span>.
-        </h1>
-        <p class="mt-6 max-w-2xl text-lg text-pretty text-slate-400 sm:text-xl">
-          React Native developer with full-stack range. 10+ years taking
-          products from first idea to the app stores.
-        </p>
-        <div class="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#contact"
-            class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
+        <div>
+          <p
+            class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
           >
-            Get in touch
-          </a>
-          <a
-            href="#work"
-            class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex items-center gap-2 rounded-full border px-6 py-3 font-semibold text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+            Tyler Eich
+          </p>
+          <h1
+            class="font-display mt-5 text-5xl font-semibold tracking-tight text-balance text-slate-50 sm:text-7xl"
           >
-            See the work
-            <svg
-              class="h-4 w-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
+            I build <span class="text-gold">mobile apps</span>.
+          </h1>
+          <p
+            class="mt-6 max-w-2xl text-lg text-pretty text-slate-400 sm:text-xl"
+          >
+            React Native developer with full-stack range. 10+ years taking
+            products from first idea to the app stores.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#contact"
+              class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold inline-flex items-center gap-2 rounded-[2px] px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <path d="M12 5v14" />
-              <path d="m19 12-7 7-7-7" />
-            </svg>
-          </a>
+              Get in touch
+            </a>
+            <a
+              href="#work"
+              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex items-center gap-2 rounded-[2px] border px-6 py-3 font-semibold text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              See the work
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14" />
+                <path d="m19 12-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
         </div>
+        <svg
+          class="iso mx-auto max-w-[280px] lg:max-w-none"
+          viewBox="0 0 300 262"
+          role="img"
+          aria-label="Isometric stack of four layers: app, API, data and pipeline"
+        >
+          <g class="slab" style="--i: 0">
+            <polygon class="left" points="25,198 105,238 105,254 25,214" />
+            <polygon class="right" points="105,238 185,198 185,214 105,254" />
+            <polygon class="top" points="105,158 185,198 105,238 25,198" />
+            <line class="lead" x1="189" y1="198" x2="211" y2="198" />
+            <text x="217" y="202">PIPELINE</text>
+          </g>
+          <g class="slab" style="--i: 1">
+            <polygon class="left" points="25,152 105,192 105,208 25,168" />
+            <polygon class="right" points="105,192 185,152 185,168 105,208" />
+            <polygon class="top" points="105,112 185,152 105,192 25,152" />
+            <line class="lead" x1="189" y1="152" x2="211" y2="152" />
+            <text x="217" y="156">DATA</text>
+          </g>
+          <g class="slab" style="--i: 2">
+            <polygon class="left" points="25,106 105,146 105,162 25,122" />
+            <polygon class="right" points="105,146 185,106 185,122 105,162" />
+            <polygon class="top" points="105,66 185,106 105,146 25,106" />
+            <line class="lead" x1="189" y1="106" x2="211" y2="106" />
+            <text x="217" y="110">API</text>
+          </g>
+          <g class="slab hot" style="--i: 3">
+            <polygon class="left" points="25,60 105,100 105,116 25,76" />
+            <polygon class="right" points="105,100 185,60 185,76 105,116" />
+            <polygon class="top" points="105,20 185,60 105,100 25,60" />
+            <line class="lead" x1="189" y1="60" x2="211" y2="60" />
+            <text x="217" y="64">APP</text>
+          </g>
+        </svg>
       </div>
     </header>
 
@@ -140,7 +151,7 @@
     <section id="experience" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
           Experience
         </h2>
@@ -149,7 +160,7 @@
           decade-plus of shipping, solo and with teams.
         </p>
         <dl class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="border-edge/60 bg-surface/50 rounded-2xl border p-6">
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
             <dt class="font-display text-3xl font-semibold text-slate-50">
               10+ years
             </dt>
@@ -157,7 +168,7 @@
               of professional, full-time software development.
             </dd>
           </div>
-          <div class="border-edge/60 bg-surface/50 rounded-2xl border p-6">
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
             <dt class="font-display text-3xl font-semibold text-slate-50">
               Both stores
             </dt>
@@ -165,7 +176,7 @@
               Apps shipped to the App Store and Google Play with React Native.
             </dd>
           </div>
-          <div class="border-edge/60 bg-surface/50 rounded-2xl border p-6">
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
             <dt class="font-display text-3xl font-semibold text-slate-50">
               Enterprise scale
             </dt>
@@ -173,7 +184,7 @@
               Backends built on C#, ASP.NET, SQL, Cosmos DB, and Service Bus.
             </dd>
           </div>
-          <div class="border-edge/60 bg-surface/50 rounded-2xl border p-6">
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
             <dt class="font-display text-3xl font-semibold text-slate-50">
               Multi-year
             </dt>
@@ -189,14 +200,14 @@
     <section id="services" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
           What I can do for you
         </h2>
         <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Launch a new app -->
           <div
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -231,7 +242,7 @@
 
           <!-- Improve an existing app -->
           <div
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -261,7 +272,7 @@
 
           <!-- Add AI to your product -->
           <div
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 hover:shadow-gold/5 rounded-2xl border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <svg
               class="text-gold h-7 w-7"
@@ -298,253 +309,558 @@
       </div>
     </section>
 
-    <!-- Selected work — real client screenshots (img/work/<project>-*.jpg) -->
-    <section id="work" class="border-edge/60 border-t">
+    <!-- Fig. 01: press Play to run the animation (js/sections.js) -->
+    <section
+      id="deploy"
+      class="bp-anim border-edge/60 border-t"
+      aria-labelledby="deploy-h"
+    >
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div class="max-w-2xl min-w-0">
+            <h2
+              id="deploy-h"
+              class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
+            >
+              Fig. 01 · Automatic deployment
+            </h2>
+            <p
+              class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+            >
+              Every change ships itself.
+            </p>
+            <p class="mt-4 text-lg text-pretty text-slate-300">
+              Push a change and the pipeline takes it from there: lint, tests
+              and UI screenshots, then live on the web, TestFlight and Google
+              Play. Small changes go out often, so problems get caught while
+              they're small.
+            </p>
+          </div>
+          <button class="play" type="button" id="play-deploy">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"
+              />
+            </svg>
+            <span>Play</span>
+          </button>
+        </div>
+        <div
+          class="bp-card border-edge bg-panel mt-10 rounded-[3px] border p-4 sm:p-6"
+        >
+          <div>
+            <ol class="pipe" aria-label="Deployment pipeline">
+              <li class="scene">
+                <div class="scene-top">
+                  <span class="step">1</span>
+                  <h3>Change</h3>
+                </div>
+                <div class="viz">
+                  <div class="editor" aria-hidden="true">
+                    <div class="editor-bar">
+                      <i></i><i></i><i></i><span>TrailCard.tsx</span>
+                    </div>
+                    <div class="code">
+                      <div class="ln del" data-text="<Text>{len}</Text>">
+                        <span class="g">-</span><span class="t"></span>
+                      </div>
+                      <div class="ln add" data-text="const mi = len.toFixed(1)">
+                        <span class="g">+</span><span class="t"></span>
+                      </div>
+                      <div class="ln add" data-text="<Badge>{mi} mi</Badge>">
+                        <span class="g">+</span><span class="t"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="link" aria-hidden="true"></li>
+              <li class="scene">
+                <div class="scene-top">
+                  <span class="step">2</span>
+                  <h3>Push</h3>
+                </div>
+                <div class="viz">
+                  <div class="stream" id="stream" aria-hidden="true">
+                    <span class="commit">a1f3c9e</span>
+                    <span class="track">
+                      <span class="pk" style="--i: 0"></span
+                      ><span class="pk" style="--i: 1"></span
+                      ><span class="pk" style="--i: 2"></span
+                      ><span class="pk" style="--i: 3"></span
+                      ><span class="pk" style="--i: 4"></span>
+                    </span>
+                    <span class="repo" id="repo">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"
+                        />
+                        <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5" />
+                        <path d="M9 8h6" />
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="viz-note" id="push-note">Waiting for a push</p>
+                </div>
+              </li>
+              <li class="link" aria-hidden="true"></li>
+              <li class="scene">
+                <div class="scene-top">
+                  <span class="step">3</span>
+                  <h3>Test</h3>
+                </div>
+                <div class="viz">
+                  <div class="tests" aria-hidden="true">
+                    <div class="battery" id="battery"></div>
+                    <svg class="ci-ring" viewBox="0 0 60 60">
+                      <circle class="bg" cx="30" cy="30" r="25" />
+                      <circle class="fg" id="ring-fg" cx="30" cy="30" r="25" />
+                      <path class="ck" id="ring-ck" d="M20 31l7 7 13-14" />
+                    </svg>
+                  </div>
+                  <p class="viz-note" id="test-note">Waiting for code</p>
+                </div>
+              </li>
+              <li class="link" aria-hidden="true"></li>
+              <li class="scene">
+                <div class="scene-top">
+                  <span class="step">4</span>
+                  <h3>Deploy</h3>
+                </div>
+                <div class="viz">
+                  <div class="ship" aria-hidden="true">
+                    <div class="pkg" id="pkg">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M3.5 9h17v10a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"
+                        />
+                        <path d="M12 9v12" />
+                        <path class="lid" d="M2 6h20v3H2z" />
+                      </svg>
+                      <span class="ver">v2.4</span>
+                    </div>
+                    <div class="dests">
+                      <div class="dest">
+                        <span class="wire"></span
+                        ><span class="pill"><i></i>Web</span>
+                      </div>
+                      <div class="dest">
+                        <span class="wire"></span
+                        ><span class="pill"><i></i>TestFlight</span>
+                      </div>
+                      <div class="dest">
+                        <span class="wire"></span
+                        ><span class="pill"><i></i>Google Play</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div class="loop" id="loop">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 12a9 9 0 1 0 3-6.7" />
+                <path d="M3 4v5h5" />
+              </svg>
+              Then the next change starts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fig. 02: press Play to run the animation (js/sections.js) -->
+    <section
+      id="agents"
+      class="bp-anim border-edge/60 border-t"
+      aria-labelledby="agents-h"
+    >
+      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div class="max-w-2xl min-w-0">
+            <h2
+              id="agents-h"
+              class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
+            >
+              Fig. 02 · Agentic speed, experienced taste
+            </h2>
+            <p
+              class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+            >
+              A fleet of agents. One clear direction.
+            </p>
+            <p class="mt-4 text-lg text-pretty text-slate-300">
+              I plan the work, run AI agents in parallel, and review every piece
+              before it ships. You get the speed of a team and the judgment of
+              10+ years.
+            </p>
+          </div>
+          <button class="play" type="button" id="play-agents">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"
+              />
+            </svg>
+            <span>Play</span>
+          </button>
+        </div>
+        <div
+          class="bp-card border-edge bg-panel mt-10 rounded-[3px] border p-4 sm:p-6"
+        >
+          <div class="fleet-grid">
+            <div class="fleet" id="fleet" aria-hidden="true">
+              <div class="agent-box" id="agent-box">
+                <b>Agents</b>
+                <span class="slots"
+                  ><span class="slot"></span><span class="slot"></span
+                  ><span class="slot"></span
+                ></span>
+              </div>
+              <div class="screen">
+                <div class="blk b-head" id="b-head">
+                  <span class="lbl">header</span><span class="ink"></span>
+                </div>
+                <div class="blk b-hero" id="b-hero">
+                  <span class="lbl">hero</span><span class="ink"></span>
+                </div>
+                <div class="b-cards">
+                  <div class="blk b-card" id="card1">
+                    <span class="lbl">card</span><span class="ink"></span>
+                  </div>
+                  <div class="blk b-card" id="card2">
+                    <span class="lbl">card</span><span class="ink"></span
+                    ><span class="tag">Spacing off</span
+                    ><span class="tick"></span>
+                  </div>
+                </div>
+                <div class="blk b-list" id="b-list">
+                  <span class="lbl">list</span><span class="ink"></span>
+                </div>
+                <div class="blk b-btn" id="b-btn">
+                  <span class="lbl">button</span
+                  ><span class="ink">Book now</span>
+                </div>
+              </div>
+              <span class="agent" style="--c: var(--gold)"></span>
+              <span class="agent" style="--c: var(--indigo)"></span>
+              <span class="agent" style="--c: var(--teal)"></span>
+              <svg
+                class="cursor"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="#282940"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              >
+                <path d="M4 2.5 19.5 12l-6.8 1.6L9.4 20z" />
+              </svg>
+            </div>
+
+            <div class="log-wrap">
+              <p class="log-title">Build log</p>
+              <ol class="log" id="log">
+                <li class="hint">Press Play to start the build.</li>
+              </ol>
+              <span class="shipped" id="shipped">Reviewed and shipped</span>
+              <p class="note">
+                Three agents build the screen at once. I catch the card that's
+                off and send it back before anything ships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fig. 03: website wall, real client screenshots (img/work/<project>-*.jpg) -->
+    <section id="work" class="border-edge/60 border-t" aria-labelledby="work-h">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          id="work-h"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
-          Selected work
+          Fig. 03 · Websites
         </h2>
-        <p class="mt-4 max-w-2xl text-lg text-pretty text-slate-300">
-          Every screen, every size — desktop, iPad, and mobile from real client
-          builds.
+        <p
+          class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+        >
+          Every screen, every size.
         </p>
-
-        <div class="mt-10 space-y-6">
-          <!-- CR Carpet -->
-          <article
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+        <p class="mt-4 max-w-2xl text-lg text-pretty text-slate-300">
+          Sites for local businesses, built to look right on a phone, an iPad
+          and a desktop.
+        </p>
+        <div class="wall mt-10">
+          <button
+            type="button"
+            class="shot is-desktop"
+            data-src="img/work/crflooring-desktop.jpg"
+            data-cap="CR Carpet · Desktop"
+            aria-label="Open CR Carpet desktop screenshot"
           >
-            <div class="work-trio">
-              <div class="device-browser">
-                <div class="device-browser-bar">
-                  <i></i><i></i><i></i>
-                  <span class="url"></span>
-                </div>
-                <img
-                  src="img/work/crflooring-desktop.jpg"
-                  alt="CR Carpet desktop view"
-                  loading="lazy"
-                  decoding="async"
-                  width="1512"
-                  height="982"
-                />
-              </div>
-              <div class="device-tablet">
-                <div class="device-screen">
-                  <img
-                    src="img/work/crflooring-ipad.jpg"
-                    alt="CR Carpet iPad view"
-                    loading="lazy"
-                    decoding="async"
-                    width="656"
-                    height="944"
-                  />
-                </div>
-              </div>
-              <div class="device-phone">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/work/crflooring-mobile.jpg"
-                    alt="CR Carpet mobile view"
-                    loading="lazy"
-                    decoding="async"
-                    width="393"
-                    height="659"
-                  />
-                </div>
-              </div>
+            <div class="frame">
+              <img
+                src="img/work/crflooring-desktop.jpg"
+                width="1512"
+                height="982"
+                alt="CR Carpet on desktop"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div
-              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
-            >
-              <h3 class="font-display text-xl font-semibold text-slate-50">
-                CR Carpet
-              </h3>
-              <p class="text-sm text-slate-400">
-                Role · <span class="text-gold">Frontend</span> · Stack ·
-                <span class="text-gold">Custom WordPress theme</span>
-              </p>
+            <div class="cap">
+              <b>CR Carpet</b><span>Desktop · 1512×982</span>
             </div>
-          </article>
-
-          <!-- Gasoline Equipment (mirrored layout) -->
-          <article
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+          </button>
+          <button
+            type="button"
+            class="shot is-phone"
+            data-src="img/work/fwtrails-mobile.jpg"
+            data-cap="Fort Wayne Trails · Phone"
+            aria-label="Open Fort Wayne Trails phone screenshot"
           >
-            <div class="work-trio is-reversed">
-              <div class="device-browser">
-                <div class="device-browser-bar">
-                  <i></i><i></i><i></i>
-                  <span class="url"></span>
-                </div>
-                <img
-                  src="img/work/gasolineequipment-desktop.jpg"
-                  alt="Gasoline Equipment desktop view"
-                  loading="lazy"
-                  decoding="async"
-                  width="1512"
-                  height="982"
-                />
-              </div>
-              <div class="device-tablet">
-                <div class="device-screen">
-                  <img
-                    src="img/work/gasolineequipment-ipad.jpg"
-                    alt="Gasoline Equipment iPad view"
-                    loading="lazy"
-                    decoding="async"
-                    width="656"
-                    height="944"
-                  />
-                </div>
-              </div>
-              <div class="device-phone">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/work/gasolineequipment-mobile.jpg"
-                    alt="Gasoline Equipment mobile view"
-                    loading="lazy"
-                    decoding="async"
-                    width="393"
-                    height="659"
-                  />
-                </div>
-              </div>
+            <div class="frame">
+              <img
+                src="img/work/fwtrails-mobile.jpg"
+                width="393"
+                height="659"
+                alt="Fort Wayne Trails on phone"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div
-              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
-            >
-              <h3 class="font-display text-xl font-semibold text-slate-50">
-                Gasoline Equipment
-              </h3>
-              <p class="text-sm text-slate-400">
-                Role · <span class="text-gold">Frontend</span> · Stack ·
-                <span class="text-gold"
-                  >Custom WordPress theme + WooCommerce</span
-                >
-              </p>
+            <div class="cap">
+              <b>Fort Wayne Trails</b><span>Phone · 393×659</span>
             </div>
-          </article>
-
-          <!-- Peña Mechanical Contractors -->
-          <article
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+          </button>
+          <button
+            type="button"
+            class="shot is-ipad"
+            data-src="img/work/gasolineequipment-ipad.jpg"
+            data-cap="Gasoline Equipment · iPad"
+            aria-label="Open Gasoline Equipment ipad screenshot"
           >
-            <div class="work-trio">
-              <div class="device-browser">
-                <div class="device-browser-bar">
-                  <i></i><i></i><i></i>
-                  <span class="url"></span>
-                </div>
-                <img
-                  src="img/work/penamechanical-desktop.jpg"
-                  alt="Peña Mechanical Contractors desktop view"
-                  loading="lazy"
-                  decoding="async"
-                  width="1512"
-                  height="982"
-                />
-              </div>
-              <div class="device-tablet">
-                <div class="device-screen">
-                  <img
-                    src="img/work/penamechanical-ipad.jpg"
-                    alt="Peña Mechanical Contractors iPad view"
-                    loading="lazy"
-                    decoding="async"
-                    width="656"
-                    height="944"
-                  />
-                </div>
-              </div>
-              <div class="device-phone">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/work/penamechanical-mobile.jpg"
-                    alt="Peña Mechanical Contractors mobile view"
-                    loading="lazy"
-                    decoding="async"
-                    width="393"
-                    height="659"
-                  />
-                </div>
-              </div>
+            <div class="frame">
+              <img
+                src="img/work/gasolineequipment-ipad.jpg"
+                width="656"
+                height="944"
+                alt="Gasoline Equipment on ipad"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div
-              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
-            >
-              <h3 class="font-display text-xl font-semibold text-slate-50">
-                Peña Mechanical Contractors
-              </h3>
-              <p class="text-sm text-slate-400">
-                Role · <span class="text-gold">Frontend design</span> · Stack ·
-                <span class="text-gold">WordPress</span>
-              </p>
+            <div class="cap">
+              <b>Gasoline Equipment</b><span>iPad · 656×944</span>
             </div>
-          </article>
-
-          <!-- Fort Wayne Trails (mirrored layout) -->
-          <article
-            class="border-edge/60 bg-surface/50 hover:border-gold/50 rounded-2xl border p-6 transition duration-300 sm:p-8"
+          </button>
+          <button
+            type="button"
+            class="shot is-desktop"
+            data-src="img/work/penamechanical-desktop.jpg"
+            data-cap="Peña Mechanical · Desktop"
+            aria-label="Open Peña Mechanical desktop screenshot"
           >
-            <div class="work-trio is-reversed">
-              <div class="device-browser">
-                <div class="device-browser-bar">
-                  <i></i><i></i><i></i>
-                  <span class="url"></span>
-                </div>
-                <img
-                  src="img/work/fwtrails-desktop.jpg"
-                  alt="Fort Wayne Trails desktop view"
-                  loading="lazy"
-                  decoding="async"
-                  width="1512"
-                  height="982"
-                />
-              </div>
-              <div class="device-tablet">
-                <div class="device-screen">
-                  <img
-                    src="img/work/fwtrails-ipad.jpg"
-                    alt="Fort Wayne Trails iPad view"
-                    loading="lazy"
-                    decoding="async"
-                    width="656"
-                    height="944"
-                  />
-                </div>
-              </div>
-              <div class="device-phone">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/work/fwtrails-mobile.jpg"
-                    alt="Fort Wayne Trails mobile view"
-                    loading="lazy"
-                    decoding="async"
-                    width="393"
-                    height="659"
-                  />
-                </div>
-              </div>
+            <div class="frame">
+              <img
+                src="img/work/penamechanical-desktop.jpg"
+                width="1512"
+                height="982"
+                alt="Peña Mechanical on desktop"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div
-              class="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2"
-            >
-              <h3 class="font-display text-xl font-semibold text-slate-50">
-                Fort Wayne Trails
-              </h3>
-              <p class="text-sm text-slate-400">
-                Role · <span class="text-gold">Frontend design</span> · Stack ·
-                <span class="text-gold">WordPress</span>
-              </p>
+            <div class="cap">
+              <b>Peña Mechanical</b><span>Desktop · 1512×982</span>
             </div>
-          </article>
+          </button>
+          <button
+            type="button"
+            class="shot is-phone"
+            data-src="img/work/crflooring-mobile.jpg"
+            data-cap="CR Carpet · Phone"
+            aria-label="Open CR Carpet phone screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/crflooring-mobile.jpg"
+                width="393"
+                height="659"
+                alt="CR Carpet on phone"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap"><b>CR Carpet</b><span>Phone · 393×659</span></div>
+          </button>
+          <button
+            type="button"
+            class="shot is-ipad"
+            data-src="img/work/fwtrails-ipad.jpg"
+            data-cap="Fort Wayne Trails · iPad"
+            aria-label="Open Fort Wayne Trails ipad screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/fwtrails-ipad.jpg"
+                width="656"
+                height="944"
+                alt="Fort Wayne Trails on ipad"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Fort Wayne Trails</b><span>iPad · 656×944</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="shot is-desktop"
+            data-src="img/work/gasolineequipment-desktop.jpg"
+            data-cap="Gasoline Equipment · Desktop"
+            aria-label="Open Gasoline Equipment desktop screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/gasolineequipment-desktop.jpg"
+                width="1512"
+                height="982"
+                alt="Gasoline Equipment on desktop"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Gasoline Equipment</b><span>Desktop · 1512×982</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="shot is-phone"
+            data-src="img/work/penamechanical-mobile.jpg"
+            data-cap="Peña Mechanical · Phone"
+            aria-label="Open Peña Mechanical phone screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/penamechanical-mobile.jpg"
+                width="393"
+                height="659"
+                alt="Peña Mechanical on phone"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Peña Mechanical</b><span>Phone · 393×659</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="shot is-ipad"
+            data-src="img/work/crflooring-ipad.jpg"
+            data-cap="CR Carpet · iPad"
+            aria-label="Open CR Carpet ipad screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/crflooring-ipad.jpg"
+                width="656"
+                height="944"
+                alt="CR Carpet on ipad"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap"><b>CR Carpet</b><span>iPad · 656×944</span></div>
+          </button>
+          <button
+            type="button"
+            class="shot is-desktop"
+            data-src="img/work/fwtrails-desktop.jpg"
+            data-cap="Fort Wayne Trails · Desktop"
+            aria-label="Open Fort Wayne Trails desktop screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/fwtrails-desktop.jpg"
+                width="1512"
+                height="982"
+                alt="Fort Wayne Trails on desktop"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Fort Wayne Trails</b><span>Desktop · 1512×982</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="shot is-phone"
+            data-src="img/work/gasolineequipment-mobile.jpg"
+            data-cap="Gasoline Equipment · Phone"
+            aria-label="Open Gasoline Equipment phone screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/gasolineequipment-mobile.jpg"
+                width="393"
+                height="659"
+                alt="Gasoline Equipment on phone"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Gasoline Equipment</b><span>Phone · 393×659</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="shot is-ipad"
+            data-src="img/work/penamechanical-ipad.jpg"
+            data-cap="Peña Mechanical · iPad"
+            aria-label="Open Peña Mechanical ipad screenshot"
+          >
+            <div class="frame">
+              <img
+                src="img/work/penamechanical-ipad.jpg"
+                width="656"
+                height="944"
+                alt="Peña Mechanical on ipad"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cap">
+              <b>Peña Mechanical</b><span>iPad · 656×944</span>
+            </div>
+          </button>
         </div>
       </div>
     </section>
@@ -554,7 +870,7 @@
     <section id="native" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
           Native · iOS &amp; Android
         </h2>
@@ -572,14 +888,14 @@
           <div class="mt-6 flex flex-wrap gap-3">
             <a
               href="https://apps.apple.com/us/app/fort-wayne-trails/id6462937464"
-              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span class="text-[0.65rem] text-slate-400">Download on the</span>
               <span class="font-display font-semibold">App Store</span>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=org.fwtrails.FortWayneTrails"
-              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span class="text-[0.65rem] text-slate-400">Get it on</span>
               <span class="font-display font-semibold">Google Play</span>
@@ -593,7 +909,7 @@
     <section id="process" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
           How I work
         </h2>
@@ -633,7 +949,7 @@
     <section id="contact" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
-          class="text-gold font-display text-sm font-semibold tracking-[0.25em] uppercase"
+          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
         >
           Get in touch
         </h2>
@@ -642,7 +958,7 @@
         </p>
         <a
           href="mailto:me@tylereich.com"
-          class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold mt-8 inline-flex items-center gap-2 rounded-[2px] px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <svg
             class="h-5 w-5"
@@ -689,5 +1005,12 @@
         </a>
       </div>
     </footer>
+    <dialog id="lb" aria-label="Screenshot">
+      <img id="lb-img" alt="" />
+      <div class="lb-bar">
+        <p id="lb-cap"></p>
+        <button class="lb-close" type="button" id="lb-close">Close</button>
+      </div>
+    </dialog>
   </body>
 </html>
