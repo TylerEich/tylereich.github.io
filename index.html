@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tyler Eich — Mobile &amp; Full-Stack Developer</title>
+    <title>Tyler Eich · Need a guy? I'm your guy.</title>
     <meta
       name="description"
-      content="Tyler Eich is a freelance React Native developer with 10+ years of experience — launching new apps, reviving existing ones, and shipping with craft at AI speed."
+      content="Tyler Eich is a freelance developer who builds websites and apps, fixes what's broken and finishes projects that got stuck. Evenings and weekends, a few projects at a time."
     />
-    <meta name="theme-color" content="#282940" />
+    <meta name="theme-color" content="#0f2a4a" />
     <meta name="color-scheme" content="dark" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tylereich.com/" />
     <meta
       property="og:title"
-      content="Tyler Eich — Mobile &amp; Full-Stack Developer"
+      content="Tyler Eich · Need a guy? I'm your guy."
     />
     <meta
       property="og:description"
-      content="I build mobile apps — React Native, full-stack range, craft at AI speed."
+      content="Websites, apps and fixes. Built, finished or fixed by a freelance developer with 10+ years of experience."
     />
     <meta property="og:image" content="https://tylereich.com/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -32,8 +32,22 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="style.css?v=6f4be235" />
+    <link
+      rel="preload"
+      href="fonts/caveat-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script>
+      // Sections below the hero start as linework and refine on scroll
+      // (js/site.js). Skipped when the visitor asks for reduced motion.
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.documentElement.classList.add("sketchy");
+    </script>
+    <link rel="stylesheet" href="style.css?v=d7af8324" />
     <script src="js/sections.js?v=157fe576" defer></script>
+    <script src="js/site.js?v=f61b406b" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,8 +55,9 @@
         "name": "Tyler Eich",
         "url": "https://tylereich.com/",
         "email": "mailto:me@tylereich.com",
-        "jobTitle": "Mobile & Full-Stack Developer",
+        "jobTitle": "Freelance Developer",
         "knowsAbout": [
+          "Websites",
           "React Native",
           "React",
           "Angular",
@@ -50,49 +65,120 @@
           "C#",
           "ASP.NET",
           "SQL",
-          "Azure Cosmos DB",
-          "AI Engineering"
+          "Azure"
         ],
         "sameAs": ["https://github.com/TylerEich"]
       }
     </script>
   </head>
-  <body class="bg-gunmetal text-slate-300 antialiased">
-    <!-- Hero -->
-    <header class="relative overflow-hidden">
+  <body class="bg-page text-body antialiased">
+    <!-- Progress strip: which stage of the build this part of the page is -->
+    <nav class="stages" aria-label="Page sections">
+      <div class="stages-in">
+        <a class="brand" href="#top">TE</a>
+        <ol>
+          <li class="now">
+            <a href="#top" aria-current="step"><i></i><span>Sketch</span></a>
+          </li>
+          <li>
+            <a href="#help"><i></i><span>Framing</span></a>
+          </li>
+          <li>
+            <a href="#deploy"><i></i><span>Wiring</span></a>
+          </li>
+          <li>
+            <a href="#work"><i></i><span>Polish</span></a>
+          </li>
+          <li>
+            <a href="#process"><i></i><span>Shipped</span></a>
+          </li>
+        </ol>
+        <button
+          class="bp-toggle"
+          type="button"
+          id="bp-toggle"
+          aria-pressed="false"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 3h18v18H3z" stroke-dasharray="3 3" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+          <span class="long">Show the blueprint</span
+          ><span class="short">Plan</span>
+        </button>
+      </div>
+      <span class="bar" aria-hidden="true"><span></span></span>
+    </nav>
+    <p class="bp-banner" aria-live="polite">
+      This is the plan under the finished site. Tap the button again to put the
+      finish back.
+    </p>
+
+    <!-- Hero: finished from the start, with a few construction marks left -->
+    <header
+      id="top"
+      class="ink inked relative overflow-hidden"
+      data-stage="sketch"
+    >
       <div class="hero-glow pointer-events-none absolute inset-0"></div>
+      <span
+        class="smudge"
+        style="top: 30%; right: 8%"
+        aria-hidden="true"
+      ></span>
       <div
-        class="relative mx-auto grid max-w-5xl items-center gap-12 px-6 py-24 sm:px-8 sm:py-32 lg:grid-cols-[minmax(0,1fr)_300px]"
+        class="relative mx-auto grid max-w-5xl items-center gap-12 px-6 pt-32 pb-20 sm:px-8 sm:pt-40 sm:pb-28 lg:grid-cols-[minmax(0,1fr)_320px]"
       >
         <div>
-          <p
-            class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-          >
-            Tyler Eich
-          </p>
+          <p class="eyebrow">Tyler Eich · Freelance developer</p>
           <h1
-            class="font-display mt-5 text-5xl font-semibold tracking-tight text-balance text-slate-50 sm:text-7xl"
+            class="trace font-display text-head mt-5 text-5xl font-semibold tracking-tight text-balance sm:text-7xl"
           >
-            I build <span class="text-gold">mobile apps</span>.
+            Need a guy?
+            <span class="scribble text-marker"
+              >I'm your guy.<svg
+                viewBox="0 0 300 20"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  pathLength="1"
+                  d="M4 13 C 60 5, 120 17, 180 9 S 268 5, 296 11"
+                /></svg
+            ></span>
           </h1>
-          <p
-            class="mt-6 max-w-2xl text-lg text-pretty text-slate-400 sm:text-xl"
-          >
-            React Native developer with full-stack range. 10+ years taking
-            products from first idea to the app stores.
+          <p class="text-body mt-6 max-w-2xl text-lg text-pretty sm:text-xl">
+            I build websites and apps, fix what's broken, and finish the
+            projects that got stuck. If there's something on your list you'd
+            rather not deal with, hand it to me.
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold inline-flex items-center gap-2 rounded-[2px] px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="pencil-ring btn-fill bg-marker text-page border-marker hover:bg-marker/90 focus-visible:outline-marker inline-flex items-center gap-2 rounded-[2px] border px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              Get in touch
+              Tell me what you need
+              <svg
+                viewBox="0 0 100 40"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M6 22 C 4 6, 92 2, 96 18 S 30 40, 8 26" />
+              </svg>
             </a>
             <a
               href="#work"
-              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex items-center gap-2 rounded-[2px] border px-6 py-3 font-semibold text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="border-edge hover:border-marker/60 focus-visible:outline-marker text-head inline-flex items-center gap-2 rounded-[2px] border px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              See the work
+              See what I've built
               <svg
                 class="h-4 w-4"
                 viewBox="0 0 24 24"
@@ -108,109 +194,68 @@
               </svg>
             </a>
           </div>
+          <p class="text-muted mt-6 text-sm">
+            I take on a few focused projects at a time, on evenings and
+            weekends.
+          </p>
         </div>
-        <svg
-          class="iso mx-auto max-w-[280px] lg:max-w-none"
-          viewBox="0 0 300 262"
-          role="img"
-          aria-label="Isometric stack of four layers: app, API, data and pipeline"
+
+        <div
+          id="todo"
+          class="todo bp-card border-edge bg-panel rounded-[3px] border p-6"
         >
-          <g class="slab" style="--i: 0">
-            <polygon class="left" points="25,198 105,238 105,254 25,214" />
-            <polygon class="right" points="105,238 185,198 185,214 105,254" />
-            <polygon class="top" points="105,158 185,198 105,238 25,198" />
-            <line class="lead" x1="189" y1="198" x2="211" y2="198" />
-            <text x="217" y="202">PIPELINE</text>
-          </g>
-          <g class="slab" style="--i: 1">
-            <polygon class="left" points="25,152 105,192 105,208 25,168" />
-            <polygon class="right" points="105,192 185,152 185,168 105,208" />
-            <polygon class="top" points="105,112 185,152 105,192 25,152" />
-            <line class="lead" x1="189" y1="152" x2="211" y2="152" />
-            <text x="217" y="156">DATA</text>
-          </g>
-          <g class="slab" style="--i: 2">
-            <polygon class="left" points="25,106 105,146 105,162 25,122" />
-            <polygon class="right" points="105,146 185,106 185,122 105,162" />
-            <polygon class="top" points="105,66 185,106 105,146 25,106" />
-            <line class="lead" x1="189" y1="106" x2="211" y2="106" />
-            <text x="217" y="110">API</text>
-          </g>
-          <g class="slab hot" style="--i: 3">
-            <polygon class="left" points="25,60 105,100 105,116 25,76" />
-            <polygon class="right" points="105,100 185,60 185,76 105,116" />
-            <polygon class="top" points="105,20 185,60 105,100 25,60" />
-            <line class="lead" x1="189" y1="60" x2="211" y2="60" />
-            <text x="217" y="64">APP</text>
-          </g>
-        </svg>
+          <p class="eyebrow">Your list</p>
+          <ul class="mt-5">
+            <li>
+              <span class="box"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path pathLength="1" d="M4 13l5 5L22 4" /></svg></span
+              ><span class="txt">A website that works on phones</span>
+            </li>
+            <li>
+              <span class="box"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path pathLength="1" d="M4 13l5 5L22 4" /></svg></span
+              ><span class="txt">Fix the form that stopped sending</span>
+            </li>
+            <li>
+              <span class="box"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path pathLength="1" d="M4 13l5 5L22 4" /></svg></span
+              ><span class="txt">Finish the app that's almost done</span>
+            </li>
+            <li>
+              <span class="box"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path pathLength="1" d="M4 13l5 5L22 4" /></svg></span
+              ><span class="txt">Updates that go live on their own</span>
+            </li>
+          </ul>
+          <p class="after hand r mt-6">handled. what's next?</p>
+        </div>
       </div>
     </header>
 
-    <!-- Experience & proof -->
-    <section id="experience" class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
+    <!-- Fig. 01: what I can help with -->
+    <section
+      id="help"
+      class="ink border-edge/60 border-t"
+      data-stage="framing"
+      aria-labelledby="help-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="help-h" class="eyebrow">Fig. 01 · What I can help with</h2>
+        <p
+          class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
         >
-          Experience
-        </h2>
-        <p class="mt-4 max-w-2xl text-lg text-pretty text-slate-300">
-          Mapping platforms, small-business advertising, web hosting — a
-          decade-plus of shipping, solo and with teams.
+          Hand me the thing you've been putting off.
         </p>
-        <dl class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
-            <dt class="font-display text-3xl font-semibold text-slate-50">
-              10+ years
-            </dt>
-            <dd class="mt-2 text-sm text-slate-400">
-              of professional, full-time software development.
-            </dd>
-          </div>
-          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
-            <dt class="font-display text-3xl font-semibold text-slate-50">
-              Both stores
-            </dt>
-            <dd class="mt-2 text-sm text-slate-400">
-              Apps shipped to the App Store and Google Play with React Native.
-            </dd>
-          </div>
-          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
-            <dt class="font-display text-3xl font-semibold text-slate-50">
-              Enterprise scale
-            </dt>
-            <dd class="mt-2 text-sm text-slate-400">
-              Backends built on C#, ASP.NET, SQL, Cosmos DB, and Service Bus.
-            </dd>
-          </div>
-          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
-            <dt class="font-display text-3xl font-semibold text-slate-50">
-              Multi-year
-            </dt>
-            <dd class="mt-2 text-sm text-slate-400">
-              client relationships — repeat clients, not one-offs.
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-        >
-          What I can do for you
-        </h2>
-        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Launch a new app -->
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div
-            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-marker/50 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5"
           >
             <svg
-              class="text-gold h-7 w-7"
+              class="text-marker h-7 w-7"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -219,33 +264,52 @@
               stroke-linejoin="round"
               aria-hidden="true"
             >
-              <path
-                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-              />
-              <path
-                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
-              />
-              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+              <rect x="2" y="4" width="20" height="14" rx="1" />
+              <path d="M2 8h20M8 21h8M12 18v3" />
             </svg>
-            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
-              Launch a new app
+            <h3 class="font-display text-head mt-4 text-xl font-semibold">
+              A website for your business
             </h3>
-            <p class="mt-1 text-sm font-medium text-slate-400">
-              React Native · iOS &amp; Android
+            <p class="text-muted mt-1 text-sm font-medium">
+              Phone · Tablet · Desktop
             </p>
-            <p class="mt-3 text-slate-300">
-              Idea to launch. I deliver start to finish — on my own or alongside
-              your backend team.
+            <p class="text-body mt-3">
+              A clean, fast site that looks right on every screen, with updates
+              when you need them.
             </p>
           </div>
-
-          <!-- Improve an existing app -->
           <div
-            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-marker/50 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5"
           >
             <svg
-              class="text-gold h-7 w-7"
+              class="text-marker h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 22V4" />
+              <path d="M4 4h13l-2 4 2 4H4" />
+            </svg>
+            <h3 class="font-display text-head mt-4 text-xl font-semibold">
+              Finish what got stuck
+            </h3>
+            <p class="text-muted mt-1 text-sm font-medium">
+              Half-built · Stalled · Almost there
+            </p>
+            <p class="text-body mt-3">
+              Developer moved on? Project stuck at 80%? I'll figure out where it
+              stands and get it over the line.
+            </p>
+          </div>
+          <div
+            class="bp-card border-edge bg-panel hover:border-marker/50 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5"
+          >
+            <svg
+              class="text-marker h-7 w-7"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -258,24 +322,22 @@
                 d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
               />
             </svg>
-            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
-              Revive an existing app
+            <h3 class="font-display text-head mt-4 text-xl font-semibold">
+              Fix what's broken
             </h3>
-            <p class="mt-1 text-sm font-medium text-slate-400">
-              Rescue · Modernize · Extend
+            <p class="text-muted mt-1 text-sm font-medium">
+              Bugs · Slow pages · Odd errors
             </p>
-            <p class="mt-3 text-slate-300">
-              I've taken apps that were far off client expectations and brought
-              them all the way back.
+            <p class="text-body mt-3">
+              Something stopped working, or never quite did. I'll track it down,
+              fix it, and tell you plainly what happened.
             </p>
           </div>
-
-          <!-- Add AI to your product -->
           <div
-            class="bp-card border-edge bg-panel hover:border-gold/50 hover:shadow-gold/5 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            class="bp-card border-edge bg-panel hover:border-marker/50 rounded-[3px] border p-6 transition duration-300 hover:-translate-y-0.5"
           >
             <svg
-              class="text-gold h-7 w-7"
+              class="text-marker h-7 w-7"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -284,57 +346,109 @@
               stroke-linejoin="round"
               aria-hidden="true"
             >
-              <path
-                d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"
-              />
-              <path d="M20 3v4" />
-              <path d="M22 5h-4" />
+              <rect x="6" y="2" width="12" height="20" rx="2" />
+              <path d="M11 18h2" />
             </svg>
-            <h3 class="font-display mt-4 text-xl font-semibold text-slate-50">
-              Craft, accelerated
+            <h3 class="font-display text-head mt-4 text-xl font-semibold">
+              An app for iPhone and Android
             </h3>
-            <p class="mt-1 text-sm font-medium text-slate-400">
-              Polish · Detail · AI-aware
+            <p class="text-muted mt-1 text-sm font-medium">
+              React Native · Both stores
             </p>
-            <p class="mt-3 text-slate-300">
-              A personal touch on every screen, built at AI-assisted speed. I
-              know LLMs well and where they fit in a product.
+            <p class="text-body mt-3">
+              Got a focused app idea? I've shipped to both app stores and can
+              take it from sketch to download.
             </p>
           </div>
         </div>
-        <p class="mt-8 text-sm text-slate-400">
-          Also fluent in: React · Angular · TypeScript · C# · ASP.NET · SQL ·
-          Cosmos DB · Azure Service Bus
+        <p class="hand mt-6">don't see yours? ask anyway.</p>
+        <p class="text-muted mt-4 text-sm">
+          Comfortable with: React Native · React · Angular · TypeScript · C# ·
+          ASP.NET · SQL · Azure
         </p>
       </div>
     </section>
 
-    <!-- Fig. 01: press Play to run the animation (js/sections.js) -->
+    <!-- Fig. 02: the honest part -->
+    <section
+      id="about"
+      class="ink border-edge/60 border-t"
+      data-stage="framing"
+      aria-labelledby="about-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="about-h" class="eyebrow">Fig. 02 · The honest part</h2>
+        <p
+          class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
+        >
+          One guy, evenings and weekends, done right.
+        </p>
+        <p class="text-body mt-4 max-w-2xl text-lg text-pretty">
+          I've built software for a living for over 10 years, and I still do it
+          full-time by day. Freelance work happens on evenings and weekends, so
+          I keep it to a few projects at a time. You won't get an agency. You'll
+          get someone experienced who actually finishes the job.
+        </p>
+        <dl class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <dt class="font-display text-head text-3xl font-semibold">
+              10+ years
+            </dt>
+            <dd class="text-muted mt-2 text-sm">
+              building software professionally.
+            </dd>
+          </div>
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <dt class="font-display text-head text-3xl font-semibold">
+              Web and native
+            </dt>
+            <dd class="text-muted mt-2 text-sm">
+              Websites, iPhone and Android apps, and the servers behind them.
+            </dd>
+          </div>
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <dt class="font-display text-head text-3xl font-semibold">
+              Repeat clients
+            </dt>
+            <dd class="text-muted mt-2 text-sm">
+              People I've worked with for years keep coming back with the next
+              thing.
+            </dd>
+          </div>
+          <div class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <dt class="font-display text-head text-3xl font-semibold">
+              Seen through
+            </dt>
+            <dd class="text-muted mt-2 text-sm">
+              I like finishing things. When I take one on, I get it done.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Fig. 03: press Play to run the animation (js/sections.js) -->
     <section
       id="deploy"
-      class="bp-anim border-edge/60 border-t"
+      class="ink bp-anim border-edge/60 border-t"
+      data-stage="wiring"
       aria-labelledby="deploy-h"
     >
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <div class="flex flex-wrap items-end justify-between gap-6">
           <div class="max-w-2xl min-w-0">
-            <h2
-              id="deploy-h"
-              class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-            >
-              Fig. 01 · Automatic deployment
-            </h2>
+            <h2 id="deploy-h" class="eyebrow">Fig. 03 · How changes go live</h2>
             <p
-              class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+              class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
             >
-              Every change ships itself.
+              Small changes, checked every time.
             </p>
-            <p class="mt-4 text-lg text-pretty text-slate-300">
-              Push a change and the pipeline takes it from there: lint, tests
-              and UI screenshots, then live on the web, TestFlight and Google
-              Play. Small changes go out often, so problems get caught while
-              they're small.
+            <p class="text-body mt-4 text-lg text-pretty">
+              When I make a change, it runs through automatic checks before it
+              goes live on the web or in the app stores. Nothing gets copied
+              around by hand, and problems get caught while they're small.
             </p>
+            <p class="hand mt-4">press play to watch one go through &darr;</p>
           </div>
           <button class="play" type="button" id="play-deploy">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -491,30 +605,26 @@
       </div>
     </section>
 
-    <!-- Fig. 02: press Play to run the animation (js/sections.js) -->
+    <!-- Fig. 04: press Play to run the animation (js/sections.js) -->
     <section
       id="agents"
-      class="bp-anim border-edge/60 border-t"
+      class="ink bp-anim border-edge/60 border-t"
+      data-stage="wiring"
       aria-labelledby="agents-h"
     >
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <div class="flex flex-wrap items-end justify-between gap-6">
           <div class="max-w-2xl min-w-0">
-            <h2
-              id="agents-h"
-              class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-            >
-              Fig. 02 · Agentic speed, experienced taste
-            </h2>
+            <h2 id="agents-h" class="eyebrow">Fig. 04 · How I work fast</h2>
             <p
-              class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+              class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
             >
-              A fleet of agents. One clear direction.
+              AI helpers do the legwork. I make the calls.
             </p>
-            <p class="mt-4 text-lg text-pretty text-slate-300">
-              I plan the work, run AI agents in parallel, and review every piece
-              before it ships. You get the speed of a team and the judgment of
-              10+ years.
+            <p class="text-body mt-4 text-lg text-pretty">
+              I use AI tools to knock out the repetitive parts quickly, and I
+              review every piece myself before it ships. That's how one guy on
+              evenings and weekends gets real work done without cutting corners.
             </p>
           </div>
           <button class="play" type="button" id="play-agents">
@@ -563,14 +673,14 @@
                   ><span class="ink">Book now</span>
                 </div>
               </div>
-              <span class="agent" style="--c: var(--gold)"></span>
-              <span class="agent" style="--c: var(--indigo)"></span>
-              <span class="agent" style="--c: var(--teal)"></span>
+              <span class="agent" style="--c: var(--bp-gold)"></span>
+              <span class="agent" style="--c: var(--bp-indigo)"></span>
+              <span class="agent" style="--c: var(--bp-teal)"></span>
               <svg
                 class="cursor"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                stroke="#282940"
+                stroke="#0f2a4a"
                 stroke-width="1.2"
                 stroke-linejoin="round"
               >
@@ -585,8 +695,8 @@
               </ol>
               <span class="shipped" id="shipped">Reviewed and shipped</span>
               <p class="note">
-                Three agents build the screen at once. I catch the card that's
-                off and send it back before anything ships.
+                The helpers build the screen at the same time. I catch the card
+                that's off and send it back before anything ships.
               </p>
             </div>
           </div>
@@ -594,25 +704,65 @@
       </div>
     </section>
 
-    <!-- Fig. 03: website wall, real client screenshots (img/work/<project>-*.jpg) -->
-    <section id="work" class="border-edge/60 border-t" aria-labelledby="work-h">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          id="work-h"
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-        >
-          Fig. 03 · Websites
-        </h2>
+    <!-- Fig. 05: website wall, real client screenshots (img/work/<project>-*.jpg) -->
+    <section
+      id="work"
+      class="ink border-edge/60 border-t"
+      data-stage="polish"
+      aria-labelledby="work-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="work-h" class="eyebrow">Fig. 05 · Stuff I've built</h2>
         <p
-          class="font-display mt-4 text-2xl font-semibold text-balance text-slate-50 sm:text-3xl"
+          class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
         >
-          Every screen, every size.
+          Websites for local businesses.
         </p>
-        <p class="mt-4 max-w-2xl text-lg text-pretty text-slate-300">
-          Sites for local businesses, built to look right on a phone, an iPad
-          and a desktop.
+        <p class="text-body mt-4 max-w-2xl text-lg text-pretty">
+          Real sites for real businesses, built to look right on a phone, an
+          iPad and a desktop.
         </p>
-        <div class="wall mt-10">
+
+        <!-- Before and after: the same screenshot as a blueprint print and in color -->
+        <figure id="compare" class="compare mt-10">
+          <div class="cmp-stage">
+            <img
+              src="img/work/penamechanical-desktop.jpg"
+              width="1512"
+              height="982"
+              alt=""
+              class="cmp-plan"
+              style="filter: var(--bp-print)"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="img/work/penamechanical-desktop.jpg"
+              width="1512"
+              height="982"
+              alt="A business website shown half as a blueprint and half finished"
+              class="cmp-built"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="cmp-line" aria-hidden="true"></span>
+            <span class="cmp-tag l" aria-hidden="true">the plan</span>
+            <span class="cmp-tag r" aria-hidden="true">the finished site</span>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Slide between the plan and the finished site"
+            />
+          </div>
+          <figcaption class="text-muted mt-3 text-sm">
+            Same page, plan and finish. Drag the line to compare.
+          </figcaption>
+        </figure>
+
+        <p class="hand r mt-10">tap any one for a closer look</p>
+        <div class="wall mt-4">
           <button
             type="button"
             class="shot is-desktop"
@@ -630,9 +780,7 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>CR Carpet</b><span>Desktop · 1512×982</span>
-            </div>
+            <div class="cap"><b>CR Carpet</b><span>Desktop</span></div>
           </button>
           <button
             type="button"
@@ -651,30 +799,26 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Fort Wayne Trails</b><span>Phone · 393×659</span>
-            </div>
+            <div class="cap"><b>Fort Wayne Trails</b><span>Phone</span></div>
           </button>
           <button
             type="button"
             class="shot is-ipad"
             data-src="img/work/gasolineequipment-ipad.jpg"
             data-cap="Gasoline Equipment · iPad"
-            aria-label="Open Gasoline Equipment ipad screenshot"
+            aria-label="Open Gasoline Equipment iPad screenshot"
           >
             <div class="frame">
               <img
                 src="img/work/gasolineequipment-ipad.jpg"
                 width="656"
                 height="944"
-                alt="Gasoline Equipment on ipad"
+                alt="Gasoline Equipment on iPad"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Gasoline Equipment</b><span>iPad · 656×944</span>
-            </div>
+            <div class="cap"><b>Gasoline Equipment</b><span>iPad</span></div>
           </button>
           <button
             type="button"
@@ -693,9 +837,7 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Peña Mechanical</b><span>Desktop · 1512×982</span>
-            </div>
+            <div class="cap"><b>Peña Mechanical</b><span>Desktop</span></div>
           </button>
           <button
             type="button"
@@ -714,28 +856,26 @@
                 decoding="async"
               />
             </div>
-            <div class="cap"><b>CR Carpet</b><span>Phone · 393×659</span></div>
+            <div class="cap"><b>CR Carpet</b><span>Phone</span></div>
           </button>
           <button
             type="button"
             class="shot is-ipad"
             data-src="img/work/fwtrails-ipad.jpg"
             data-cap="Fort Wayne Trails · iPad"
-            aria-label="Open Fort Wayne Trails ipad screenshot"
+            aria-label="Open Fort Wayne Trails iPad screenshot"
           >
             <div class="frame">
               <img
                 src="img/work/fwtrails-ipad.jpg"
                 width="656"
                 height="944"
-                alt="Fort Wayne Trails on ipad"
+                alt="Fort Wayne Trails on iPad"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Fort Wayne Trails</b><span>iPad · 656×944</span>
-            </div>
+            <div class="cap"><b>Fort Wayne Trails</b><span>iPad</span></div>
           </button>
           <button
             type="button"
@@ -754,9 +894,7 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Gasoline Equipment</b><span>Desktop · 1512×982</span>
-            </div>
+            <div class="cap"><b>Gasoline Equipment</b><span>Desktop</span></div>
           </button>
           <button
             type="button"
@@ -775,28 +913,26 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Peña Mechanical</b><span>Phone · 393×659</span>
-            </div>
+            <div class="cap"><b>Peña Mechanical</b><span>Phone</span></div>
           </button>
           <button
             type="button"
             class="shot is-ipad"
             data-src="img/work/crflooring-ipad.jpg"
             data-cap="CR Carpet · iPad"
-            aria-label="Open CR Carpet ipad screenshot"
+            aria-label="Open CR Carpet iPad screenshot"
           >
             <div class="frame">
               <img
                 src="img/work/crflooring-ipad.jpg"
                 width="656"
                 height="944"
-                alt="CR Carpet on ipad"
+                alt="CR Carpet on iPad"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div class="cap"><b>CR Carpet</b><span>iPad · 656×944</span></div>
+            <div class="cap"><b>CR Carpet</b><span>iPad</span></div>
           </button>
           <button
             type="button"
@@ -815,9 +951,7 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Fort Wayne Trails</b><span>Desktop · 1512×982</span>
-            </div>
+            <div class="cap"><b>Fort Wayne Trails</b><span>Desktop</span></div>
           </button>
           <button
             type="button"
@@ -836,68 +970,62 @@
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Gasoline Equipment</b><span>Phone · 393×659</span>
-            </div>
+            <div class="cap"><b>Gasoline Equipment</b><span>Phone</span></div>
           </button>
           <button
             type="button"
             class="shot is-ipad"
             data-src="img/work/penamechanical-ipad.jpg"
             data-cap="Peña Mechanical · iPad"
-            aria-label="Open Peña Mechanical ipad screenshot"
+            aria-label="Open Peña Mechanical iPad screenshot"
           >
             <div class="frame">
               <img
                 src="img/work/penamechanical-ipad.jpg"
                 width="656"
                 height="944"
-                alt="Peña Mechanical on ipad"
+                alt="Peña Mechanical on iPad"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div class="cap">
-              <b>Peña Mechanical</b><span>iPad · 656×944</span>
-            </div>
+            <div class="cap"><b>Peña Mechanical</b><span>iPad</span></div>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Native — store links for the Fort Wayne Trails app. Add real phone
+    <!-- Native: store links for the Fort Wayne Trails app. Add real phone
          screenshots (img/native/) here once captured. -->
-    <section id="native" class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-        >
-          Native · iOS &amp; Android
-        </h2>
+    <section
+      id="native"
+      class="ink border-edge/60 border-t"
+      data-stage="polish"
+      aria-labelledby="native-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="native-h" class="eyebrow">Also in the app stores</h2>
         <div class="mt-8">
-          <h3
-            class="font-display text-2xl font-semibold text-slate-50 sm:text-3xl"
-          >
+          <h3 class="font-display text-head text-2xl font-semibold sm:text-3xl">
             Fort Wayne Trails
           </h3>
-          <p class="mt-4 max-w-md text-slate-300">
-            Trail maps, live location, and points of interest for the Fort Wayne
-            trail network — one React Native codebase, shipped to both app
-            stores.
+          <p class="text-body mt-4 max-w-md">
+            Trail maps, live location and points of interest for Fort Wayne's
+            trail network. One codebase, live on iPhone and Android.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a
               href="https://apps.apple.com/us/app/fort-wayne-trails/id6462937464"
-              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="bp-card border-edge hover:border-marker/50 focus-visible:outline-marker text-head inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <span class="text-[0.65rem] text-slate-400">Download on the</span>
+              <span class="text-muted text-[0.65rem]">Download on the</span>
               <span class="font-display font-semibold">App Store</span>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=org.fwtrails.FortWayneTrails"
-              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="bp-card border-edge hover:border-marker/50 focus-visible:outline-marker text-head inline-flex flex-col rounded-[3px] border px-4 py-2 leading-tight transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <span class="text-[0.65rem] text-slate-400">Get it on</span>
+              <span class="text-muted text-[0.65rem]">Get it on</span>
               <span class="font-display font-semibold">Google Play</span>
             </a>
           </div>
@@ -905,82 +1033,95 @@
       </div>
     </section>
 
-    <!-- How I work -->
-    <section id="process" class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
-        >
-          How I work
-        </h2>
-        <div class="mt-8 grid gap-10 sm:grid-cols-3 sm:gap-6">
-          <div>
-            <h3 class="font-display text-xl font-semibold text-slate-50">
-              Start to finish
+    <!-- Fig. 06: how it works -->
+    <section
+      id="process"
+      class="ink border-edge/60 border-t"
+      data-stage="shipped"
+      aria-labelledby="process-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="process-h" class="eyebrow">Fig. 06 · How it works</h2>
+        <ol class="mt-8 grid gap-4 sm:grid-cols-3">
+          <li class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <span class="text-marker font-mono text-sm">01</span>
+            <h3 class="font-display text-head mt-3 text-xl font-semibold">
+              Tell me what you need
             </h3>
-            <p class="mt-3 text-slate-300">
-              I drive delivery from design to release — and I integrate well
-              with the teams and collaborators already on your product.
+            <p class="text-body mt-3">
+              Send me an email about what's going on. A few sentences is plenty.
             </p>
-          </div>
-          <div>
-            <h3 class="font-display text-xl font-semibold text-slate-50">
-              Clear communication
+          </li>
+          <li class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <span class="text-marker font-mono text-sm">02</span>
+            <h3 class="font-display text-head mt-3 text-xl font-semibold">
+              I'll give it to you straight
             </h3>
-            <p class="mt-3 text-slate-300">
-              Years of public speaking. It shows: plain language, straight
-              answers, no jargon.
+            <p class="text-body mt-3">
+              I'll tell you if I'm the right guy, what it'll take, and when I
+              can get to it.
             </p>
-          </div>
-          <div>
-            <h3 class="font-display text-xl font-semibold text-slate-50">
-              AI speed, senior judgment
+          </li>
+          <li class="bp-card border-edge bg-panel rounded-[3px] border p-6">
+            <span class="text-marker font-mono text-sm">03</span>
+            <h3 class="font-display text-head mt-3 text-xl font-semibold">
+              I get it done
             </h3>
-            <p class="mt-3 text-slate-300">
-              I build with agentic AI tooling every day — you get modern
-              velocity with 10+ years of experience behind every decision.
+            <p class="text-body mt-3">
+              I'll keep you posted in plain English and see it through to
+              finished.
             </p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="border-edge/60 border-t">
-      <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
-        <h2
-          class="text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase"
+    <section
+      id="contact"
+      class="ink border-edge/60 border-t"
+      data-stage="shipped"
+      aria-labelledby="contact-h"
+    >
+      <div class="guides mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
+        <h2 id="contact-h" class="eyebrow">Fig. 07 · Your project next</h2>
+        <p
+          class="font-display text-head mt-4 text-2xl font-semibold text-balance sm:text-3xl"
         >
-          Get in touch
-        </h2>
-        <p class="mt-4 max-w-xl text-lg text-slate-300">
-          New app, struggling app, or just an idea? Tell me about it.
+          Got something on your list?
         </p>
-        <a
-          href="mailto:me@tylereich.com"
-          class="bg-gold text-gunmetal hover:bg-gold/90 focus-visible:outline-gold mt-8 inline-flex items-center gap-2 rounded-[2px] px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          <svg
-            class="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
+        <p class="text-body mt-4 max-w-xl text-lg">
+          Tell me what you need built, finished or fixed, and I'll let you know
+          if I can help.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a
+            href="mailto:me@tylereich.com"
+            class="btn-fill bg-marker text-page border-marker hover:bg-marker/90 focus-visible:outline-marker inline-flex items-center gap-2 rounded-[2px] border px-6 py-3 font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2"
           >
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-          me@tylereich.com
-        </a>
+            <svg
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            me@tylereich.com
+          </a>
+          <p class="hand">no pitch, no pressure.</p>
+        </div>
       </div>
     </section>
 
     <footer class="border-edge/60 border-t">
       <div
-        class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-8 text-sm text-slate-400 sm:px-8"
+        class="text-muted mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-8 text-sm sm:px-8"
       >
         <p>© <span id="year">2026</span> Tyler Eich LLC</p>
         <script>
@@ -989,7 +1130,7 @@
         </script>
         <a
           href="https://github.com/TylerEich"
-          class="hover:text-gold focus-visible:outline-gold inline-flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="hover:text-marker focus-visible:outline-marker inline-flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <svg
             class="h-4 w-4"
