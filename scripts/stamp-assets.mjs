@@ -3,7 +3,7 @@
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 
-const assets = ["style.css", "js/sections.js"];
+const assets = ["style.css", "js/sections.js", "js/site.js"];
 let html = readFileSync("index.html", "utf8");
 
 for (const file of assets) {
