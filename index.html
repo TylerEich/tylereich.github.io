@@ -291,7 +291,7 @@
             </p>
           </div>
         </div>
-        <p class="mt-8 text-sm text-slate-500">
+        <p class="mt-8 text-sm text-slate-400">
           Also fluent in: React · Angular · TypeScript · C# · ASP.NET · SQL ·
           Cosmos DB · Azure Service Bus
         </p>
@@ -549,8 +549,8 @@
       </div>
     </section>
 
-    <!-- Native — placeholder phone screenshots (img/native/placeholder-*.jpg)
-         and store links; swap in real Fort Wayne Trails captures + URLs. -->
+    <!-- Native — store links for the Fort Wayne Trails app. Add real phone
+         screenshots (img/native/) here once captured. -->
     <section id="native" class="border-edge/60 border-t">
       <div class="mx-auto max-w-5xl px-6 py-16 sm:px-8 sm:py-24">
         <h2
@@ -558,80 +558,32 @@
         >
           Native · iOS &amp; Android
         </h2>
-        <div
-          class="mt-8 grid items-center gap-10 lg:grid-cols-[3fr_2fr] lg:gap-12"
-        >
-          <div>
-            <h3
-              class="font-display text-2xl font-semibold text-slate-50 sm:text-3xl"
+        <div class="mt-8">
+          <h3
+            class="font-display text-2xl font-semibold text-slate-50 sm:text-3xl"
+          >
+            Fort Wayne Trails
+          </h3>
+          <p class="mt-4 max-w-md text-slate-300">
+            Trail maps, live location, and points of interest for the Fort Wayne
+            trail network — one React Native codebase, shipped to both app
+            stores.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="https://apps.apple.com/us/app/fort-wayne-trails/id6462937464"
+              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              Fort Wayne Trails
-            </h3>
-            <p class="mt-4 max-w-md text-slate-300">
-              Trail maps, live location, and points of interest for the Fort
-              Wayne trail network — one React Native codebase, shipped to both
-              app stores.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#"
-                class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                <span class="text-[0.65rem] text-slate-400"
-                  >Download on the</span
-                >
-                <span class="font-display font-semibold">App Store</span>
-              </a>
-              <a
-                href="#"
-                class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                <span class="text-[0.65rem] text-slate-400">Get it on</span>
-                <span class="font-display font-semibold">Google Play</span>
-              </a>
-            </div>
-          </div>
-          <div class="flex items-end justify-center gap-6">
-            <div class="mb-6 w-[9.5rem]">
-              <div class="device-phone">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/native/placeholder-ios.jpg"
-                    alt="Fort Wayne Trails on iOS — placeholder screenshot"
-                    loading="lazy"
-                    decoding="async"
-                    width="480"
-                    height="1039"
-                  />
-                </div>
-              </div>
-              <p
-                class="mt-2 text-center text-xs tracking-[0.1em] text-slate-500 uppercase"
-              >
-                iOS
-              </p>
-            </div>
-            <div class="w-[9.5rem]">
-              <div class="device-phone is-android">
-                <span class="device-island"></span>
-                <div class="device-screen">
-                  <img
-                    src="img/native/placeholder-android.jpg"
-                    alt="Fort Wayne Trails on Android — placeholder screenshot"
-                    loading="lazy"
-                    decoding="async"
-                    width="480"
-                    height="1039"
-                  />
-                </div>
-              </div>
-              <p
-                class="mt-2 text-center text-xs tracking-[0.1em] text-slate-500 uppercase"
-              >
-                Android
-              </p>
-            </div>
+              <span class="text-[0.65rem] text-slate-400">Download on the</span>
+              <span class="font-display font-semibold">App Store</span>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=org.fwtrails.FortWayneTrails"
+              class="border-edge hover:border-gold/50 focus-visible:outline-gold inline-flex flex-col rounded-xl border px-4 py-2 leading-tight text-slate-200 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              <span class="text-[0.65rem] text-slate-400">Get it on</span>
+              <span class="font-display font-semibold">Google Play</span>
+            </a>
           </div>
         </div>
       </div>
@@ -712,9 +664,13 @@
 
     <footer class="border-edge/60 border-t">
       <div
-        class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-8 text-sm text-slate-500 sm:px-8"
+        class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-8 text-sm text-slate-400 sm:px-8"
       >
-        <p>© 2026 Tyler Eich LLC</p>
+        <p>© <span id="year">2026</span> Tyler Eich LLC</p>
+        <script>
+          document.getElementById("year").textContent =
+            new Date().getFullYear();
+        </script>
         <a
           href="https://github.com/TylerEich"
           class="hover:text-gold focus-visible:outline-gold inline-flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"

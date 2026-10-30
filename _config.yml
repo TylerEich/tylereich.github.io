@@ -1,1 +1,11 @@
 title: "Tyler Eich"
+# Keep repo tooling and docs off the published site.
+exclude:
+  - AGENTS.md
+  - README.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - src
+  - .prettierrc
+  - .prettierignore

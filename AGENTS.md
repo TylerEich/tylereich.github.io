@@ -57,6 +57,6 @@ The site commits to a single dark theme (no light mode). Brand tokens live in
 - `--color-edge` `#41436b` — borders and section dividers (`border-edge`).
 - `--color-gold` `#d9bc66` — accent for eyebrows, icons, links, and the contact CTA (`text-gold`, `bg-gold`).
 
-Text: body `text-slate-300`, headings `text-slate-50`, muted/supporting `text-slate-400` / `text-slate-500`.
+Text: body `text-slate-300`, headings `text-slate-50`, muted/supporting `text-slate-400`. Avoid `text-slate-500` and darker for text: it fails WCAG AA contrast on `bg-gunmetal`.
 
 Contact CTA: `bg-gold` with `text-gunmetal`.
