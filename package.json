@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./style.css --watch --minify",
-    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify && node scripts/stamp-assets.mjs",
+    "stamp": "node scripts/stamp-assets.mjs"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",

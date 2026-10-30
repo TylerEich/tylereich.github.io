@@ -16,7 +16,8 @@
 ## Build, Test, and Development Commands
 
 - `npm run dev`: compile Tailwind from `src/input.css` to `style.css` in watch mode (minified).
-- `npm run build`: one-off Tailwind build for commits/CI.
+- `npm run build`: one-off Tailwind build for commits/CI. It also runs `npm run stamp`, which adds a content hash (`?v=…`) to the `style.css` and `js/sections.js` links in `index.html` so browsers skip stale cached copies after a deploy.
+- After changing `js/sections.js` alone, run `npm run stamp` (or `npm run build`) before committing.
 - Local preview: `python -m http.server` then open `http://localhost:8000` (or use your editor’s Live Server). Ensure `style.css` exists/updates.
 
 ## Coding Style & Naming Conventions
