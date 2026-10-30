@@ -7,6 +7,7 @@
   - `_config.yml`: Pages/Jekyll metadata (no Gemfile used)
   - `src/input.css`: Tailwind source; edit styles here
   - `style.css`: compiled CSS; do not edit directly
+  - `js/sections.js`: Play/replay animations for the pipeline (Fig. 01) and agents (Fig. 02) sections, and the website wall lightbox
   - `favicon.svg`: gold "TE" monogram favicon
   - `fonts/`: self-hosted Space Grotesk variable font (display typeface)
   - `og.png`: social share (Open Graph) image
@@ -53,10 +54,19 @@ The site commits to a single dark theme (no light mode). Brand tokens live in
 `src/input.css` via `@theme`:
 
 - `--color-gunmetal` `#282940` — page background (`bg-gunmetal`).
-- `--color-surface` `#2f3050` — card surfaces (`bg-surface`).
+- `--color-surface` `#2f3050` — raised surfaces (`bg-surface`).
+- `--color-panel` `#2a2b44` — opaque card and panel fill over the grid (`bg-panel`).
 - `--color-edge` `#41436b` — borders and section dividers (`border-edge`).
 - `--color-gold` `#d9bc66` — accent for eyebrows, icons, links, and the contact CTA (`text-gold`, `bg-gold`).
 
 Text: body `text-slate-300`, headings `text-slate-50`, muted/supporting `text-slate-400`. Avoid `text-slate-500` and darker for text: it fails WCAG AA contrast on `bg-gunmetal`.
 
 Contact CTA: `bg-gold` with `text-gunmetal`.
+
+## Blueprint Look
+
+- A faint drafting grid sits behind the page (`body` in `src/input.css`).
+- Square corners: `rounded-[3px]` for cards and panels, `rounded-[2px]` for buttons. Phone mockups keep device rounding.
+- Cards and figure panels add `bp-card` for gold corner registration ticks.
+- Section eyebrows are monospace: `text-gold font-mono text-xs font-medium tracking-[0.16em] uppercase`. Diagram sections are labelled `Fig. 01`, `Fig. 02`, `Fig. 03`.
+- The diagrams use `--bp-*` variables defined on `:root` in `src/input.css`. Animations start empty and run when Play is pressed; with reduced motion, Play jumps to the finished state.
