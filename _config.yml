@@ -7,5 +7,6 @@ exclude:
   - package-lock.json
   - node_modules
   - src
+  - scripts
   - .prettierrc
   - .prettierignore
