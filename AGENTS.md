@@ -8,7 +8,7 @@
   - `src/input.css`: Tailwind source; edit styles here
   - `style.css`: compiled CSS; do not edit directly
   - `js/sections.js`: Play/replay animations for the pipeline (Fig. 01) and agents (Fig. 02) sections, and the website wall lightbox
-  - `favicon.svg`: gold "TE" monogram favicon
+  - `favicon.svg`: marker yellow "TE" monogram on blueprint blue with corner ticks
   - `fonts/`: self-hosted Space Grotesk variable font (display typeface)
   - `og.png`: social share (Open Graph) image, rendered from `scripts/og.html`
   - `package.json`: scripts and tooling
