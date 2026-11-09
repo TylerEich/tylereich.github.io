@@ -8,9 +8,9 @@
   - `src/input.css`: Tailwind source; edit styles here
   - `style.css`: compiled CSS; do not edit directly
   - `js/sections.js`: Play/replay animations for the pipeline (Fig. 01) and agents (Fig. 02) sections, and the website wall lightbox
-  - `favicon.svg`: gold "TE" monogram favicon
+  - `favicon.svg`: marker yellow "TE" monogram on blueprint blue with corner ticks
   - `fonts/`: self-hosted Space Grotesk variable font (display typeface)
-  - `og.png`: social share (Open Graph) image
+  - `og.png`: social share (Open Graph) image, rendered from `scripts/og.html`
   - `package.json`: scripts and tooling
 
 ## Build, Test, and Development Commands
@@ -18,6 +18,7 @@
 - `npm run dev`: compile Tailwind from `src/input.css` to `style.css` in watch mode (minified).
 - `npm run build`: one-off Tailwind build for commits/CI. It also runs `npm run stamp`, which adds a content hash (`?v=…`) to the `style.css` and `js/sections.js` links in `index.html` so browsers skip stale cached copies after a deploy.
 - After changing `js/sections.js` alone, run `npm run stamp` (or `npm run build`) before committing.
+- Share image: edit `scripts/og.html`, then run `node scripts/render-og.mjs` (uses the preinstalled Playwright) to rewrite `og.png`. Update the `?v=` on the `og:image` URL in `index.html` so social sites refetch it.
 - Local preview: `python -m http.server` then open `http://localhost:8000` (or use your editor’s Live Server). Ensure `style.css` exists/updates.
 
 ## Coding Style & Naming Conventions

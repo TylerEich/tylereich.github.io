@@ -1,12 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#282940" />
+  <rect width="64" height="64" rx="4" fill="#0f2a4a" />
+  <path
+    d="M16 0v64M32 0v64M48 0v64M0 16h64M0 32h64M0 48h64"
+    stroke="#aacdf5"
+    stroke-opacity="0.12"
+    stroke-width="1"
+  />
+  <path
+    d="M4 12V4h8M52 4h8v8M60 52v8h-8M12 60H4v-8"
+    fill="none"
+    stroke="#8fb3dc"
+    stroke-width="3"
+  />
   <text
     x="32"
-    y="45"
-    font-family="Helvetica, Arial, sans-serif"
-    font-size="32"
+    y="45.5"
+    font-family="Space Grotesk, Helvetica, Arial, sans-serif"
+    font-size="36"
     font-weight="700"
-    fill="#d9bc66"
+    letter-spacing="-1.5"
+    fill="#ffd84d"
     text-anchor="middle"
   >
     TE
